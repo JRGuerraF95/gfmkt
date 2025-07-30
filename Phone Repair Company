@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Success Story | Mobile Repair Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the example's aesthetic */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #073B4C; /* Dark blue background */
+            color: #FFFFFF; /* White text */
+        }
+        h1, h2, h3, .stat-number {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Limit chart width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Fixed height for charts */
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+        }
+        .flow-arrow {
+            color: #FFD166; /* Accent color for arrows */
+            font-size: 2rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="text-white">
+    
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Marketing Success Story</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Driving Growth for a Mobile Repair Business</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">This case study highlights our partnership with a mobile phone repair business, demonstrating how targeted digital marketing strategies led to significant improvements in online presence, client acquisition, and operational efficiency.</p>
+        </header>
+
+        <main>
+            <section id="approach" class="mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-white">Our Strategic Approach</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">We focused on key interconnected areas to ensure comprehensive and sustainable growth for our client.</p>
+                </div>
+                <div class="bg-[#118AB2] bg-opacity-30 rounded-xl shadow-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="approachChart"></canvas>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <div class="text-4xl mb-2">💻</div>
+                            <h4 class="font-bold text-xl text-[#FF6B6B]">Optimized Web Presence</h4>
+                            <p class="text-sm text-gray-200">Creating high-converting landing pages and streamlined booking forms.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <div class="text-4xl mb-2">🚀</div>
+                            <h4 class="font-bold text-xl text-[#FFD166]">Targeted Paid Ads</h4>
+                            <p class="text-sm text-gray-200">Elevating social media impressions and activity through strategic campaigns.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <div class="text-4xl mb-2">⏰</div>
+                            <h4 class="font-bold text-xl text-[#06D6A0]">Time Management Solution</h4>
+                            <p class="text-sm text-gray-200">Implementing an efficient appointment scheduling system for the owner.</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <div class="text-4xl mb-2">💬</div>
+                            <h4 class="font-bold text-xl text-white">Engaging Content</h4>
+                            <p class="text-sm text-gray-200">Fostering stronger client relationships through valuable content.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="actions" class="space-y-12">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-white">Key Actions and Implementation</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">Here's how we brought our strategy to life with concrete initiatives.</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FF6B6B] mb-4">🌐 Website Optimization & Conversion</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-200 mb-4">We meticulously redesigned and optimized the client's website, with a strong emphasis on creating intuitive and high-converting landing pages. This included developing user-friendly forms to streamline the appointment booking process, making it effortless for customers to schedule services.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Conversion-Focused Design:</span> Intuitive layouts for user journey.</li>
+                                <li><span class="font-bold">Streamlined Booking Forms:</span> Easy and quick appointment scheduling.</li>
+                                <li><span class="font-bold">Enhanced User Experience (UX):</span> Improved navigation and responsiveness.</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="websiteConversionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">📢 Elevated Social Media Presence with Paid Ads</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                           <div class="chart-container">
+                                <canvas id="socialAdsChart"></canvas>
+                            </div>
+                        <div>
+                            <p class="text-gray-200 mb-4">Through carefully crafted and targeted paid advertising campaigns on key social media platforms, we achieved a significant elevation in brand impressions and user activity. This strategy effectively expanded the client's reach, driving higher engagement and attracting a broader audience.</p>
+                               <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Targeted Audience Segmentation:</span> Reaching the most relevant users.</li>
+                                <li><span class="font-bold">Compelling Ad Creatives:</span> Visually appealing and engaging content.</li>
+                                <li><span class="font-bold">Performance Monitoring:</span> Continuous optimization for maximum ROI.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#06D6A0] mb-4">⏰ Optimized Time Management with Appointment System</h4>
+                    <p class="text-gray-200 mb-6 text-center max-w-3xl mx-auto">To directly address the owner's need for better time management, we implemented a robust online appointment booking system. This system provided a clear, set schedule for client meetings, significantly improving operational efficiency, reducing scheduling conflicts, and enhancing overall client satisfaction.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 overflow-x-auto pb-4">
+                        <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
+                            <div class="text-3xl">🗓️</div>
+                            <h5 class="font-bold mt-2">Online Scheduling</h5>
+                        </div>
+                        <div class="flow-arrow transform md:-rotate-0">→</div>
+                        <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
+                            <div class="text-3xl">✅</div>
+                            <h5 class="font-bold mt-2">Automated Confirmations</h5>
+                        </div>
+                        <div class="flow-arrow transform md:-rotate-0">→</div>
+                        <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
+                               <div class="text-3xl">📊</div>
+                            <h5 class="font-bold mt-2">Time Slot Management</h5>
+                        </div>
+                        <div class="flow-arrow transform md:-rotate-0">→</div>
+                        <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
+                               <div class="text-3xl">📈</div>
+                            <h5 class="font-bold mt-2">Improved Efficiency</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-white mb-4">💬 Engaging Content Strategy</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-200 mb-4">Our content strategy was designed to connect deeply with the audience, demonstrate the client's expertise, and maintain brand relevance. We created valuable and engaging content across various platforms to attract and retain customers, fostering a loyal community.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Curated Social Media Posts:</span> Regular updates and interactive stories.</li>
+                                <li><span class="font-bold">Targeted Email Campaigns:</span> Nurturing leads and promoting services.</li>
+                                <li><span class="font-bold">Community Interaction:</span> Building loyalty through direct engagement.</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="contentEngagementChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="results" class="mt-16 text-center">
+                   <h3 class="text-3xl font-bold text-white">✅ Achieved Results</h3>
+                   <p class="mt-2 mb-8 text-gray-300 max-w-2xl mx-auto">These strategic initiatives produced measurable results and a significant positive impact on the client's business operations and market presence.</p>
+                   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">🚀</div><p class="mt-2 font-semibold">Increased Social Media Impressions</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">📈</div><p class="mt-2 font-semibold">Higher Website Conversion Rates</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">🗓️</div><p class="mt-2 font-semibold">Optimized Owner's Time Management</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">💬</div><p class="mt-2 font-semibold">Enhanced Client Engagement</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">💰</div><p class="mt-2 font-semibold">Improved Client Acquisition</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">🏆</div><p class="mt-2 font-semibold">Stronger Brand Authority</p></div>
+                   </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-400">Marketing Success Story prepared by <span class="font-bold">Your Marketing & Consulting Company</span>.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Helper function to wrap long labels for Chart.js
+        const wrapText = (text, maxLength = 16) => {
+            if (text.length <= maxLength) {
+                return text;
+            }
+            const words = text.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength && currentLine !== '') {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        // Tooltip and legend callback for Chart.js to ensure white text
+        const chartOptionsCallbacks = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: 'white' // Set legend text color to white
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: { color: 'white' }, // Set x-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                },
+                y: {
+                    ticks: { color: 'white' }, // Set y-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                }
+            }
+        };
+
+        // Data for the "Our Strategic Approach" doughnut chart
+        const approachData = {
+            labels: ['Web Optimization', 'Paid Ads', 'Time Management', 'Content & Engagement'].map(l => wrapText(l, 25)),
+            datasets: [{
+                label: 'Strategic Focus Areas',
+                data: [30, 30, 20, 20], // Illustrative allocation of effort
+                backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#FFFFFF'],
+                borderColor: '#073B4C', // Border color matching background
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        };
+        new Chart(document.getElementById('approachChart'), {
+            type: 'doughnut',
+            data: approachData,
+            options: {
+                ...chartOptionsCallbacks,
+                cutout: '60%', // Size of the doughnut hole
+                scales: { // Remove scales for doughnut chart
+                    x: { display: false },
+                    y: { display: false }
+                }
+            }
+        });
+
+        // Data for "Website Optimization & Conversion" bar chart
+        const websiteConversionData = {
+            labels: ['Website Conversion Rate Increase', 'Online Appointment Bookings Increase'].map(l => wrapText(l)),
+            datasets: [{
+                label: 'Percentage Increase (Illustrative)',
+                data: [45, 60], // Illustrative percentage increases
+                backgroundColor: '#FF6B6B',
+                borderColor: '#FF8A8A',
+                borderWidth: 2,
+                borderRadius: 5
+            }]
+        };
+        new Chart(document.getElementById('websiteConversionChart'), {
+            type: 'bar',
+            data: websiteConversionData,
+            options: {
+                ...chartOptionsCallbacks,
+                indexAxis: 'y', // Horizontal bars
+                scales: {
+                    x: {
+                        ticks: { color: 'white', callback: function(value) { return value + '%'; } },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    }
+                }
+            }
+        });
+        
+        // Data for "Elevated Social Media Presence with Paid Ads" bar chart
+        const socialAdsData = {
+            labels: ['Social Media Impressions Boost', 'Social Media Activity Growth'].map(l => wrapText(l)),
+            datasets: [{
+                label: 'Percentage Increase (Illustrative)',
+                data: [120, 80], // Illustrative percentage increases
+                backgroundColor: '#FFD166',
+                borderColor: '#FFE399',
+                borderWidth: 2,
+                borderRadius: 5
+            }]
+        };
+        new Chart(document.getElementById('socialAdsChart'), {
+            type: 'bar',
+            data: socialAdsData,
+            options: {
+                ...chartOptionsCallbacks,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        ticks: { color: 'white', callback: function(value) { return value + '%'; } },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    }
+                }
+            }
+        });
+
+        // Data for "Engaging Content Strategy" bar chart
+        const contentEngagementData = {
+            labels: ['Average Engagement Rate', 'Email Open Rate'].map(l => wrapText(l)),
+            datasets: [{
+                label: 'Percentage (Illustrative)',
+                data: [12, 30], // Illustrative percentages
+                backgroundColor: ['#06D6A0', '#6EFFD8'],
+                borderColor: '#FFFFFF',
+                borderWidth: 2,
+                borderRadius: 5,
+            }]
+        };
+        new Chart(document.getElementById('contentEngagementChart'), {
+            type: 'bar',
+            data: contentEngagementData,
+            options: {
+                ...chartOptionsCallbacks,
+                scales: {
+                    x: {
+                        ticks: { color: 'white', callback: function(value) { return value + '%'; } },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
