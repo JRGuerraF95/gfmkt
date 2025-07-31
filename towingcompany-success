@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales & Business Development Success Story | Towing Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the example's aesthetic */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #073B4C; /* Dark blue background */
+            color: #FFFFFF; /* White text */
+        }
+        h1, h2, h3, .stat-number {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Limit chart width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Fixed height for charts */
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+        }
+        .flow-arrow {
+            color: #FFD166; /* Accent color for arrows */
+            font-size: 2rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="text-white">
+    
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Business Development Success Story</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Scaling a Towing Company's Revenue</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">This case study demonstrates our expertise in providing strategic consultation and sales training to a towing company, empowering them to secure key contracts and establish a new path to profitability.</p>
+        </header>
+
+        <main>
+            <section id="the-challenge" class="mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-white">The Challenge</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">The business owner lacked the strategic knowledge to establish key industry connections and secure profitable service contracts with target businesses.</p>
+                </div>
+                <div class="bg-[#118AB2] bg-opacity-30 rounded-xl shadow-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">🚧</div>
+                        <h4 class="font-bold text-xl text-[#FF6B6B]">Problem Statement</h4>
+                        <p class="text-sm text-gray-200 mt-2">Difficulty securing business-to-business (B2B) contracts needed to generate consistent revenue.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">🎯</div>
+                        <h4 class="font-bold text-xl text-[#FFD166]">Project Goal</h4>
+                        <p class="text-sm text-gray-200 mt-2">To develop a strategy and provide the tools necessary to secure high-value contracts and achieve profitability.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="our-solution" class="space-y-12">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-white">Our Strategic Solution</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">We provided a three-pronged approach focused on education, strategy, and hands-on support to overcome the client's challenges.</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FF6B6B] mb-4">🤝 Consultation & Sales Strategy</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-200 mb-4">We began with a strategic consultation to identify key target businesses, develop a clear value proposition, and craft an effective outreach strategy tailored to the towing industry.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Target Market Analysis:</span> Identifying high-potential business partners.</li>
+                                <li><span class="font-bold">Value Proposition Crafting:</span> Communicating the client's unique benefits.</li>
+                                <li><span class="font-bold">Strategic Outreach:</span> A roadmap for engaging with potential partners.</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="strategyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">🎓 Sales Training & Representation</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="chart-container">
+                            <canvas id="trainingChart"></canvas>
+                        </div>
+                        <div>
+                            <p class="text-gray-200 mb-4">Beyond strategy, we provided hands-on sales training to the owner and offered direct representation in contract negotiations. This empowered the client with the skills to close deals and built immediate credibility with potential partners.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Sales Skills Training:</span> Equipping the owner with confidence and techniques.</li>
+                                <li><span class="font-bold">Contract Representation:</span> Negotiating favorable terms on behalf of the client.</li>
+                                <li><span class="font-bold">Relationship Building:</span> Fostering long-term business partnerships.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="results" class="mt-16 text-center">
+                <h3 class="text-3xl font-bold text-white">✅ Achieved Results</h3>
+                <p class="mt-2 mb-8 text-gray-300 max-w-2xl mx-auto">Our intervention led to tangible, revenue-generating outcomes that put the business on a path to success.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">🤝</div><p class="mt-2 font-semibold">New Contracts Secured</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl"> auction </div><p class="mt-2 font-semibold">Partnerships with Auction Businesses</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">🖥️</div><p class="mt-2 font-semibold">Integrated with Online Dispatch Platforms</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">💰</div><p class="mt-2 font-semibold">Increased Revenue & Profitability</p></div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-400">Business Development Success Story prepared by <span class="font-bold">Guerra Fourcade Marketing & Consulting</span>.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Helper function to wrap long labels for Chart.js
+        const wrapText = (text, maxLength = 16) => {
+            if (text.length <= maxLength) {
+                return text;
+            }
+            const words = text.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength && currentLine !== '') {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        // Tooltip and legend callback for Chart.js to ensure white text
+        const chartOptionsCallbacks = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: 'white' // Set legend text color to white
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: { color: 'white' }, // Set x-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                },
+                y: {
+                    ticks: { color: 'white' }, // Set y-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                }
+            }
+        };
+        
+        // Data for "Consultation & Sales Strategy" doughnut chart
+        const strategyData = {
+            labels: ['Strategic Planning', 'Market Analysis', 'Value Proposition'].map(l => wrapText(l, 25)),
+            datasets: [{
+                label: 'Strategic Focus (Illustrative)',
+                data: [40, 35, 25], // Illustrative focus allocation
+                backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0'],
+                borderColor: '#073B4C',
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        };
+        new Chart(document.getElementById('strategyChart'), {
+            type: 'doughnut',
+            data: strategyData,
+            options: {
+                ...chartOptionsCallbacks,
+                cutout: '60%', // Size of the doughnut hole
+                scales: { // Remove scales for doughnut chart
+                    x: { display: false },
+                    y: { display: false }
+                }
+            }
+        });
+
+        // Data for "Sales Training & Representation" bar chart
+        const trainingData = {
+            labels: ['Contracts Secured', 'Sales Skill Improvement'].map(l => wrapText(l)),
+            datasets: [{
+                label: 'Success Metrics (Illustrative)',
+                data: [5, 4], // Illustrative number of contracts and skill improvement rating
+                backgroundColor: '#FFD166',
+                borderColor: '#FFE399',
+                borderWidth: 2,
+                borderRadius: 5
+            }]
+        };
+        new Chart(document.getElementById('trainingChart'), {
+            type: 'bar',
+            data: trainingData,
+            options: {
+                ...chartOptionsCallbacks,
+                indexAxis: 'y', // Horizontal bars
+                scales: {
+                    x: {
+                        ticks: { color: 'white', beginAtZero: true },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
