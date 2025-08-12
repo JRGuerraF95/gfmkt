@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Calm Neutrals -->
+    <!-- Chosen Palette: GF Marketing & Consulting -->
     <!-- Application Structure Plan: The SPA is designed as a narrative journey for Nick Storey. It starts with a high-impact "Hook" section to grab attention by highlighting the core problem (leaky funnel) and opportunity (high in-store closing rate). It then flows into "The Opportunity," which uses interactive charts to visually diagnose the problem. "The Game Plan" section presents the two-phased solution using an interactive timeline, making the strategy clear and easy to follow. "The Investment" section clearly breaks down the costs and ties them to the phases. Finally, "The Partnership" section serves as a call to action. This thematic, storytelling structure is more persuasive and engaging than a simple document, guiding the client from problem to solution to decision. -->
     <!-- Visualization & Content Choices: 
         - Hook: Goal: Grab attention. Method: Large, bold text with key stats (40 leads, 4% vs 90% close rate). Interaction: None, pure impact. Justification: Immediately frames the core business problem and opportunity.
@@ -22,17 +22,17 @@
             color: #333;
         }
         .bg-warm-neutral { background-color: #f8f7f4; }
-        .bg-soft-accent { background-color: #eaddd7; }
-        .text-primary { color: #3d405b; }
-        .text-secondary { color: #816a68; }
+        .bg-gf-light { background-color: #e6e8e0; }
+        .text-primary { color: #385241; }
+        .text-secondary { color: #526c59; }
         .accent-color { color: #e07a5f; }
         .btn-primary {
-            background-color: #3d405b;
+            background-color: #385241;
             color: #ffffff;
             transition: background-color 0.3s ease;
         }
         .btn-primary:hover {
-            background-color: #2c2f48;
+            background-color: #2c3a31;
         }
         .btn-accent {
             background-color: #e07a5f;
@@ -73,9 +73,7 @@
     <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-6xl">
 
         <header class="text-center mb-12">
-            <img src="https://storage.googleapis.com/doc-explorer-uploaded-files/uploaded:GF%20Logo%20Big.png-002ec9f4-75ca-4c01-8147-4c5a5952b3a8" alt="GF Marketing and Consulting Logo" class="mx-auto mb-4 h-24">
-            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-2">The Mattress ROI Maximizer</h1>
-            <p class="text-lg text-secondary">A Growth Proposal for Factory Direct Mattress</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-2">The Mattress ROI Maximizer Campaign</h1>
         </header>
 
         <main>
@@ -154,12 +152,12 @@
                     <div class="bg-white p-8 rounded-2xl shadow-lg">
                         <h3 class="text-xl font-bold text-primary mb-2">Funnel Rework</h3>
                         <p class="text-4xl font-bold accent-color mb-4">$600</p>
-                        <p class="text-secondary">One-time payment due before Labor Day to optimize your current sales process.</p>
+                        <p class="text-secondary">One-time payment upon project initiation, allowing you to immediately leverage the upcoming Labor Day sale.</p>
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-primary">
                          <h3 class="text-xl font-bold text-primary mb-2">Google Ads Setup</h3>
                         <p class="text-4xl font-bold accent-color mb-4">$1,000</p>
-                        <p class="text-secondary">One-time payment due after Labor Day to build and launch your new growth engine.</p>
+                        <p class="text-secondary">One-time payment upon the start of the Google Ads project to build and launch your new growth engine.</p>
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-lg">
                          <h3 class="text-xl font-bold text-primary mb-2">Ongoing Maintenance</h3>
@@ -169,12 +167,12 @@
                 </div>
             </section>
 
-            <section id="partnership" class="text-center bg-primary text-white p-8 rounded-2xl shadow-lg">
-                <h2 class="text-3xl font-bold mb-4">Let's Build a Predictable, Profitable Business.</h2>
-                <p class="text-lg max-w-3xl mx-auto mb-6">
+            <section id="partnership" class="text-center bg-gf-light p-8 rounded-2xl shadow-lg">
+                <h2 class="text-3xl font-bold text-primary mb-4">Let's Build a Predictable, Profitable Business.</h2>
+                <p class="text-lg text-secondary max-w-3xl mx-auto mb-6">
                     This is more than a marketing plan; it's a partnership to build a system for sustainable growth. The work on your funnel can begin today. Let's stop wasting money on lost leads and start unlocking the full potential of your business.
                 </p>
-                <button class="btn-accent font-bold py-3 px-8 rounded-lg text-lg hover:bg-cf674b">
+                <button class="btn-primary font-bold py-3 px-8 rounded-lg text-lg">
                     Let's Get Started
                 </button>
             </section>
@@ -192,8 +190,8 @@
                         label: 'Lead Conversion',
                         data: [1.6, 38.4],
                         backgroundColor: [
-                            '#3d405b',
-                            '#eaddd7'
+                            '#385241',
+                            '#e6e8e0'
                         ],
                         borderColor: [
                             '#ffffff',
