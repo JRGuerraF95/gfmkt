@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mattress ROI Maximizer Campaign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Neutrals -->
+    <!-- Application Structure Plan: The SPA is designed as a narrative journey for Nick Storey. It starts with a high-impact "Hook" section to grab attention by highlighting the core problem (leaky funnel) and opportunity (high in-store closing rate). It then flows into "The Opportunity," which uses interactive charts to visually diagnose the problem. "The Game Plan" section presents the two-phased solution using an interactive timeline, making the strategy clear and easy to follow. "The Investment" section clearly breaks down the costs and ties them to the phases. Finally, "The Partnership" section serves as a call to action. This thematic, storytelling structure is more persuasive and engaging than a simple document, guiding the client from problem to solution to decision. -->
+    <!-- Visualization & Content Choices: 
+        - Hook: Goal: Grab attention. Method: Large, bold text with key stats (40 leads, 4% vs 90% close rate). Interaction: None, pure impact. Justification: Immediately frames the core business problem and opportunity.
+        - The Opportunity (Lead Funnel Chart): Goal: Compare current vs. potential performance. Method: Interactive doughnut chart (Chart.js). Interaction: Hovering over segments reveals detailed stats (current leads, closed deals, lost leads). Justification: Visually dramatizes the "leaky funnel" problem, making the 96% drop-off stark and clear.
+        - The Game Plan (Interactive Timeline): Goal: Organize the two-phase strategy. Method: HTML/CSS/Tailwind for the visual timeline. Interaction: Clicking on each phase reveals detailed actions and expected outcomes in a separate panel. Justification: Breaks down the complex plan into digestible, sequential steps, improving comprehension and showing a clear path to results.
+        - The Investment (Pricing Tiers): Goal: Inform about costs. Method: Structured HTML/CSS cards. Interaction: None, designed for clarity. Justification: Presents financial information in a clean, transparent, and easy-to-understand format.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f7f4;
+            color: #333;
+        }
+        .bg-warm-neutral { background-color: #f8f7f4; }
+        .bg-soft-accent { background-color: #eaddd7; }
+        .text-primary { color: #3d405b; }
+        .text-secondary { color: #816a68; }
+        .accent-color { color: #e07a5f; }
+        .btn-primary {
+            background-color: #3d405b;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #2c2f48;
+        }
+        .btn-accent {
+            background-color: #e07a5f;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        .btn-accent:hover {
+            background-color: #cf674b;
+        }
+        .timeline-item {
+            border-left: 3px solid #eaddd7;
+            transition: border-color 0.3s ease;
+        }
+        .timeline-item.active {
+            border-left: 3px solid #e07a5f;
+        }
+        .timeline-item-content {
+            transition: all 0.3s ease;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-warm-neutral">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-6xl">
+
+        <header class="text-center mb-12">
+            <img src="https://storage.googleapis.com/doc-explorer-uploaded-files/uploaded:GF%20Logo%20Big.png-002ec9f4-75ca-4c01-8147-4c5a5952b3a8" alt="GF Marketing and Consulting Logo" class="mx-auto mb-4 h-24">
+            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-2">The Mattress ROI Maximizer</h1>
+            <p class="text-lg text-secondary">A Growth Proposal for Factory Direct Mattress</p>
+        </header>
+
+        <main>
+            <section id="hook" class="text-center bg-white p-8 rounded-2xl shadow-lg mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Nick, let's fix the leak in your sales funnel.</h2>
+                <p class="text-lg md:text-xl text-secondary max-w-3xl mx-auto">
+                    You're generating <strong class="accent-color">40 Facebook leads</strong> a month, but only closing <strong class="accent-color">4%</strong>. Yet, when a customer walks through your door, you have an incredible <strong class="accent-color">90% closing rate</strong>. The problem isn't your product or your sales skill—it's the journey from lead to storefront. We'll fix it.
+                </p>
+            </section>
+
+            <section id="opportunity" class="mb-12">
+                <h2 class="text-3xl font-bold text-primary text-center mb-8">The Opportunity: Visualizing the Gap</h2>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                     <p class="text-center text-secondary mb-6">This chart shows what currently happens to your 40 monthly leads. Our goal is to dramatically shrink the "Lost Leads" section and grow "Deals Won."</p>
+                    <div class="chart-container">
+                        <canvas id="funnelChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="game-plan" class="mb-12">
+                <h2 class="text-3xl font-bold text-primary text-center mb-8">Our Two-Phase Game Plan</h2>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="w-full md:w-1/3">
+                        <ul id="timeline-nav" class="space-y-4">
+                            <li>
+                                <div id="phase-1-nav" class="timeline-item active p-4 rounded-lg cursor-pointer bg-white shadow">
+                                    <h3 class="font-bold text-lg text-primary">Phase 1: Immediate Wins</h3>
+                                    <p class="text-sm text-secondary">Funnel & Labor Day Maximizer</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="phase-2-nav" class="timeline-item p-4 rounded-lg cursor-pointer bg-white shadow">
+                                    <h3 class="font-bold text-lg text-primary">Phase 2: Massive Growth</h3>
+                                    <p class="text-sm text-secondary">Targeted Google Ads Campaign</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-2/3 bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                        <div id="phase-1-content" class="timeline-item-content">
+                            <h3 class="text-2xl font-bold text-primary mb-4">Phase 1: Immediate Wins & Funnel Optimization</h3>
+                            <p class="text-secondary mb-4">Our first priority is to maximize the return on your existing ad spend, especially with the upcoming Labor Day sale. We'll turn your current leads into qualified appointments.</p>
+                            <ul class="list-disc list-inside space-y-2 text-secondary">
+                                <li><strong class="text-primary">Funnel Rework:</strong> Replace single-question ads with comprehensive forms to capture vital contact info (email/phone).</li>
+                                <li><strong class="text-primary">Automation Setup:</strong> Implement automated email and text follow-ups to nurture leads and prevent them from going cold.</li>
+                                <li><strong class="text-primary">Labor Day Leverage:</strong> Capitalize on the holiday sales rush by ensuring every single lead is captured and nurtured effectively.</li>
+                                <li><strong class="text-primary">Sales Training:</strong> Provide your team with proven scripts and strategies to convert these nurtured leads into in-store appointments.</li>
+                            </ul>
+                             <div class="mt-6 bg-soft-accent p-4 rounded-lg">
+                                <h4 class="font-bold text-primary">Expected Outcome:</h4>
+                                <p class="text-secondary">A significant increase in booked appointments and a higher ROI from your existing Facebook ads before we even spend a new dollar on advertising.</p>
+                            </div>
+                        </div>
+                        <div id="phase-2-content" class="timeline-item-content hidden">
+                            <h3 class="text-2xl font-bold text-primary mb-4">Phase 2: Massive Growth with Google Ads</h3>
+                            <p class="text-secondary mb-4">Once your funnel is optimized, we'll build a powerful new lead-generation engine by targeting customers who are actively searching for mattresses right now.</p>
+                             <ul class="list-disc list-inside space-y-2 text-secondary">
+                                <li><strong class="text-primary">Campaign Setup:</strong> Conduct in-depth keyword research to find high-intent buyers and create compelling ad copy that speaks directly to them.</li>
+                                <li><strong class="text-primary">Video Ad Development:</strong> Create engaging video ads to showcase your unique value proposition and build trust with potential customers.</li>
+                                <li><strong class="text-primary">Targeted Launch:</strong> Roll out the campaign after Labor Day to capture post-holiday buyers and establish a consistent flow of new, high-quality leads.</li>
+                                <li><strong class="text-primary">Ongoing Optimization:</strong> Continuously manage and refine the campaigns to maximize performance and dominate the local market search results.</li>
+                            </ul>
+                             <div class="mt-6 bg-soft-accent p-4 rounded-lg">
+                                <h4 class="font-bold text-primary">Expected Outcome:</h4>
+                                <p class="text-secondary">A steady, predictable stream of new, high-quality leads from a different channel, positioning you as the top choice for mattresses in your area.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="investment" class="mb-12">
+                <h2 class="text-3xl font-bold text-primary text-center mb-8">Your Investment in Growth</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold text-primary mb-2">Funnel Rework</h3>
+                        <p class="text-4xl font-bold accent-color mb-4">$600</p>
+                        <p class="text-secondary">One-time payment due before Labor Day to optimize your current sales process.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-primary">
+                         <h3 class="text-xl font-bold text-primary mb-2">Google Ads Setup</h3>
+                        <p class="text-4xl font-bold accent-color mb-4">$1,000</p>
+                        <p class="text-secondary">One-time payment due after Labor Day to build and launch your new growth engine.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                         <h3 class="text-xl font-bold text-primary mb-2">Ongoing Maintenance</h3>
+                        <p class="text-4xl font-bold accent-color mb-4">$600<span class="text-lg text-secondary">/mo</span></p>
+                        <p class="text-secondary">Monthly fee to manage, optimize, and report on all campaigns for continuous ROI.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="partnership" class="text-center bg-primary text-white p-8 rounded-2xl shadow-lg">
+                <h2 class="text-3xl font-bold mb-4">Let's Build a Predictable, Profitable Business.</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-6">
+                    This is more than a marketing plan; it's a partnership to build a system for sustainable growth. The work on your funnel can begin today. Let's stop wasting money on lost leads and start unlocking the full potential of your business.
+                </p>
+                <button class="btn-accent font-bold py-3 px-8 rounded-lg text-lg hover:bg-cf674b">
+                    Let's Get Started
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('funnelChart').getContext('2d');
+            const funnelChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Deals Won (4%)', 'Lost Leads (96%)'],
+                    datasets: [{
+                        label: 'Lead Conversion',
+                        data: [1.6, 38.4],
+                        backgroundColor: [
+                            '#3d405b',
+                            '#eaddd7'
+                        ],
+                        borderColor: [
+                            '#ffffff',
+                            '#ffffff'
+                        ],
+                        borderWidth: 4,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    family: "'Inter', sans-serif"
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    const value = context.raw;
+                                    const total = context.chart.getDatasetMeta(0).total;
+                                    const percentage = ((value / total) * 100).toFixed(0);
+                                    return ` ${context.label}: ${percentage}% (${Math.round(value)} leads)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const phase1Nav = document.getElementById('phase-1-nav');
+            const phase2Nav = document.getElementById('phase-2-nav');
+            const phase1Content = document.getElementById('phase-1-content');
+            const phase2Content = document.getElementById('phase-2-content');
+
+            phase1Nav.addEventListener('click', () => {
+                phase1Nav.classList.add('active');
+                phase2Nav.classList.remove('active');
+                phase1Content.classList.remove('hidden');
+                phase2Content.classList.add('hidden');
+            });
+
+            phase2Nav.addEventListener('click', () => {
+                phase2Nav.classList.add('active');
+                phase1Nav.classList.remove('active');
+                phase2Content.classList.remove('hidden');
+                phase1Content.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
