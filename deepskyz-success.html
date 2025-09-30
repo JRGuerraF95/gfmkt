@@ -178,17 +178,11 @@
                         label: function(context) {
                             let label = context.dataset.label || '';
                             if (context.chart.config.type === 'doughnut') {
-                                // FIX: Display only the percentage value for the doughnut chart segment
+                                // For Doughnut Chart: Show percentage
                                 return `${context.raw}% of Project Focus`;
                             } else {
-                                // For Bar Chart: Show Dataset Label and the Y-value percentage
-                                if (label) {
-                                    label += ': ';
-                                }
-                                if (context.parsed.y !== null) {
-                                    label += context.parsed.y + '%';
-                                }
-                                return label;
+                                // For Bar Chart: Show the actual percentage value with new label
+                                return `${context.raw}% Allocation of Focus`;
                             }
                         }
                     }
