@@ -82,9 +82,9 @@
                             <canvas id="compatibilityChart"></canvas>
                         </div>
                         <div>
-                            <p class="text-gray-200 mb-4">Our goal was to ensure a pixel-perfect, functional button regardless of how the recipient viewed the email, maximizing conversion opportunities. **We achieved a perfect score.**</p>
+                            <p class="text-gray-200 mb-4">Our goal was to ensure a pixel-perfect, functional button regardless of how the recipient viewed the email, maximizing conversion opportunities. <span class="font-bold">We achieved a perfect score.</span></p>
                             <ul class="list-disc list-inside text-gray-300 space-y-2">
-                                <li><span class="font-bold">High Success Rate:</span> Universal rendering success across **100%** of common email clients tested.</li>
+                                <li><span class="font-bold">High Success Rate:</span> Universal rendering success across <span class="font-bold">100%</span> of common email clients tested.</li>
                                 <li><span class="font-bold">Mobile Optimization:</span> Ensuring the button scaled and looked correct on all mobile devices.</li>
                                 <li><span class="font-bold">Low Technical Debt:</span> The solution is simple and requires minimal ongoing maintenance.</li>
                             </ul>
@@ -174,7 +174,7 @@
                         },
                         label: function(context) {
                             let label = context.dataset.label || '';
-                            // This chart should only show the percentage value
+                            // This chart should show the specific success rate for the platform
                             return `${context.parsed.y}% Success Rate`;
                         }
                     }
@@ -199,14 +199,13 @@
             }
         };
 
-        // Data for Compatibility Success Rate Bar Chart
+        // Data for Compatibility Success Rate Bar Chart (Updated to show 3 platforms at 100%)
         const compatibilityData = {
-            // Using a single label for a simple, direct 100% visual.
-            labels: ['Cross-Client Performance'],
+            labels: ['Gmail/Webmail Clients', 'Microsoft (Outlook) Clients', 'Mobile/App Clients'].map(l => wrapText(l, 30)),
             datasets: [{
                 label: 'Rendering Success Rate (%)',
-                data: [100], // Updated to 100%
-                backgroundColor: ['#06D6A0'],
+                data: [100, 100, 100], // All 100% success
+                backgroundColor: ['#06D6A0', '#118AB2', '#FFD166'],
                 borderColor: '#073B4C',
                 borderWidth: 2,
                 borderRadius: 5
@@ -219,19 +218,20 @@
                 ...chartOptionsCallbacks,
                 scales: {
                     x: {
-                        ticks: { color: 'white' },
-                        grid: { display: false } // Hide grid lines on x-axis for cleaner look
-                    },
-                    y: {
                         max: 100, // Ensure the maximum is 100%
                         ticks: { color: 'white', callback: (value) => value + '%' },
                         grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: 'white' },
+                        grid: { display: false }
                     }
                 },
+                indexAxis: 'y', // Horizontal bars
                 plugins: {
                     ...chartOptionsCallbacks.plugins,
                     legend: {
-                        display: true,
+                        display: false, // Hiding legend as all segments are the same value (100%)
                         labels: {
                             color: 'white'
                         }
