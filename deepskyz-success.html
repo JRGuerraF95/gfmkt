@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSkyz Stargazing Website - Success Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the portfolio's aesthetic */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #073B4C; /* Dark blue background */
+            color: #FFFFFF; /* White text */
+        }
+        h1, h2, h3, .stat-number {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Limit chart width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Fixed height for charts */
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body class="text-white">
+    
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+        <a href="index.html" class="inline-flex items-center text-[#06D6A0] hover:text-[#6EFFD8] transition duration-300 mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Portfolio
+        </a>
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">DeepSkyz Stargazing</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#118AB2]">Building a Digital Gateway to the Cosmos</h2>
+            <p class="mt-2 text-md text-[#06D6A0] font-semibold">
+                <a href="https://deepskyz.net" target="_blank" class="hover:underline">Visit Client Website: deepskyz.net</a>
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">We designed and developed a five-page, SEO-optimized website that serves as a captivating information hub and a crucial booking platform for unique stargazing experiences.</p>
+        </header>
+
+        <main>
+            <section id="the-challenge" class="mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-white">The Challenge & Our Solution</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">DeepSkyz needed a professional, responsive, and SEO-optimized web presence to validate its business and streamline the customer booking journey.</p>
+                </div>
+                <div class="bg-[#FF6B6B] bg-opacity-30 rounded-xl shadow-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">🚧</div>
+                        <h4 class="font-bold text-xl text-[#FFD166]">Problem Statement</h4>
+                        <p class="text-sm text-gray-200 mt-2">The client lacked an established online presence and was losing potential customers who searched for local stargazing tours.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">✅</div>
+                        <h4 class="font-bold text-xl text-[#06D6A0]">Solution Statement</h4>
+                        <p class="text-sm text-gray-200 mt-2">We built a visually immersive, 5-page site with deep-dive SEO integration to capture organic traffic for niche astronomy terms.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="space-y-12">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-white">Key Services Delivered: The Digital Launch</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">Our work focused equally on aesthetic appeal and search engine performance to ensure long-term visibility and conversion.</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FF6B6B] mb-4">💻 5-Page Website Development Focus</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-200 mb-4">The site was built to be fast, mobile-friendly, and to emotionally connect with visitors. Key pages included Home, Experiences, Booking, About, and Contact.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">High-Fidelity Design:</span> Immersive, dark-themed design using the night sky as inspiration.</li>
+                                <li><span class="font-bold">Booking Integration:</span> Seamlessly connected to the client's scheduling tool.</li>
+                                <li><span class="font-bold">Core Pages:</span> Established authority and guided the customer journey.</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="deepskyzDevelopmentChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">🔍 Comprehensive SEO Strategy Breakdown</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="chart-container">
+                            <canvas id="deepskyzSEOChart"></canvas>
+                        </div>
+                        <div>
+                            <p class="text-gray-200 mb-4">A custom SEO strategy was the backbone of this launch, ensuring the new site would immediately start capturing relevant search traffic for stargazing and astronomical tourism.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Niche Keyword Mapping:</span> Targeting highly specific, high-intent search terms.</li>
+                                <li><span class="font-bold">Technical Optimization:</span> Ensuring fast load times and clean site structure (crucial for ranking).</li>
+                                <li><span class="font-bold">Local SEO Setup:</span> Optimizing for geographic searches (e.g., "stargazing near me").</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="results" class="mt-16 text-center">
+                <h3 class="text-3xl font-bold text-white">✅ Achieved Outcomes</h3>
+                <p class="mt-2 mb-8 text-gray-300 max-w-2xl mx-auto">The new website created a professional, visible, and automated source of lead generation for DeepSkyz.</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">⭐</div><p class="mt-2 font-semibold">Instant Professional Credibility</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">🚀</div><p class="mt-2 font-semibold">Improved Search Visibility</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">💰</div><p class="mt-2 font-semibold">Automated Booking Pipeline</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">📱</div><p class="mt-2 font-semibold">100% Mobile Responsive</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">📊</div><p class="mt-2 font-semibold">Measurable SEO Progress</p></div>
+                </div>
+
+                <p class="text-center pt-8">
+                    <a href="https://www.guerrafourcademkt.com/contact" class="inline-block bg-[#06D6A0] hover:bg-[#6EFFD8] text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                        Discuss Your Website Project
+                    </a>
+                </p>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-400">Integrated Marketing Success Story prepared by <a href="https://www.guerrafourcademkt.com" target="_blank" class="font-bold text-gray-300 hover:text-[#06D6A0] transition duration-300">Guerra Fourcade Marketing & Consulting</a>.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Helper function to wrap long labels for Chart.js
+        const wrapText = (text, maxLength = 16) => {
+            if (text.length <= maxLength) {
+                return text;
+            }
+            const words = text.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength && currentLine !== '') {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        // Tooltip and legend callback for Chart.js to ensure white text
+        const chartOptionsCallbacks = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: 'white' // Set legend text color to white
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: { color: 'white' }, // Set x-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                },
+                y: {
+                    ticks: { color: 'white' }, // Set y-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                }
+            }
+        };
+
+        // Data for Development Focus doughnut chart
+        const deepskyzDevelopmentData = {
+            labels: ['UX/Design', 'Development & Integration', 'Content Writing', 'Launch & QA'].map(l => wrapText(l, 25)),
+            datasets: [{
+                label: 'Project Focus Areas',
+                data: [30, 40, 20, 10], // Illustrative allocation of effort
+                backgroundColor: ['#118AB2', '#FFD166', '#FF6B6B', '#06D6A0'],
+                borderColor: '#073B4C', // Border color matching background
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        };
+        new Chart(document.getElementById('deepskyzDevelopmentChart'), {
+            type: 'doughnut',
+            data: deepskyzDevelopmentData,
+            options: {
+                ...chartOptionsCallbacks,
+                cutout: '60%', // Size of the doughnut hole
+                scales: { // Remove scales for doughnut chart
+                    x: { display: false },
+                    y: { display: false }
+                }
+            }
+        });
+
+        // Data for SEO Breakdown bar chart
+        const deepskyzSEOData = {
+            labels: ['Keyword Research', 'On-Page Optimization', 'Technical SEO', 'Local SEO Setup'].map(l => wrapText(l)),
+            datasets: [{
+                label: 'SEO Effort (%)',
+                data: [35, 30, 25, 10], // Illustrative time/effort allocation
+                backgroundColor: ['#06D6A0', '#05A87F', '#048060', '#118AB2'],
+                borderColor: '#073B4C',
+                borderWidth: 2,
+                borderRadius: 5
+            }]
+        };
+        new Chart(document.getElementById('deepskyzSEOChart'), {
+            type: 'bar',
+            data: deepskyzSEOData,
+            options: {
+                ...chartOptionsCallbacks,
+                indexAxis: 'y', // Horizontal bars
+                scales: {
+                    x: {
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
