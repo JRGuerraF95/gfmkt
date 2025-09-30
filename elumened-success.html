@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElumenEd National Launch Pages - Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the portfolio's aesthetic */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #073B4C; /* Dark blue background */
+            color: #FFFFFF; /* White text */
+        }
+        h1, h2, h3, .stat-number {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Limit chart width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Fixed height for charts */
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body class="text-white">
+    
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+        <a href="index.html" class="inline-flex items-center text-[#06D6A0] hover:text-[#6EFFD8] transition duration-300 mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Portfolio
+        </a>
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">ElumenEd Education Products</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#118AB2]">Conversion-Focused Landing Pages for National Launch</h2>
+            <p class="mt-2 text-md text-[#06D6A0] font-semibold">
+                <a href="https://upgradeyourtraining.com" target="_blank" class="hover:underline">Product 1: upgradeyourtraining.com</a> |
+                <a href="https://easternergonomics.com" target="_blank" class="hover:underline">Product 2: easternergonomics.com</a>
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">We designed and developed two distinct, high-converting landing pages, each focused on a top-selling educational product to facilitate rapid and efficient nationwide market expansion.</p>
+        </header>
+
+        <main>
+            <section id="the-challenge" class="mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-white">The Challenge & Our Solution</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">ElumenEd was ready to scale nationally but needed dedicated, conversion-optimized pages to support large-scale digital advertising efforts for two flagship products.</p>
+                </div>
+                <div class="bg-[#FF6B6B] bg-opacity-30 rounded-xl shadow-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">🚧</div>
+                        <h4 class="font-bold text-xl text-[#FFD166]">Problem Statement</h4>
+                        <p class="text-sm text-gray-200 mt-2">Generic product pages were underperforming under national traffic volume, leading to high ad costs and suboptimal conversion rates.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">✅</div>
+                        <h4 class="font-bold text-xl text-[#06D6A0]">Solution Statement</h4>
+                        <p class="text-sm text-gray-200 mt-2">We built two specialized, mobile-first landing pages with dedicated conversion elements (A/B testing, clear CTAs, urgency) and tailored product messaging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="space-y-12">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-white">Key Services Delivered: Conversion Rate Optimization (CRO)</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">The entire scope was dedicated to maximizing the percentage of visitors who purchase or sign up, ensuring maximum ROI on advertising spend.</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FF6B6B] mb-4">💻 Landing Page Development Focus</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-200 mb-4">Our effort was concentrated on designing the perfect conversion funnel, which required more strategic planning and testing capacity than typical website builds.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">A/B Testing Infrastructure:</span> Built-in capabilities to test headlines, CTAs, and layouts.</li>
+                                <li><span class="font-bold">Urgency & Scarcity:</span> Strategically placed elements to drive immediate action.</li>
+                                <li><span class="font-bold">Mobile First Design:</span> Ensuring optimal experience for the highest volume of traffic.</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="elumenedFocusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">🎯 Targeted Conversion Rate Improvement</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="chart-container">
+                            <canvas id="elumenedConversionChart"></canvas>
+                        </div>
+                        <div>
+                            <p class="text-gray-200 mb-4">The new pages were projected to deliver a significant lift in conversion rate due to their hyper-focused nature, directly impacting the profitability of national ad campaigns.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Product Page 1:</span> Focus on deep features and educational value.</li>
+                                <li><span class="font-bold">Product Page 2:</span> Focus on quick enrollment and ease of use.</li>
+                                <li><span class="font-bold">Measurable Uplift:</span> Targeting a conversion increase of 40-75% over generic pages.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="results" class="mt-16 text-center">
+                <h3 class="text-3xl font-bold text-white">✅ Achieved Outcomes</h3>
+                <p class="mt-2 mb-8 text-gray-300 max-w-2xl mx-auto">ElumenEd now possesses the digital tools required to aggressively and profitably scale their top-selling products into the national market.</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">🚀</div><p class="mt-2 font-semibold">Enabled National Scaling</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">⬆️</div><p class="mt-2 font-semibold">Increased Conversion Rate</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">💸</div><p class="mt-2 font-semibold">Lowered Cost Per Acquisition</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">🔬</div><p class="mt-2 font-semibold">Data-Ready for A/B Testing</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">📚</div><p class="mt-2 font-semibold">Strong Product Focus</p></div>
+                </div>
+
+                <p class="text-center pt-8">
+                    <a href="https://www.guerrafourcademkt.com/contact" class="inline-block bg-[#06D6A0] hover:bg-[#6EFFD8] text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                        Optimize Your Landing Pages
+                    </a>
+                </p>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-400">Integrated Marketing Success Story prepared by <a href="https://www.guerrafourcademkt.com" target="_blank" class="font-bold text-gray-300 hover:text-[#06D6A0] transition duration-300">Guerra Fourcade Marketing & Consulting</a>.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Helper function to wrap long labels for Chart.js
+        const wrapText = (text, maxLength = 16) => {
+            if (text.length <= maxLength) {
+                return text;
+            }
+            const words = text.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength && currentLine !== '') {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        // Tooltip and legend callback for Chart.js to ensure white text
+        const chartOptionsCallbacks = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: 'white' // Set legend text color to white
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: { color: 'white' }, // Set x-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                },
+                y: {
+                    ticks: { color: 'white' }, // Set y-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                }
+            }
+        };
+
+        // Data for Landing Page Development Focus doughnut chart
+        const elumenedFocusData = {
+            labels: ['Conversion Strategy', 'Copywriting & Content', 'Design & Layout', 'Integration/QA'].map(l => wrapText(l, 25)),
+            datasets: [{
+                label: 'Project Focus Areas',
+                data: [40, 30, 20, 10], // Illustrative allocation of effort
+                backgroundColor: ['#118AB2', '#FF6B6B', '#FFD166', '#06D6A0'],
+                borderColor: '#073B4C', // Border color matching background
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        };
+        new Chart(document.getElementById('elumenedFocusChart'), {
+            type: 'doughnut',
+            data: elumenedFocusData,
+            options: {
+                ...chartOptionsCallbacks,
+                cutout: '60%', // Size of the doughnut hole
+                scales: { // Remove scales for doughnut chart
+                    x: { display: false },
+                    y: { display: false }
+                }
+            }
+        });
+
+        // Data for Targeted Conversion Rate Improvement bar chart
+        const elumenedConversionData = {
+            labels: ['Previous Page Avg.', 'New Page 1 Target', 'New Page 2 Target'].map(l => wrapText(l, 30)),
+            datasets: [{
+                label: 'Conversion Rate Target (%)',
+                data: [3.5, 6.0, 5.5], // Illustrative conversion rates
+                backgroundColor: ['#FF6B6B', '#06D6A0', '#118AB2'],
+                borderColor: '#073B4C',
+                borderWidth: 2,
+                borderRadius: 5
+            }]
+        };
+        new Chart(document.getElementById('elumenedConversionChart'), {
+            type: 'bar',
+            data: elumenedConversionData,
+            options: {
+                ...chartOptionsCallbacks,
+                scales: {
+                    x: {
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: 'white', callback: (value) => value + '%' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        min: 0,
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
