@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wright Way Senior Placement - Social Media Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to match the portfolio's aesthetic */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #073B4C; /* Dark blue background */
+            color: #FFFFFF; /* White text */
+        }
+        h1, h2, h3, .stat-number {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Limit chart width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Fixed height for charts */
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body class="text-white">
+    
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+        <a href="index.html" class="inline-flex items-center text-[#06D6A0] hover:text-[#6EFFD8] transition duration-300 mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Portfolio
+        </a>
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Wright Way Senior Placement</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Social Media & Website Management for Local Authority</h2>
+            <p class="mt-2 text-md text-[#06D6A0] font-semibold">
+                <a href="https://wrightwaysp.com" target="_blank" class="hover:underline">Visit Client Website: wrightwaysp.com</a>
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">Our comprehensive social media strategy and website maintenance led to massive growth in engagement and posts published, solidifying Wright Way as a trusted resource in the senior placement space.</p>
+        </header>
+
+        <main>
+            <section id="the-challenge" class="mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-white">The Challenge & Our Solution</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">The client needed consistent, authoritative content to build trust with local families making difficult placement decisions, coupled with reliable website upkeep.</p>
+                </div>
+                <div class="bg-[#118AB2] bg-opacity-30 rounded-xl shadow-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">🚧</div>
+                        <h4 class="font-bold text-xl text-[#FF6B6B]">Problem Statement</h4>
+                        <p class="text-sm text-gray-200 mt-2">Inconsistent posting and low engagement meant the social channels were failing to establish the necessary local expertise and emotional connection.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">✅</div>
+                        <h4 class="font-bold text-xl text-[#06D6A0]">Solution Statement</h4>
+                        <p class="text-sm text-gray-200 mt-2">We implemented a themed content calendar focused on community involvement and resource sharing, paired with proactive website maintenance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="space-y-12">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-white">Key Services Delivered: Content & Reliability</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">Our work ensured high digital visibility and technical stability across all platforms for the crucial target audience (Phoenix, AZ region).</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FF6B6B] mb-4">🚀 Social Media Performance Growth (30 Days)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-200 mb-4">Our aggressive posting strategy and tailored content led to dramatic month-over-month increases in key engagement metrics on Facebook, turning followers into an active community.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Posts Engagement:</span> Increased by **863%** in the reporting period.</li>
+                                <li><span class="font-bold">Posts Reactions:</span> Increased by **1425%** in the reporting period.</li>
+                                <li><span class="font-bold">Posts Published:</span> Increased by **100%** (13 posts total, Page 3).</li>
+                            </ul>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="wrightWayGrowthChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">⚙️ Key Service Allocation</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="chart-container">
+                            <canvas id="wrightWayServiceChart"></canvas>
+                        </div>
+                        <div>
+                            <p class="text-gray-200 mb-4">Our work provided a balanced approach, dedicating effort to content creation and social strategy while ensuring the official website remained fast, secure, and up-to-date.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Content Strategy:</span> Focused on informative articles and local community events (Phoenix, AZ - Page 2).</li>
+                                <li><span class="font-bold">Facebook Dominance:</span> Prioritized the platform showing the highest immediate engagement.</li>
+                                <li><span class="font-bold">Website Maintenance:</span> Included security updates, uptime monitoring, and content refreshes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="results" class="mt-16 text-center">
+                <h3 class="text-3xl font-bold text-white">✅ Achieved Outcomes</h3>
+                <p class="mt-2 mb-8 text-gray-300 max-w-2xl mx-auto">Wright Way now benefits from a highly engaged online community and a secure digital headquarters, crucial for a business based on trust and local recommendation.</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">🗣️</div><p class="mt-2 font-semibold">863% Engagement Lift</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">👑</div><p class="mt-2 font-semibold">Local Authority Established</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">💻</div><p class="mt-2 font-semibold">Website Stability</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">👀</div><p class="mt-2 font-semibold">38% Page View Increase</p></div>
+                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg flex flex-col items-center text-center"><div class="text-4xl">🤝</div><p class="mt-2 font-semibold">Stronger Community Ties</p></div>
+                </div>
+
+                <p class="text-center pt-8">
+                    <a href="https://www.guerrafourcademkt.com/contact" class="inline-block bg-[#06D6A0] hover:bg-[#6EFFD8] text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                        Discuss Your Social Media Strategy
+                    </a>
+                </p>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-400">Integrated Marketing Success Story prepared by <a href="https://www.guerrafourcademkt.com" target="_blank" class="font-bold text-gray-300 hover:text-[#06D6A0] transition duration-300">Guerra Fourcade Marketing & Consulting</a>.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Helper function to wrap long labels for Chart.js
+        const wrapText = (text, maxLength = 16) => {
+            if (text.length <= maxLength) {
+                return text;
+            }
+            const words = text.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength && currentLine !== '') {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        // Tooltip and legend callback for Chart.js to ensure white text
+        const chartOptionsCallbacks = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        },
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.y !== null) {
+                                label += context.parsed.y + '%';
+                            }
+                            return label;
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: 'white' // Set legend text color to white
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: { color: 'white' }, // Set x-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                },
+                y: {
+                    ticks: { color: 'white' }, // Set y-axis tick color to white
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                }
+            }
+        };
+
+        // Data for Social Media Performance Growth Bar Chart
+        const wrightWayGrowthData = {
+            labels: ['Posts Engagement', 'Posts Reactions', 'Page Views', 'Posts Published'].map(l => wrapText(l, 25)),
+            datasets: [{
+                label: '30-Day Growth Since Previous Period',
+                data: [863, 1425, 38, 100], // Data pulled from PDF (Pages 1 & 3)
+                backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2'],
+                borderColor: '#073B4C', 
+                borderWidth: 2,
+                borderRadius: 5
+            }]
+        };
+        new Chart(document.getElementById('wrightWayGrowthChart'), {
+            type: 'bar',
+            data: wrightWayGrowthData,
+            options: {
+                ...chartOptionsCallbacks,
+                scales: {
+                    x: {
+                        ticks: { color: 'white' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: 'white', callback: (value) => value + '%' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        min: 0,
+                    }
+                }
+            }
+        });
+
+        // Data for Service Allocation Doughnut Chart
+        const wrightWayServiceData = {
+            labels: ['Content Strategy & Creation', 'Social Media Management', 'Website Maintenance', 'Performance Reporting'].map(l => wrapText(l, 25)),
+            datasets: [{
+                label: 'Service Allocation',
+                data: [40, 30, 15, 15], // Illustrative allocation of effort
+                backgroundColor: ['#FFD166', '#118AB2', '#06D6A0', '#FF6B6B'],
+                borderColor: '#073B4C', // Border color matching background
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        };
+        new Chart(document.getElementById('wrightWayServiceChart'), {
+            type: 'doughnut',
+            data: wrightWayServiceData,
+            options: {
+                ...chartOptionsCallbacks,
+                cutout: '60%', // Size of the doughnut hole
+                scales: { // Remove scales for doughnut chart
+                    x: { display: false },
+                    y: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
