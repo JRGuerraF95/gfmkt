@@ -86,6 +86,7 @@
                             <ul class="list-disc list-inside text-gray-300 space-y-2">
                                 <li>Posts Engagement: Increased by <span class="font-bold">863%</span> in the reporting period.</li>
                                 <li>Posts Reactions: Increased by <span class="font-bold">1425%</span> in the reporting period.</li>
+                                <li>Page Views: Increased by <span class="font-bold">38%</span> in the reporting period.</li>
                                 <li>Posts Published: Increased by <span class="font-bold">100%</span> (13 posts total, Page 3).</li>
                             </ul>
                         </div>
@@ -96,17 +97,18 @@
                 </div>
 
                 <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
-                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">⚙️ Key Service Allocation</h4>
+                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">⚙️ Key Service Allocation (24 Monthly Hours)</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="chart-container">
                             <canvas id="wrightWayServiceChart"></canvas>
                         </div>
                         <div>
-                            <p class="text-gray-200 mb-4">Our work provided a balanced approach, dedicating effort to content creation and social strategy while ensuring the official website remained fast, secure, and up-to-date.</p>
+                            <p class="text-gray-200 mb-4">Our monthly allocation focuses primarily on direct engagement and maintaining platform health, with significant dedicated time for technical upkeep and ensuring all performance metrics are captured.</p>
                             <ul class="list-disc list-inside text-gray-300 space-y-2">
-                                <li><span class="font-bold">Content Strategy:</span> Focused on informative articles and local community events (Phoenix, AZ - Page 2).</li>
-                                <li><span class="font-bold">Facebook Dominance:</span> Prioritized the platform showing the highest immediate engagement.</li>
-                                <li><span class="font-bold">Website Maintenance:</span> Included security updates, uptime monitoring, and content refreshes.</li>
+                                <li><span class="font-bold">Social Media Management (50%):</span> 12 hours dedicated to community interaction and scheduling.</li>
+                                <li><span class="font-bold">Website Maintenance (25%):</span> 6 hours ensuring security, speed, and content stability.</li>
+                                <li><span class="font-bold">Performance Reporting (17%):</span> 4 hours for in-depth data analysis and report generation.</li>
+                                <li><span class="font-bold">Content Strategy & Creation (8%):</span> 2 hours focused on thematic planning and asset preparation.</li>
                             </ul>
                         </div>
                     </div>
@@ -177,13 +179,21 @@
                         },
                         label: function(context) {
                             let label = context.dataset.label || '';
-                            if (label) {
-                                label += ': ';
+                            if (context.chart.config.type === 'doughnut') {
+                                // FIX: Display total hours and percentage for the doughnut chart segment
+                                const hours = [2, 12, 6, 4]; // Total hours for each segment: [Content, Social Media, Website, Reporting]
+                                const index = context.dataIndex;
+                                return `Hours: ${hours[index]} (${context.raw}%)`;
+                            } else {
+                                // For Bar Chart: Show Dataset Label and the Y-value percentage
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y + '%';
+                                }
+                                return label;
                             }
-                            if (context.parsed.y !== null) {
-                                label += context.parsed.y + '%';
-                            }
-                            return label;
                         }
                     }
                 },
@@ -207,13 +217,14 @@
             }
         };
 
-        // Data for Social Media Performance Growth Bar Chart
+        // Data for Social Media Performance Growth Bar Chart (UPDATED)
         const wrightWayGrowthData = {
-            labels: ['Posts Engagement', 'Posts Reactions', 'Page Views', 'Posts Published'].map(l => wrapText(l, 25)),
+            // Only showing the high-growth metrics for better visual representation
+            labels: ['Posts Engagement', 'Posts Reactions'].map(l => wrapText(l, 25)), 
             datasets: [{
                 label: '30-Day Growth Since Previous Period',
-                data: [863, 1425, 38, 100], // Data pulled from PDF (Pages 1 & 3)
-                backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2'],
+                data: [863, 1425], // Engagement (863%) and Reactions (1425%)
+                backgroundColor: ['#FF6B6B', '#FFD166'], // Only two colors needed
                 borderColor: '#073B4C', 
                 borderWidth: 2,
                 borderRadius: 5
@@ -241,9 +252,10 @@
         // Data for Service Allocation Doughnut Chart
         const wrightWayServiceData = {
             labels: ['Content Strategy & Creation', 'Social Media Management', 'Website Maintenance', 'Performance Reporting'].map(l => wrapText(l, 25)),
+            // UPDATED DATA: [8.33%, 50%, 25%, 16.67%] rounded to nearest integer
             datasets: [{
                 label: 'Service Allocation',
-                data: [40, 30, 15, 15], // Illustrative allocation of effort
+                data: [8, 50, 25, 17], 
                 backgroundColor: ['#FFD166', '#118AB2', '#06D6A0', '#FF6B6B'],
                 borderColor: '#073B4C', // Border color matching background
                 borderWidth: 4,
