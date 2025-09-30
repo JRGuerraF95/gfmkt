@@ -84,9 +84,9 @@
                         <div>
                             <p class="text-gray-200 mb-4">Our aggressive posting strategy and tailored content led to dramatic month-over-month increases in key engagement metrics on Facebook, turning followers into an active community.</p>
                             <ul class="list-disc list-inside text-gray-300 space-y-2">
-                                <li><span class="font-bold">Posts Engagement:</span> Increased by **863%** in the reporting period.</li>
-                                <li><span class="font-bold">Posts Reactions:</span> Increased by **1425%** in the reporting period.</li>
-                                <li><span class="font-bold">Posts Published:</span> Increased by **100%** (13 posts total, Page 3).</li>
+                                <li>Posts Engagement: Increased by <span class="font-bold">863%</span> in the reporting period.</li>
+                                <li>Posts Reactions: Increased by <span class="font-bold">1425%</span> in the reporting period.</li>
+                                <li>Posts Published: Increased by <span class="font-bold">100%</span> (13 posts total, Page 3).</li>
                             </ul>
                         </div>
                         <div class="chart-container">
@@ -154,7 +154,9 @@
                     currentLine = '';
                 }
                 currentLine += word + ' ';
-            });
+            }
+        
+            );
             lines.push(currentLine.trim());
             return lines;
         };
@@ -253,6 +255,12 @@
             data: wrightWayServiceData,
             options: {
                 ...chartOptionsCallbacks,
+                plugins: { // Hiding the legend to prevent label overlap
+                    ...chartOptionsCallbacks.plugins,
+                    legend: {
+                        display: false
+                    }
+                },
                 cutout: '60%', // Size of the doughnut hole
                 scales: { // Remove scales for doughnut chart
                     x: { display: false },
