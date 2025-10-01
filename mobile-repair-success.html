@@ -186,6 +186,17 @@
                    </div>
             </section>
 
+            <!-- NEW CALL TO ACTION SECTION -->
+            <section class="mt-16 text-center bg-white bg-opacity-10 p-10 rounded-xl shadow-2xl">
+                <h3 class="text-4xl font-black text-[#06D6A0] mb-4">Ready for Your Business to Scale?</h3>
+                <p class="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                    The strategies that drove success for the Mobile Repair Business can be customized to accelerate your growth. Let's discuss a plan for your operational efficiency and client acquisition.
+                </p>
+                <a href="https://www.guerrafourcademkt.com/contact" class="inline-block bg-[#FFD166] hover:bg-[#FF6B6B] text-[#073B4C] font-bold text-lg py-4 px-10 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Schedule a Consultation
+                </a>
+            </section>
+
         </main>
 
         <footer class="text-center mt-16 pt-8 border-t border-gray-700">
@@ -366,12 +377,12 @@
                 scales: {
                     // This is a vertical bar chart (categories on X, values on Y)
                     x: {
-                        // We want the labels (Average Engagement...) to show up here.
-                        ticks: { color: 'white' }, // Keep this to color the ticks
+                        // FIX: Show the categories (labels) on the X-axis
+                        ticks: { color: 'white' },
                         grid: { color: 'rgba(255, 255, 255, 0.1)' }
                     },
                     y: {
-                        // We want the percentage numbers (0, 10, 20...) to show up here.
+                        // FIX: Show the percentage numbers (scale) on the Y-axis
                         ticks: { color: 'white', callback: function(value) { return value + '%'; } },
                         beginAtZero: true,
                         grid: { color: 'rgba(255, 255, 255, 0.1)' }
