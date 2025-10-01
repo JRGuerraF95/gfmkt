@@ -38,6 +38,10 @@
 <body class="text-white">
     
     <div class="container mx-auto p-4 md:p-8">
+        <a href="index.html" class="inline-flex items-center text-[#06D6A0] hover:text-[#6EFFD8] transition duration-300 mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Portfolio
+        </a>
 
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">EDDM Mailer Success Story</h1>
@@ -99,94 +103,115 @@
                    </div>
             </section>
 
+             <!-- NEW CALL TO ACTION SECTION -->
+            <section class="mt-16 text-center bg-white bg-opacity-10 p-10 rounded-xl shadow-2xl">
+                <h3 class="text-4xl font-black text-[#06D6A0] mb-4">Ready to Amplify Your Local Reach?</h3>
+                <p class="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                    Direct mail is still a powerful local marketing tool. Let's design a high-impact print campaign that drives leads directly to your business.
+                </p>
+                <a href="https://www.guerrafourcademkt.com/contact" class="inline-block bg-[#FFD166] hover:bg-[#FF6B6B] text-[#073B4C] font-bold text-lg py-4 px-10 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Discuss Print Design
+                </a>
+            </section>
+
         </main>
 
         <footer class="text-center mt-16 pt-8 border-t border-gray-700">
-            <p class="text-gray-400">EDDM Mailer Success Story prepared by <span class="font-bold">Guerra Fourcade Marketing & Consulting</span>.</p>
+            <p class="text-gray-400">EDDM Mailer Success Story prepared by <a href="https://www.guerrafourcademkt.com" target="_blank" class="font-bold text-gray-300 hover:text-[#06D6A0] transition duration-300">Guerra Fourcade Marketing & Consulting</a>.</p>
         </footer>
 
     </div>
 
     <script>
-        // Helper function to wrap long labels for Chart.js
-        const wrapText = (text, maxLength = 16) => {
-            if (text.length <= maxLength) {
-                return text;
-            }
-            const words = text.split(' ');
-            let lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + word).length > maxLength && currentLine !== '') {
-                    lines.push(currentLine.trim());
-                    currentLine = '';
+        window.onload = function() {
+            // Helper function to wrap long labels for Chart.js
+            const wrapText = (text, maxLength = 16) => {
+                if (text.length <= maxLength) {
+                    return text;
                 }
-                currentLine += word + ' ';
-            });
-            lines.push(currentLine.trim());
-            return lines;
-        };
+                const words = text.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxLength && currentLine !== '') {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            };
 
-        // Tooltip and legend callback for Chart.js to ensure white text
-        const chartOptionsCallbacks = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                                return label.join(' ');
-                            } else {
-                                return label;
+            // Tooltip and legend callback for Chart.js to ensure white text
+            const chartOptionsCallbacks = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            },
+                            label: function(context) {
+                                // For Doughnut Chart (Design Process): Show percentage of allocation
+                                if (context.chart.config.type === 'doughnut') {
+                                    return `${context.raw}% of Design Focus`;
+                                } else {
+                                    return `${context.raw}`; // Default label for other charts
+                                }
                             }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: 'white' // Set legend text color to white
                         }
                     }
                 },
-                legend: {
-                    labels: {
-                        color: 'white' // Set legend text color to white
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        ticks: { color: 'white' }, // Set x-axis tick color to white
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                    },
+                    y: {
+                        ticks: { color: 'white' }, // Set y-axis tick color to white
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
                     }
                 }
-            },
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    ticks: { color: 'white' }, // Set x-axis tick color to white
-                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
-                },
-                y: {
-                    ticks: { color: 'white' }, // Set y-axis tick color to white
-                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+            };
+
+            // Data for "Mailer Design Process" doughnut chart
+            const designProcessData = {
+                labels: ['Initial Concept', 'Revisions', 'Final Delivery'].map(l => wrapText(l, 25)),
+                datasets: [{
+                    label: 'Project Phases',
+                    data: [40, 20, 40], // Allocation of time
+                    backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0'],
+                    borderColor: '#073B4C',
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            };
+            new Chart(document.getElementById('designProcessChart'), {
+                type: 'doughnut',
+                data: designProcessData,
+                options: {
+                    ...chartOptionsCallbacks,
+                    cutout: '60%', // Size of the doughnut hole
+                    scales: { // Remove scales for doughnut chart
+                        x: { display: false },
+                        y: { display: false }
+                    }
                 }
-            }
+            });
         };
-        
-        // Data for "Mailer Design Process" bar chart
-        const designProcessData = {
-            labels: ['Initial Concept', 'Revisions', 'Final Delivery'].map(l => wrapText(l)),
-            datasets: [{
-                label: 'Project Phases (Illustrative)',
-                data: [40, 20, 40], // Illustrative time allocation
-                backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0'],
-                borderColor: '#073B4C',
-                borderWidth: 2,
-                borderRadius: 5
-            }]
-        };
-        new Chart(document.getElementById('designProcessChart'), {
-            type: 'doughnut',
-            data: designProcessData,
-            options: {
-                ...chartOptionsCallbacks,
-                cutout: '60%', // Size of the doughnut hole
-                scales: { // Remove scales for doughnut chart
-                    x: { display: false },
-                    y: { display: false }
-                }
-            }
-        });
     </script>
 </body>
 </html>
