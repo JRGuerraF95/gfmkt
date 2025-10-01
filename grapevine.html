@@ -10,9 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles to match the aesthetic */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #073B4C;
+            background-color: #073B4C; /* Dark blue background */
+            color: #FFFFFF; /* White text */
         }
         h1, h2, h3, .stat-number {
             font-family: 'Montserrat', sans-serif;
@@ -20,19 +22,19 @@
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 600px; /* Limit chart width */
             margin-left: auto;
             margin-right: auto;
-            height: 350px;
+            height: 350px; /* Fixed height for charts */
             max-height: 400px;
         }
         @media (max-width: 768px) {
             .chart-container {
-                height: 300px;
+                height: 300px; /* Adjust height for smaller screens */
             }
         }
         .flow-arrow {
-            color: #FFD166;
+            color: #FFD166; /* Accent color for arrows */
             font-size: 2rem;
             line-height: 1;
         }
@@ -41,121 +43,108 @@
 <body class="text-white">
     
     <div class="container mx-auto p-4 md:p-8">
+        <a href="index.html" class="inline-flex items-center text-[#06D6A0] hover:text-[#6EFFD8] transition duration-300 mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Volver al Portafolio
+        </a>
 
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Estrategia de Marketing</h1>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Grapevine Cupcuterie</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Grapevine Cupcuterie - Crecimiento y Automatización</h2>
             <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">Un plan visual para aumentar la visibilidad, optimizar ventas y construir una marca sólida y reconocida en Tucson.</p>
+            <a href="https://www.grapevinecupcuterie.com" target="_blank" class="mt-4 inline-block text-sm font-semibold text-gray-400 hover:text-white transition duration-300 underline">
+                Visitar Sitio Web del Cliente: grapevinecupcuterie.com
+            </a>
         </header>
 
         <main>
             <section id="pilares" class="mb-16">
                 <div class="text-center mb-8">
-                    <h3 class="text-3xl font-bold text-white">Los 4 Pilares del Crecimiento</h3>
-                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">Nuestra estrategia se centra en cuatro áreas clave interconectadas para garantizar un crecimiento integral y sostenible.</p>
+                    <h3 class="text-3xl font-bold text-white">El Reto y la Solución Estratégica</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">La marca necesitaba una hoja de ruta clara para pasar de un negocio basado en contactos a una operación digital escalable.</p>
                 </div>
                 <div class="bg-[#118AB2] bg-opacity-30 rounded-xl shadow-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div class="chart-container h-80 md:h-96">
-                        <canvas id="pilaresChart"></canvas>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">🚧</div>
+                        <h4 class="font-bold text-xl text-[#FF6B6B]">El Reto Principal</h4>
+                        <p class="text-sm text-gray-200 mt-2">Dependencia en pedidos manuales, baja visibilidad orgánica y necesidad de profesionalizar el proceso de venta.</p>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
-                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                            <div class="text-4xl mb-2">🏗️</div>
-                            <h4 class="font-bold text-xl text-[#FF6B6B]">Fundación Online</h4>
-                            <p class="text-sm text-gray-200">Crear una presencia digital profesional y fácil de encontrar.</p>
-                        </div>
-                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                            <div class="text-4xl mb-2">📈</div>
-                            <h4 class="font-bold text-xl text-[#FFD166]">Visibilidad Orgánica</h4>
-                            <p class="text-sm text-gray-200">Maximizar el alcance sin depender únicamente de anuncios.</p>
-                        </div>
-                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                            <div class="text-4xl mb-2">🚀</div>
-                            <h4 class="font-bold text-xl text-[#06D6A0]">Proceso de Venta</h4>
-                            <p class="text-sm text-gray-200">Convertir consultas en ventas de forma eficiente y medible.</p>
-                        </div>
-                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
-                            <div class="text-4xl mb-2">🤝</div>
-                            <h4 class="font-bold text-xl text-white">Engagement Comunitario</h4>
-                            <p class="text-sm text-gray-200">Conectar con la audiencia local y crear alianzas.</p>
-                        </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg flex flex-col items-center text-center">
+                        <div class="text-4xl mb-2">✅</div>
+                        <h4 class="font-bold text-xl text-[#FFD166]">Nuestra Solución</h4>
+                        <p class="text-sm text-gray-200 mt-2">Implementamos cuatro pilares clave: presencia web, SEO local, automatización de ventas (CRM) y engagement comunitario.</p>
                     </div>
                 </div>
             </section>
 
             <section id="iniciativas" class="space-y-12">
                 <div class="text-center">
-                    <h3 class="text-3xl font-bold text-white">Iniciativas Clave y Tácticas</h3>
-                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">Así es como daremos vida a cada pilar con acciones concretas.</p>
+                    <h3 class="text-3xl font-bold text-white">Asignación de Enfoque Estratégico</h3>
+                    <p class="mt-2 text-gray-300 max-w-2xl mx-auto">La distribución de los recursos para construir una base sólida y eficiente.</p>
                 </div>
 
                 <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
-                    <h4 class="text-2xl font-bold text-[#FF6B6B] mb-4">🌐 Desarrollo Web y SEO</h4>
+                    <h4 class="text-2xl font-bold text-[#FF6B6B] mb-4">🌐 Desarrollo Web y SEO Local</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <p class="text-gray-200 mb-4">El sitio web es la piedra angular de la presencia digital. Priorizaremos las páginas que generan más valor y confianza, optimizadas para que Google las encuentre y posicione.</p>
+                            <p class="text-gray-200 mb-4">El sitio web y el SEO local en Tucson fueron prioridades para garantizar que los clientes potenciales encontraran la marca de forma orgánica y tuvieran una experiencia de pedido fluida.</p>
                             <ul class="list-disc list-inside text-gray-300 space-y-2">
-                                <li><span class="font-bold">Sitio Web Profesional:</span> Diseño atractivo y funcional en WordPress.</li>
-                                <li><span class="font-bold">SEO Local y General:</span> Optimización para búsquedas en Tucson.</li>
-                                <li><span class="font-bold">Perfil de Google Business:</span> Para aparecer en mapas y búsquedas locales.</li>
+                                <li><span class="font-bold">Sitio Web Profesional:</span> Diseño atractivo en WordPress, optimizado para pedidos.</li>
+                                <li><span class="font-bold">SEO Local:</span> Enfoque en términos clave de charcutería y catering en la zona.</li>
+                                <li><span class="font-bold">Google Business Profile:</span> Optimización para aparecer en búsquedas de mapas.</li>
                             </ul>
                         </div>
                         <div class="chart-container">
-                            <canvas id="webSeoChart"></canvas>
+                            <canvas id="pilaresChart"></canvas>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
-                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">📢 Publicidad Digital</h4>
+                    <h4 class="text-2xl font-bold text-[#FFD166] mb-4">⚙️ Tácticas de Venta y Automatización (CRM)</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                         <div class="chart-container">
-                            <canvas id="adsChart"></canvas>
+                        <div class="chart-container">
+                           <canvas id="adsChart"></canvas>
                         </div>
                         <div>
-                            <p class="text-gray-200 mb-4">Con un enfoque estratégico y un presupuesto controlado, lanzaremos campañas para acelerar la visibilidad y capturar clientes potenciales de alta calidad tanto en redes sociales como en búsquedas de Google.</p>
-                             <ul class="list-disc list-inside text-gray-300 space-y-2">
-                                <li><span class="font-bold">Meta Ads (Facebook/Instagram):</span> Campañas de remarketing y generación de leads para eventos.</li>
-                                <li><span class="font-bold">Google Ads:</span> Campañas de búsqueda para capturar intenciones de compra activas.</li>
-                                <li><span class="font-bold">Enfoque en ROI:</span> Maximizar cada dólar invertido.</li>
+                            <p class="text-gray-200 mb-4">Implementamos un embudo de ventas digital simple (CRM) para que la dueña pudiera manejar el alto volumen de consultas de eventos y catering de manera organizada y eficiente, mejorando la tasa de conversión.</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li><span class="font-bold">Pipeline de Ventas:</span> Seguimiento automatizado desde la consulta hasta la reserva.</li>
+                                <li><span class="font-bold">Formularios Optimizados:</span> Recolección de datos clave para presupuestos de catering.</li>
+                                <li><span class="font-bold">Estrategia de Contenido:</span> Creación de contenido que impulsa el proceso de venta.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
-                    <h4 class="text-2xl font-bold text-[#06D6A0] mb-4">⚙️ Automatización del Proceso de Venta</h4>
-                    <p class="text-gray-200 mb-6 text-center max-w-3xl mx-auto">Implementaremos un embudo de ventas (pipeline) en un CRM para organizar y dar seguimiento a cada consulta. Esto asegura que ninguna oportunidad se pierda y mejora la conversión de consulta a venta.</p>
+                    <h4 class="text-2xl font-bold text-[#06D6A0] mb-4">🤝 Engagement Comunitario y Redes Sociales</h4>
+                    <p class="text-gray-200 mb-6 text-center max-w-3xl mx-auto">El arte de la charcutería es visual y local. Priorizamos alianzas estratégicas y contenido que genere confianza y antojo en la comunidad de Tucson.</p>
                     <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 overflow-x-auto pb-4">
                         <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
-                            <div class="text-3xl">📥</div>
-                            <h5 class="font-bold mt-2">Nueva Consulta</h5>
+                            <div class="text-3xl">🥂</div>
+                            <h5 class="font-bold mt-2">Alianzas Locales</h5>
                         </div>
                         <div class="flow-arrow transform md:-rotate-0">→</div>
                         <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
-                            <div class="text-3xl">📝</div>
-                            <h5 class="font-bold mt-2">Cotización Enviada</h5>
+                            <div class="text-3xl">📸</div>
+                            <h5 class="font-bold mt-2">Contenido Visual</h5>
                         </div>
                         <div class="flow-arrow transform md:-rotate-0">→</div>
                         <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
-                             <div class="text-3xl">📞</div>
-                            <h5 class="font-bold mt-2">Seguimiento</h5>
+                            <div class="text-3xl">💖</div>
+                            <h5 class="font-bold mt-2">Interacción Diaria</h5>
                         </div>
                         <div class="flow-arrow transform md:-rotate-0">→</div>
                         <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
-                             <div class="text-3xl">✅</div>
-                            <h5 class="font-bold mt-2">Reserva Confirmada</h5>
-                        </div>
-                         <div class="flow-arrow transform md:-rotate-0">→</div>
-                        <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
-                            <div class="text-3xl">⭐</div>
-                            <h5 class="font-bold mt-2">Testimonio</h5>
+                            <div class="text-3xl">📣</div>
+                            <h5 class="font-bold mt-2">Eventos y Clases</h5>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="bg-white bg-opacity-10 p-6 md:p-8 rounded-xl shadow-lg">
-                    <h4 class="text-2xl font-bold text-white mb-4">✍️ Marketing de Contenidos y Engagement</h4>
+                    <h4 class="text-2xl font-bold text-white mb-4">✍️ Marketing de Contenidos y Estrategia</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-200 mb-4">El contenido es clave para conectar con la audiencia, demostrar experiencia y mantener la marca relevante. Crearemos contenido valioso y bilingüe para atraer y fidelizar clientes.</p>
@@ -173,172 +162,234 @@
             </section>
             
             <section id="resultados" class="mt-16 text-center">
-                 <h3 class="text-3xl font-bold text-white">✅ Resultados Esperados</h3>
-                 <p class="mt-2 mb-8 text-gray-300 max-w-2xl mx-auto">Estas iniciativas están diseñadas para producir resultados medibles y un impacto real en el negocio.</p>
-                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">🌐</div><p class="mt-2 font-semibold">Más Tráfico Web</p></div>
-                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">📥</div><p class="mt-2 font-semibold">Más Consultas</p></div>
-                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">💸</div><p class="mt-2 font-semibold">Mejor Conversión</p></div>
-                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">📈</div><p class="mt-2 font-semibold">Mayor Visibilidad</p></div>
-                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">💰</div><p class="mt-2 font-semibold">Más Ingresos</p></div>
-                    <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">🏆</div><p class="mt-2 font-semibold">Marca Establecida</p></div>
-                 </div>
+                   <h3 class="text-3xl font-bold text-white">✅ Resultados y Proyección</h3>
+                   <p class="mt-2 mb-8 text-gray-300 max-w-2xl mx-auto">La estrategia integral asegura un crecimiento sostenido y un aumento en la eficiencia operativa.</p>
+                   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">🔎</div><p class="mt-2 font-semibold">Mejor Posicionamiento en Google</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">⏱️</div><p class="mt-2 font-semibold">Tiempo Ahorrado en Ventas</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">💰</div><p class="mt-2 font-semibold">Mayor Valor Promedio de Venta</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">📍</div><p class="mt-2 font-semibold">Liderazgo Local</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">📈</div><p class="mt-2 font-semibold">Aumento de Pedidos Web</p></div>
+                        <div class="bg-[#118AB2] bg-opacity-50 p-4 rounded-lg"><div class="text-4xl">🎉</div><p class="mt-2 font-semibold">Capacidad de Escalamiento</p></div>
+                   </div>
+            </section>
+
+            <!-- NEW CALL TO ACTION SECTION -->
+            <section class="mt-16 text-center bg-white bg-opacity-10 p-10 rounded-xl shadow-2xl">
+                <h3 class="text-4xl font-black text-[#06D6A0] mb-4">¿Listo para Saborear el Éxito?</h3>
+                <p class="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                    Si tu negocio necesita una estrategia de marketing integral que combine visibilidad, ventas y automatización, estamos listos para ayudarte.
+                </p>
+                <a href="https://www.guerrafourcademkt.com/contact" class="inline-block bg-[#FFD166] hover:bg-[#FF6B6B] text-[#073B4C] font-bold text-lg py-4 px-10 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Agenda una Consulta
+                </a>
             </section>
 
         </main>
 
         <footer class="text-center mt-16 pt-8 border-t border-gray-700">
-            <p class="text-gray-400">Infografía de Estrategia de Marketing preparada por <span class="font-bold">Guerra Fourcade Marketing & Consulting</span>.</p>
+            <p class="text-gray-400">Infografía de Estrategia de Marketing preparada por <a href="https://www.guerrafourcademkt.com" target="_blank" class="font-bold text-gray-300 hover:text-[#06D6A0] transition duration-300">Guerra Fourcade Marketing & Consulting</a>.</p>
         </footer>
 
     </div>
 
     <script>
-        const tooltipCallback = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                              return label.join(' ');
-                            } else {
-                              return label;
+        window.onload = function() {
+            // Helper function to wrap long labels for Chart.js
+            function wrapText(text, maxLength = 16) {
+                if (text.length <= maxLength) {
+                    return text;
+                }
+                const words = text.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxLength && currentLine !== '') {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+
+            // Tooltip and legend callback for Chart.js to ensure white text
+            const chartOptionsCallbacks = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            },
+                            label: function(context) {
+                                // For Doughnut Chart: Show percentage of focus
+                                if (context.chart.config.type === 'doughnut') {
+                                    return `${context.raw}% de Enfoque`;
+                                } else {
+                                    // For Bar Chart: Show the actual percentage value
+                                    if (context.chart.id === 'adsChart') {
+                                        return `${context.raw}% de Presupuesto`;
+                                    } else if (context.chart.id === 'contentChart') {
+                                        return `${context.raw} Items`;
+                                    }
+                                    return `${context.raw} Prioridad`; // Default for webSeoChart
+                                }
                             }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: 'white' // Set legend text color to white
                         }
                     }
                 },
-                legend: {
-                    labels: {
-                        color: 'white'
-                    }
-                }
-            }
-        };
-
-        function wrapText(text, maxLength = 16) {
-            if (text.length <= maxLength) {
-                return text;
-            }
-            const words = text.split(' ');
-            let lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + word).length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = '';
-                }
-                currentLine += word + ' ';
-            });
-            lines.push(currentLine.trim());
-            return lines;
-        }
-
-        const pilaresData = {
-            labels: ['Fundación Online', 'Visibilidad Orgánica', 'Proceso de Venta', 'Engagement Comunitario'].map(l => wrapText(l, 25)),
-            datasets: [{
-                label: 'Pilares Estratégicos',
-                data: [25, 25, 25, 25],
-                backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#FFFFFF'],
-                borderColor: '#073B4C',
-                borderWidth: 4,
-                hoverOffset: 4
-            }]
-        };
-        new Chart(document.getElementById('pilaresChart'), {
-            type: 'doughnut',
-            data: pilaresData,
-            options: {
-                ...tooltipCallback,
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: '60%',
-            }
-        });
-
-        const webSeoData = {
-            labels: ['Página de Inicio', 'Servicios y Ofertas', 'Catering para Eventos', 'Nuestra Historia', 'Contacto y Pedidos'].map(l => wrapText(l)),
-            datasets: [{
-                label: 'Prioridad de Páginas Web',
-                data: [100, 95, 90, 75, 98],
-                backgroundColor: '#FF6B6B',
-                borderColor: '#FF8A8A',
-                borderWidth: 2,
-                borderRadius: 5
-            }]
-        };
-        new Chart(document.getElementById('webSeoChart'), {
-            type: 'bar',
-            data: webSeoData,
-            options: {
-                ...tooltipCallback,
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                 scales: {
-                    x: { ticks: { color: 'white' } },
-                    y: { ticks: { color: 'white' } }
-                }
-            }
-        });
-        
-        const adsData = {
-            labels: ['Enfoque de Campañas'],
-            datasets: [
-                {
-                    label: 'Meta Ads (Remarketing, Leads)',
-                    data: [60],
-                    backgroundColor: '#FFD166',
-                    borderRadius: 5
-                },
-                {
-                    label: 'Google Ads (Búsqueda Local)',
-                    data: [40],
-                    backgroundColor: '#FFE399',
-                    borderRadius: 5
-                }
-            ]
-        };
-        new Chart(document.getElementById('adsChart'), {
-            type: 'bar',
-            data: adsData,
-            options: {
-                 ...tooltipCallback,
-                indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    x: { stacked: true, ticks: { color: 'white' } },
-                    y: { stacked: true, ticks: { color: 'white' } }
+                    x: {
+                        ticks: { color: 'white' }, // Set x-axis tick color to white
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                    },
+                    y: {
+                        ticks: { color: 'white' }, // Set y-axis tick color to white
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
+                    }
                 }
-            }
-        });
+            };
 
-        const contentData = {
-            labels: ['Posts de Blog', 'Newsletters'].map(l => wrapText(l)),
-            datasets: [{
-                label: 'Contenido Mensual Planificado',
-                data: [3, 6],
-                backgroundColor: ['#06D6A0', '#6EFFD8'],
-                borderColor: '#FFFFFF',
-                borderWidth: 2,
-                borderRadius: 5,
-            }]
-        };
-        new Chart(document.getElementById('contentChart'), {
-            type: 'bar',
-            data: contentData,
-            options: {
-                ...tooltipCallback,
-                responsive: true,
-                maintainAspectRatio: false,
-                 scales: {
-                    x: { ticks: { color: 'white' } },
-                    y: { beginAtZero: true, ticks: { color: 'white' } }
+            // 1. Pilares Estratégicos (Doughnut Chart - Allocation)
+            const pilaresData = {
+                labels: ['Fundación Online', 'Visibilidad Orgánica', 'Proceso de Venta', 'Engagement Comunitario'].map(l => wrapText(l, 25)),
+                datasets: [{
+                    label: 'Pilares Estratégicos',
+                    data: [35, 30, 20, 15], // Adjusted illustrative data for realistic strategy mix
+                    backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#FFFFFF'],
+                    borderColor: '#073B4C',
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            };
+            new Chart(document.getElementById('pilaresChart'), {
+                type: 'doughnut',
+                data: pilaresData,
+                options: {
+                    ...chartOptionsCallbacks,
+                    cutout: '60%',
+                    scales: { 
+                        x: { display: false },
+                        y: { display: false }
+                    }
                 }
-            }
-        });
+            });
+
+            // 2. Prioridad de Páginas Web (Bar Chart - Priorities)
+            const webSeoData = {
+                labels: ['Página de Inicio', 'Servicios y Ofertas', 'Catering para Eventos', 'Nuestra Historia', 'Contacto y Pedidos'].map(l => wrapText(l)),
+                datasets: [{
+                    label: 'Nivel de Prioridad (0-100)',
+                    data: [100, 95, 90, 75, 98],
+                    backgroundColor: '#FF6B6B',
+                    borderColor: '#FF8A8A',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            };
+            new Chart(document.getElementById('webSeoChart'), {
+                type: 'bar',
+                data: webSeoData,
+                options: {
+                    ...chartOptionsCallbacks,
+                    indexAxis: 'y', // Horizontal bars
+                    scales: {
+                        x: { 
+                            ticks: { color: 'white', callback: function(value) { return value + '%'; } },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        y: { 
+                            ticks: { color: 'white' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' } 
+                        }
+                    }
+                }
+            });
+            
+            // 3. Publicidad Digital (Stacked Bar Chart)
+            const adsData = {
+                labels: ['Enfoque de Campañas'],
+                datasets: [
+                    {
+                        label: 'Meta Ads (Remarketing, Leads)',
+                        data: [60],
+                        backgroundColor: '#FFD166',
+                        borderRadius: 5
+                    },
+                    {
+                        label: 'Google Ads (Búsqueda Local)',
+                        data: [40],
+                        backgroundColor: '#FFE399',
+                        borderRadius: 5
+                    }
+                ]
+            };
+            new Chart(document.getElementById('adsChart'), {
+                type: 'bar',
+                data: adsData,
+                options: {
+                     ...chartOptionsCallbacks,
+                    indexAxis: 'y',
+                    scales: {
+                        x: { 
+                            stacked: true, 
+                            ticks: { color: 'white', callback: function(value) { return value + '%'; } },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' } 
+                        },
+                        y: { 
+                            stacked: true, 
+                            ticks: { color: 'white' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' } 
+                        }
+                    }
+                }
+            });
+
+            // 4. Contenido Mensual (Vertical Bar Chart)
+            const contentData = {
+                labels: ['Posts de Blog', 'Newsletters'].map(l => wrapText(l)),
+                datasets: [{
+                    label: 'Contenido Mensual Planificado',
+                    data: [3, 6],
+                    backgroundColor: ['#06D6A0', '#6EFFD8'],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                }]
+            };
+            new Chart(document.getElementById('contentChart'), {
+                type: 'bar',
+                data: contentData,
+                options: {
+                     ...chartOptionsCallbacks,
+                    scales: {
+                        x: { 
+                            ticks: { color: 'white' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        y: { 
+                            beginAtZero: true, 
+                            ticks: { color: 'white' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        }
+                    }
+                }
+            });
+        };
     </script>
 </body>
 </html>
