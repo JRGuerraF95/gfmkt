@@ -43,11 +43,18 @@
 <body class="text-white">
     
     <div class="container mx-auto p-4 md:p-8">
+        <a href="index.html" class="inline-flex items-center text-[#06D6A0] hover:text-[#6EFFD8] transition duration-300 mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Portfolio
+        </a>
 
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Landing Page Success Story</h1>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Enhancing Online Presence for a Restaurant</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Enhancing Online Presence for a Seafood Restaurant</h2>
             <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">This case study demonstrates our expertise in designing and developing a dedicated, high-converting landing page that effectively showcases a restaurant's unique offerings and drives key visitor actions like reservations and inquiries.</p>
+             <a href="https://www.laperlatucson.com" target="_blank" class="mt-4 inline-block text-sm font-semibold text-gray-400 hover:text-white transition duration-300 underline">
+                Visit Client Website: laperlatucson.com
+            </a>
         </header>
 
         <main>
@@ -107,7 +114,7 @@
                     <h4 class="text-2xl font-bold text-[#FFD166] mb-4">🎯 Conversion Elements & CTAs</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                            <div class="chart-container">
-                                <canvas id="conversionChart"></canvas>
+                               <canvas id="conversionChart"></canvas>
                             </div>
                         <div>
                             <p class="text-gray-200 mb-4">The core of the project was to drive action. We strategically placed clear Call-to-Actions (CTAs) to encourage visitors to make reservations, order online, or view the menu, directly impacting the restaurant's business goals.</p>
@@ -132,125 +139,148 @@
                     </div>
                 </div>
             </section>
+
+             <!-- NEW CALL TO ACTION SECTION -->
+            <section class="mt-16 text-center bg-white bg-opacity-10 p-10 rounded-xl shadow-2xl">
+                <h3 class="text-4xl font-black text-[#06D6A0] mb-4">Ready to Serve Up Your Digital Success?</h3>
+                <p class="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
+                    A high-converting landing page is essential for any modern business. Let's discuss how we can create a powerful digital asset that drives reservations and sales for you.
+                </p>
+                <a href="https://www.guerrafourcademkt.com/contact" class="inline-block bg-[#FFD166] hover:bg-[#FF6B6B] text-[#073B4C] font-bold text-lg py-4 px-10 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Schedule a Consultation
+                </a>
+            </section>
+
         </main>
 
         <footer class="text-center mt-16 pt-8 border-t border-gray-700">
-            <p class="text-gray-400">Landing Page Success Story prepared by <span class="font-bold">Guerra Fourcade Marketing & Consulting</span>.</p>
+            <p class="text-gray-400">Landing Page Success Story prepared by <a href="https://www.guerrafourcademkt.com" target="_blank" class="font-bold text-gray-300 hover:text-[#06D6A0] transition duration-300">Guerra Fourcade Marketing & Consulting</a>.</p>
         </footer>
 
     </div>
 
     <script>
-        // Helper function to wrap long labels for Chart.js
-        const wrapText = (text, maxLength = 16) => {
-            if (text.length <= maxLength) {
-                return text;
-            }
-            const words = text.split(' ');
-            let lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + word).length > maxLength && currentLine !== '') {
-                    lines.push(currentLine.trim());
-                    currentLine = '';
+        window.onload = function() {
+            // Helper function to wrap long labels for Chart.js
+            const wrapText = (text, maxLength = 16) => {
+                if (text.length <= maxLength) {
+                    return text;
                 }
-                currentLine += word + ' ';
-            });
-            lines.push(currentLine.trim());
-            return lines;
-        };
+                const words = text.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxLength && currentLine !== '') {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            };
 
-        // Tooltip and legend callback for Chart.js to ensure white text
-        const chartOptionsCallbacks = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                                return label.join(' ');
-                            } else {
-                                return label;
+            // Tooltip and legend callback for Chart.js to ensure white text
+            const chartOptionsCallbacks = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            },
+                            label: function(context) {
+                                // For Doughnut Chart: Show percentage of focus
+                                if (context.chart.config.type === 'doughnut') {
+                                    return `${context.raw}% of Focus`;
+                                } else {
+                                    // For Bar Chart: Show the raw data value as "Clicks"
+                                    return `${context.raw} Clicks`;
+                                }
                             }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: 'white' // Set legend text color to white
                         }
                     }
                 },
-                legend: {
-                    labels: {
-                        color: 'white' // Set legend text color to white
-                    }
-                }
-            },
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    ticks: { color: 'white' }, // Set x-axis tick color to white
-                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
-                },
-                y: {
-                    ticks: { color: 'white' }, // Set y-axis tick color to white
-                    grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
-                }
-            }
-        };
-
-        // Data for the "Content & Design Strategy" doughnut chart
-        const contentStrategyData = {
-            labels: ['Content Strategy', 'Design & Visuals', 'Information Hierarchy'].map(l => wrapText(l, 25)),
-            datasets: [{
-                label: 'Strategic Focus Areas',
-                data: [35, 40, 25], // Illustrative allocation of effort
-                backgroundColor: ['#FF6B6B', '#FFD166', '#FFFFFF'],
-                borderColor: '#073B4C', // Border color matching background
-                borderWidth: 4,
-                hoverOffset: 4
-            }]
-        };
-        new Chart(document.getElementById('contentStrategyChart'), {
-            type: 'doughnut',
-            data: contentStrategyData,
-            options: {
-                ...chartOptionsCallbacks,
-                cutout: '60%', // Size of the doughnut hole
-                scales: { // Remove scales for doughnut chart
-                    x: { display: false },
-                    y: { display: false }
-                }
-            }
-        });
-
-        // Data for "Conversion Elements & CTAs" bar chart
-        const conversionData = {
-            labels: ['Reservations', 'Online Orders', 'Menu Views'].map(l => wrapText(l)),
-            datasets: [{
-                label: 'Clicks & Engagements (Illustrative)',
-                data: [85, 60, 95], // Illustrative engagement rates
-                backgroundColor: '#FFD166',
-                borderColor: '#FFE399',
-                borderWidth: 2,
-                borderRadius: 5
-            }]
-        };
-        new Chart(document.getElementById('conversionChart'), {
-            type: 'bar',
-            data: conversionData,
-            options: {
-                ...chartOptionsCallbacks,
-                indexAxis: 'y', // Horizontal bars
+                responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
-                        ticks: { color: 'white' },
-                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        ticks: { color: 'white' }, // Set x-axis tick color to white
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
                     },
                     y: {
-                        ticks: { color: 'white' },
-                        grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        ticks: { color: 'white' }, // Set y-axis tick color to white
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' } // Light grid lines
                     }
                 }
-            }
-        });
+            };
+
+            // Data for the "Content & Design Strategy" doughnut chart
+            const contentStrategyData = {
+                labels: ['Content Strategy', 'Design & Visuals', 'Information Hierarchy'].map(l => wrapText(l, 25)),
+                datasets: [{
+                    label: 'Strategic Focus Areas',
+                    data: [35, 40, 25], // Allocation of effort
+                    backgroundColor: ['#FF6B6B', '#FFD166', '#FFFFFF'],
+                    borderColor: '#073B4C', // Border color matching background
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            };
+            new Chart(document.getElementById('contentStrategyChart'), {
+                type: 'doughnut',
+                data: contentStrategyData,
+                options: {
+                    ...chartOptionsCallbacks,
+                    cutout: '60%', // Size of the doughnut hole
+                    scales: { // Remove scales for doughnut chart
+                        x: { display: false },
+                        y: { display: false }
+                    }
+                }
+            });
+
+            // Data for "Conversion Elements & CTAs" bar chart
+            const conversionData = {
+                labels: ['Reservations', 'Online Orders', 'Menu Views'].map(l => wrapText(l)),
+                datasets: [{
+                    label: 'Clicks & Engagements',
+                    data: [85, 60, 95], // Engagement metrics
+                    backgroundColor: '#FFD166',
+                    borderColor: '#FFE399',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            };
+            new Chart(document.getElementById('conversionChart'), {
+                type: 'bar',
+                data: conversionData,
+                options: {
+                    ...chartOptionsCallbacks,
+                    indexAxis: 'y', // Horizontal bars
+                    scales: {
+                        x: {
+                            ticks: { color: 'white' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        y: {
+                            ticks: { color: 'white' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        }
+                    }
+                }
+            });
+        };
     </script>
 </body>
 </html>
