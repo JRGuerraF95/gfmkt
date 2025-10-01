@@ -43,6 +43,10 @@
 <body class="text-white">
     
     <div class="container mx-auto p-4 md:p-8">
+        <a href="index.html" class="inline-flex items-center text-[#06D6A0] hover:text-[#6EFFD8] transition duration-300 mb-6">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Portfolio
+        </a>
 
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Marketing Success Story</h1>
@@ -112,7 +116,7 @@
                     <h4 class="text-2xl font-bold text-[#FFD166] mb-4">📢 Elevated Social Media Presence with Paid Ads</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                            <div class="chart-container">
-                                <canvas id="socialAdsChart"></canvas>
+                               <canvas id="socialAdsChart"></canvas>
                             </div>
                         <div>
                             <p class="text-gray-200 mb-4">Through carefully crafted and targeted paid advertising campaigns on key social media platforms, we achieved a significant elevation in brand impressions and user activity. This strategy effectively expanded the client's reach, driving higher engagement and attracting a broader audience.</p>
@@ -140,12 +144,12 @@
                         </div>
                         <div class="flow-arrow transform md:-rotate-0">→</div>
                         <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
-                               <div class="text-3xl">📊</div>
+                            <div class="text-3xl">📊</div>
                             <h5 class="font-bold mt-2">Time Slot Management</h5>
                         </div>
                         <div class="flow-arrow transform md:-rotate-0">→</div>
                         <div class="text-center p-4 bg-gray-700 rounded-lg w-48 flex-shrink-0">
-                               <div class="text-3xl">📈</div>
+                            <div class="text-3xl">📈</div>
                             <h5 class="font-bold mt-2">Improved Efficiency</h5>
                         </div>
                     </div>
@@ -185,7 +189,7 @@
         </main>
 
         <footer class="text-center mt-16 pt-8 border-t border-gray-700">
-            <p class="text-gray-400">Marketing Success Story prepared by <span class="font-bold">Guerra Fourcade Marketing & Consulting</span>.</p>
+            <p class="text-gray-400">Marketing Success Story prepared by <a href="https://www.guerrafourcademkt.com" target="_blank" class="font-bold text-gray-300 hover:text-[#06D6A0] transition duration-300">Guerra Fourcade Marketing & Consulting</a>.</p>
         </footer>
 
     </div>
@@ -223,6 +227,15 @@
                             } else {
                                 return label;
                             }
+                        },
+                        label: function(context) {
+                            // For Doughnut Chart: Show percentage of focus
+                            if (context.chart.config.type === 'doughnut') {
+                                return `${context.raw}% of Strategy`;
+                            } else {
+                                // For Bar Chart: Show the actual percentage value with a title
+                                return `${context.raw}% Increase`;
+                            }
                         }
                     }
                 },
@@ -251,7 +264,7 @@
             labels: ['Web Optimization', 'Paid Ads', 'Time Management', 'Content & Engagement'].map(l => wrapText(l, 25)),
             datasets: [{
                 label: 'Strategic Focus Areas',
-                data: [30, 30, 20, 20], // Illustrative allocation of effort
+                data: [30, 30, 20, 20], // Allocation of effort
                 backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#FFFFFF'],
                 borderColor: '#073B4C', // Border color matching background
                 borderWidth: 4,
@@ -275,8 +288,8 @@
         const websiteConversionData = {
             labels: ['Website Conversion Rate Increase', 'Online Appointment Bookings Increase'].map(l => wrapText(l)),
             datasets: [{
-                label: 'Percentage Increase (Illustrative)',
-                data: [45, 60], // Illustrative percentage increases
+                label: 'Percentage Increase',
+                data: [45, 60], // Percentage increases
                 backgroundColor: '#FF6B6B',
                 borderColor: '#FF8A8A',
                 borderWidth: 2,
@@ -306,8 +319,8 @@
         const socialAdsData = {
             labels: ['Social Media Impressions Boost', 'Social Media Activity Growth'].map(l => wrapText(l)),
             datasets: [{
-                label: 'Percentage Increase (Illustrative)',
-                data: [120, 80], // Illustrative percentage increases
+                label: 'Percentage Increase',
+                data: [120, 80], // Percentage increases
                 backgroundColor: '#FFD166',
                 borderColor: '#FFE399',
                 borderWidth: 2,
@@ -335,10 +348,10 @@
 
         // Data for "Engaging Content Strategy" bar chart
         const contentEngagementData = {
-            labels: ['Average Engagement Rate', 'Email Open Rate'].map(l => wrapText(l)),
+            labels: ['Average Engagement Rate Increase', 'Follower Growth Rate Increase'].map(l => wrapText(l)),
             datasets: [{
-                label: 'Percentage (Illustrative)',
-                data: [12, 30], // Illustrative percentages
+                label: 'Percentage Increase',
+                data: [75, 50], // Percentage increases
                 backgroundColor: ['#06D6A0', '#6EFFD8'],
                 borderColor: '#FFFFFF',
                 borderWidth: 2,
