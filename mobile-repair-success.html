@@ -364,13 +364,16 @@
             options: {
                 ...chartOptionsCallbacks,
                 scales: {
+                    // This is a vertical bar chart (categories on X, values on Y)
                     x: {
-                        ticks: { color: 'white', callback: function(value) { return value + '%'; } },
+                        // We want the labels (Average Engagement...) to show up here.
+                        ticks: { color: 'white' }, // Keep this to color the ticks
                         grid: { color: 'rgba(255, 255, 255, 0.1)' }
                     },
                     y: {
+                        // We want the percentage numbers (0, 10, 20...) to show up here.
+                        ticks: { color: 'white', callback: function(value) { return value + '%'; } },
                         beginAtZero: true,
-                        ticks: { color: 'white' },
                         grid: { color: 'rgba(255, 255, 255, 0.1)' }
                     }
                 }
