@@ -38,32 +38,39 @@
             font-size: 2rem;
             line-height: 1;
         }
-        .video-container {
+        /* Style for responsive video embed */
+        .video-wrapper {
             position: relative;
             width: 100%;
-            padding-top: 67.7%; /* Aspect ratio based on 504/744 * 100% */
+            max-width: 800px; /* Max width on desktop */
+            margin: 1.5rem auto; /* Center the container with margin */
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (56.25% of width) */
+            background-color: black;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
-        .video-container iframe {
+        .video-wrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 1rem;
+            border: 0;
         }
     </style>
 </head>
 <body class="text-white">
-
+    
     <div class="container mx-auto p-4 md:p-8">
 
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Integrated Marketing Success Story</h1>
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider">Business Membership based Non-Profit</h1>
             <h2 class="text-2xl md:text-3xl font-bold text-[#FFD166]">Digital Growth for Southern Arizona Placement and Referral Alliance (SoAPRA)</h2>
             
-            <!-- Navigation Links - MOVED TO TOP -->
-            <div class="mt-6 flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-6">
-                <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-[#06D6A0] transition-colors">
+            <!-- Navigation Links - RESTORED TO TOP -->
+            <div class="mt-4 flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-6">
+                <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-[#06D6A0] transition-colors font-medium">
                     &larr; Back to Project Portfolio
                 </a>
                 <a href="https://www.soapra.org" target="_blank" class="bg-[#FF6B6B] hover:bg-[#FF8A8A] text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
@@ -75,12 +82,12 @@
         </header>
 
         <main>
-            <!-- Video Testimonial - Moved below introduction paragraph -->
-            <div class="video-container mx-auto max-w-2xl mb-12 rounded-xl overflow-hidden shadow-2xl">
-                <iframe src="https://www.veed.io/embed/aa965fee-9245-427b-acf3-5230ab09888c?watermark=0&color=&sharing=0&title=0" width="100%" height="100%" frameborder="0" title="Non-Profit Success Story" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <!-- Video Testimonial - Placed below introduction paragraph. -->
+            <div class="video-wrapper">
+                <iframe src="https://www.veed.io/embed/aa965fee-9245-427b-acf3-5230ab09888c?watermark=0&color=&sharing=0&title=0" frameborder="0" title="Non-Profit Success Story" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
             <!-- End Video Testimonial -->
-            
+
             <section id="the-challenge" class="mb-16">
                 <div class="text-center mb-8">
                     <h3 class="text-3xl font-bold text-white">The Challenge & Our Solution</h3>
@@ -156,7 +163,7 @@
             <!-- Call to Action -->
             <section id="cta" class="mt-16 text-center bg-[#FFD166] bg-opacity-20 p-8 rounded-xl shadow-2xl">
                 <h3 class="text-3xl font-bold text-white mb-4">Ready to Grow Your Non-Profit or Alliance?</h3>
-                <p class="text-gray-200 mb-6 max-w-xl mx-auto">Partner with Guerra Fourcade Marketing & Consulting to build a digital presence that drives membership and achieves your mission goals.</p>
+                <p class="text-gray-200 mb-6 max-w-xl mx-auto">Let Guerra Fourcade Marketing & Consulting help you enhance your digital footprint and increase membership.</p>
                 <a href="https://www.guerrafourcademkt.com/contact" class="bg-[#06D6A0] hover:bg-[#118AB2] text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
                     Schedule a Strategy Call
                 </a>
@@ -279,7 +286,7 @@
                     indexAxis: 'y', // Horizontal bars
                     scales: {
                         x: {
-                            ticks: { color: 'white', callback: function(value) { return value + '%'; } },
+                            ticks: { color: 'white' },
                             grid: { color: 'rgba(255, 255, 255, 0.1)' }
                         },
                         y: {
