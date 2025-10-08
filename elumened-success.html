@@ -42,11 +42,12 @@
         .video-container {
             position: relative;
             width: 100%;
-            /* Set a maximum width for desktop screens to prevent it from getting too wide/narrow */
+            /* Set a reasonable maximum width for desktop screens */
             max-width: 800px; 
             margin-left: auto; /* Center the container */
             margin-right: auto; /* Center the container */
-            padding-top: 56.25%; /* Standard 16:9 aspect ratio (based on original 744x504, 67.7% is fine, but 16:9 looks more common on desktop) */
+            /* Use a standard 16:9 ratio for video players */
+            padding-top: 56.25%; 
         }
         .video-container iframe {
             position: absolute;
