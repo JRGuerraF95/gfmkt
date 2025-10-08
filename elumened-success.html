@@ -42,7 +42,11 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-top: 67.7%; /* Aspect ratio based on 504/744 * 100% */
+            /* Set a maximum width for desktop screens to prevent it from getting too wide/narrow */
+            max-width: 800px; 
+            margin-left: auto; /* Center the container */
+            margin-right: auto; /* Center the container */
+            padding-top: 56.25%; /* Standard 16:9 aspect ratio (based on original 744x504, 67.7% is fine, but 16:9 looks more common on desktop) */
         }
         .video-container iframe {
             position: absolute;
@@ -79,7 +83,7 @@
         </header>
 
         <main>
-            <!-- Video Testimonial - Placed below introduction paragraph -->
+            <!-- Video Testimonial - Placed below introduction paragraph. MAX-WIDTH added via style. -->
             <div class="video-container mx-auto max-w-2xl mb-12 rounded-xl overflow-hidden shadow-2xl">
                 <iframe src="https://www.veed.io/embed/2cdb4769-f720-4fd8-946d-f99fe0ba7364?watermark=0&color=&sharing=0&title=0" width="100%" height="100%" frameborder="0" title="ElumenEd Success Story" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
