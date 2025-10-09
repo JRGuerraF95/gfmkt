@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goalsetters B2B Contract Acceleration Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Corporate Calm Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        /* Color Palette Definitions from Reference */
+        .bg-primary { background-color: #F8F9FA; }
+        .text-primary { color: #212529; }
+        .text-secondary { color: #495057; }
+        .accent-color { color: #087990; } /* Teal/Cyan */
+        .accent-bg { background-color: #087990; }
+        .accent-border { border-color: #087990; }
+        
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Timeline Tooltip Styling (similar to reference) */
+        .timeline-item .hover-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 100%; /* Position above the dot */
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            width: max-content;
+            max-width: 250px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            z-index: 50;
+        }
+        .timeline-item:hover .hover-tooltip {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Mobile specific adjustments for timeline content */
+        @media (max-width: 768px) {
+            .timeline-item .hover-tooltip {
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary text-primary">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
+
+        <header class="flex justify-between items-center py-4 border-b border-gray-200">
+            <!-- Client Logo Area -->
+            <div class="h-10 w-40 flex items-center">
+                <!-- JOSE: Replace this entire <span> with the <img> tag for the Goalsetters logo. -->
+                <span class="text-2xl font-extrabold accent-color">GOALSETTERS</span>
+            </div>
+            <h1 class="text-2xl font-bold hidden">Proposal for <span class="accent-color">Goalsetters</span></h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#goal" class="nav-link active text-sm font-semibold hover:accent-color">Goal</a>
+                <a href="#solution" class="nav-link text-sm font-semibold hover:accent-color">Solution</a>
+                <a href="#results" class="nav-link text-sm font-semibold hover:accent-color">Results</a>
+                <a href="#roadmap" class="nav-link text-sm font-semibold hover:accent-color">Roadmap</a>
+                <a href="#investment" class="nav-link text-sm font-semibold hover:accent-color">Investment</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Section: Project Goal (Hook Added) -->
+            <section id="goal" class="text-center py-12 md:py-16">
+                <p class="text-sm font-semibold text-secondary mb-2">GF MARKETING AND CONSULTING FOR GOALSETTERS</p>
+                <h2 class="text-4xl md:text-6xl font-bold mb-4 font-bebas tracking-wide leading-tight">
+                    <span class="accent-color">Stop Chasing One-Off Sales:</span> It's Time for Recurring B2B Contracts.
+                </h2>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Right now, Goalsetters is leaving significant revenue on the table by focusing on individual clients (B2C). Our Performance Acceleration solution is designed to <b>immediately pivot your digital footprint</b> to target, attract, and close high-value organizational contracts, establishing you as the premier expert for <b>Executive and Leadership Coaching.</b>
+                </p>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: The Opportunity -->
+            <section class="py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">The Opportunity: From Coaching to Corporate Partner</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">We are strategically redirecting your visibility and assets to capture high-value, recurring business contracts.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="bg-red-50 border border-red-200 p-8 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-4 text-red-800">Current Challenge</h3>
+                         <div class="text-5xl mb-4 text-red-500">
+                             <i data-lucide="users" class="mx-auto w-12 h-12"></i>
+                         </div>
+                        <p class="font-bold text-lg">Focus on Individual B2C Clients</p>
+                        <ul class="text-red-700 mt-2 list-none space-y-1">
+                            <li><span class="font-bold text-red-500 mr-2"><b>&times;</b></span> Low Organizational Lead Volume</li>
+                            <li><span class="font-bold text-red-500 mr-2"><b>&times;</b></span> Website not optimized for corporate keywords</li>
+                            <li><span class="font-bold text-red-500 mr-2"><b>&times;</b></span> Unpredictable revenue from one-off sales</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 p-8 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-800">Proposed Objective</h3>
+                        <div class="text-5xl mb-4 text-green-500">
+                            <i data-lucide="building-2" class="mx-auto w-12 h-12"></i>
+                        </div>
+                        <p class="font-bold text-lg">Acquire High-Value B2B Contracts</p>
+                        <ul class="text-green-700 mt-2 list-none space-y-1">
+                            <li><span class="font-bold text-green-500 mr-2"><b>&#10003;</b></span> Attract HR Directors & CEOs</li>
+                            <li><span class="font-bold text-green-500 mr-2"><b>&#10003;</b></span> Drive Consultation Requests</li>
+                            <li><span class="font-bold text-green-500 mr-2"><b>&#10003;</b></span> Build predictable, recurring revenue</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Our Solution (Interactive Cards) -->
+            <section id="solution" class="py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">Our Solution: The B2B Acceleration Package</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">Your month-to-month service includes six integrated components designed to generate and close B2B leads. Click each card for details.</p>
+                </div>
+                <div id="solution-cards-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Solution Cards will be injected by JS -->
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Expected Results -->
+            <section id="results" class="py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">Expected Results: Tangible Business Growth</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">We focus on outcomes that lead directly to securing profitable, recurring contracts.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
+                        <div class="text-5xl mb-4 accent-color">
+                             <i data-lucide="gauge" class="mx-auto w-12 h-12"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Qualified B2B Leads</h3>
+                        <p class="text-secondary">We will deliver decision-makers (HR, CEO, VP) who are actively searching for organizational solutions, not just individual coaching.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
+                        <div class="text-5xl mb-4 accent-color">
+                             <i data-lucide="megaphone" class="mx-auto w-12 h-12"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Elevated Authority</h3>
+                        <p class="text-secondary">Through Advanced SEO and LinkedIn strategy, we position Anissa Brown as a top-tier corporate partner, justifying premium contract pricing.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
+                        <div class="text-5xl mb-4 accent-color">
+                             <i data-lucide="trending-up" class="mx-auto w-12 h-12"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Predictable Pipeline</h3>
+                        <p class="text-secondary">The combination of advertising and pipeline training ensures a consistent, measurable flow of potential contracts for sustained growth.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Roadmap -->
+            <section id="roadmap" class="py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold">Project Roadmap: Our Flexible Month-to-Month Plan</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">A transparent, three-phase cycle ensures continuous optimization focused on achieving your B2B contract goal.</p>
+                </div>
+                <div class="relative min-h-[150px]">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 accent-bg opacity-50" style="transform: translateY(-50%);"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Timeline items will be injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Investment (CTA Removed, Closing Added) -->
+            <section id="investment" class="my-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-8 md:p-12 text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">Total Investment & Flexible Terms</h2>
+                        <p class="text-lg text-secondary max-w-3xl mx-auto mb-6">We are committed to results, offering this entire program on a month-to-month basis. Your success is our contract.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                            <div class="bg-primary p-4 rounded-lg">
+                                <span class="font-bold text-sm uppercase text-secondary">Service Fee (GF Marketing)</span>
+                                <p class="font-bold text-4xl mt-1 accent-color">$1,500<span class="text-xl">/mo</span></p>
+                            </div>
+                            <div class="bg-primary p-4 rounded-lg">
+                                <span class="font-bold text-sm uppercase text-secondary">Ad Budget (Pass-Through)</span>
+                                <p class="font-bold text-2xl mt-2 accent-color">$500 - $1,000<span class="text-base">/mo (Recommended)</span></p>
+                            </div>
+                        </div>
+
+                         <!-- CLOSING MESSAGE ADDED HERE -->
+                        <div class="mt-8 p-6 rounded-lg border-2 accent-border bg-primary">
+                            <p class="text-xl font-bold text-primary mb-2">Next Step: Let's Define Your Pipeline</p>
+                            <p class="text-lg text-secondary">
+                                Your vision for Goalsetters demands reliable, recurring revenue. We are ready to execute this B2B pivot immediately. 
+                                By commencing our partnership tomorrow, <b>we ensure your visibility and credibility are established where the biggest contracts are signed.</b> 
+                                We look forward to partnering with you, Anissa, to make Goalsetters the unavoidable choice for corporate development.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 text-center flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-4">Investment Summary</h2>
+                        <p class="text-secondary mb-6"><b>Month-to-Month:</b> <br> No long-term lock-in. 15-day cancellation notice.</p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between bg-primary p-4 rounded-lg">
+                                <span class="font-bold text-lg">Total Monthly Service</span>
+                                <span class="font-bold accent-color text-xl">$1,500</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-primary p-4 rounded-lg">
+                                <span class="font-bold text-lg">Total Monthly Ad Spend</span>
+                                <span class="font-bold accent-color text-xl">Variable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-6 border-t border-gray-200 flex flex-col items-center">
+            <p class="text-xl font-bold text-primary mb-2">
+                <a href="https://www.guerrafourcademkt.com" class="accent-color hover:underline">GF Marketing and Consulting</a>
+            </p>
+            <p class="text-secondary text-sm">
+                &copy; 2025 Jose Guerra. B2B Strategy for Goalsetters Career & Workforce Development.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data for the 6-part solution (from Standard Package)
+            const solutionData = [
+                { title: 'Enhanced Website + Maint.', icon: 'monitor', description: 'Ensure digital credibility with corporate buyers. Website is B2B-optimized, fast, and always secure.' },
+                { title: 'Advanced SEO', icon: 'search', description: 'Target high-intent, low-volume corporate keywords to attract decision-makers searching for solutions.' },
+                { title: 'Google & Meta Ads', icon: 'zap', description: 'Directly target HR Directors and CEOs on LinkedIn and Google with offers for Executive Coaching consultations.' },
+                { title: 'Sales Strategy', icon: 'bar-chart-3', description: 'Define lead scoring criteria and sales pitch framework specifically for B2B contract closing.' },
+                { title: 'Pipeline Training', icon: 'handshake', description: 'Implement a structured, repeatable process for qualifying B2B leads from initial contact to contract readiness.' },
+                { title: 'Social Media Scheduling', icon: 'linkedin', description: 'Focus high-impact thought leadership content primarily on LinkedIn to build authority and trust in the B2B space.' }
+            ];
+
+            // Data for the 3-phase roadmap
+            const roadmapData = [
+                { phase: 'Phase 1', title: 'B2B Pivot & Setup', details: 'Website audit, B2B keyword strategy finalization, ad account setup, and launch of initial, low-budget campaigns.' },
+                { phase: 'Phase 2', title: 'Acceleration & Lead Flow', details: 'Scale successful ad campaigns, publish authority content (e.g., leadership whitepapers), and refine lead qualification filters.' },
+                { phase: 'Phase 3', title: 'Pipeline Optimization & Reporting', details: 'Continuous A/B testing, detailed KPI analysis (Cost Per Qualified Lead), and dedicated training sessions to maximize contract conversion.' }
+            ];
+
+            const solutionContainer = document.getElementById('solution-cards-container');
+            const roadmapContainer = document.querySelector('#roadmap .grid');
+
+            // --- Solution Cards Generation ---
+            solutionData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-lg shadow-md cursor-pointer card-hover';
+                card.innerHTML = `
+                    <div class="text-3xl mb-3 accent-color">
+                        <i data-lucide="${item.icon}"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">${item.title}</h3>
+                    <p class="text-secondary text-sm">${item.description}</p>
+                `;
+                solutionContainer.appendChild(card);
+            });
+
+            // --- Roadmap Generation ---
+            roadmapData.forEach((item, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'relative timeline-item text-center md:pt-16';
+                timelineItem.innerHTML = `
+                    <div class="relative z-10 w-16 h-16 mx-auto flex items-center justify-center accent-bg text-white rounded-full text-lg font-bold shadow-lg mb-4">${index + 1}</div>
+                    <h4 class="font-bold text-lg">${item.phase}</h4>
+                    <p class="text-secondary text-sm mt-1 mb-2">${item.title}</p>
+                    <div class="hover-tooltip">
+                        <h5 class="font-bold">${item.phase}: ${item.title}</h5>
+                        <p class="text-secondary text-sm mt-1">${item.details}</p>
+                    </div>
+                `;
+                roadmapContainer.appendChild(timelineItem);
+            });
+            
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // --- Navigation Scroll Logic (similar to reference) ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    // Adjust -60px for fixed header/margin offset
+                    if (window.scrollY >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'accent-color');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active', 'accent-color');
+                    }
+                });
+            });
+
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
