@@ -156,39 +156,6 @@
 
             <div class="w-full border-t border-gray-200 my-8"></div>
 
-            <!-- Section: Expected Results -->
-            <section id="results" class="py-12">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold">Expected Results: Tangible Business Growth</h2>
-                    <p class="text-secondary mt-2 max-w-2xl mx-auto">We focus on outcomes that lead directly to securing profitable, recurring contracts.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
-                        <div class="text-5xl mb-4 accent-color">
-                             <i data-lucide="gauge" class="mx-auto w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Qualified B2B Leads</h3>
-                        <p class="text-secondary">We will deliver decision-makers (HR, CEO, VP) who are actively searching for organizational solutions, not just individual coaching.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
-                        <div class="text-5xl mb-4 accent-color">
-                             <i data-lucide="megaphone" class="mx-auto w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Elevated Authority</h3>
-                        <p class="text-secondary">Through Advanced SEO and LinkedIn strategy, we position Anissa Brown as a top-tier corporate partner, justifying premium contract pricing.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center card-hover">
-                        <div class="text-5xl mb-4 accent-color">
-                             <i data-lucide="trending-up" class="mx-auto w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Predictable Pipeline</h3>
-                        <p class="text-secondary">The combination of advertising and pipeline training ensures a consistent, measurable flow of potential contracts for sustained growth.</p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="w-full border-t border-gray-200 my-8"></div>
-
             <!-- Section: Roadmap -->
             <section id="roadmap" class="py-12">
                 <div class="text-center mb-12">
@@ -197,7 +164,8 @@
                 </div>
                 <div class="relative min-h-[150px]">
                     <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 accent-bg opacity-50" style="transform: translateY(-50%);"></div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Added text-center class to the grid for mobile centering -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                         <!-- Timeline items will be injected by JS -->
                     </div>
                 </div>
@@ -299,7 +267,8 @@
             // --- Roadmap Generation ---
             roadmapData.forEach((item, index) => {
                 const timelineItem = document.createElement('div');
-                timelineItem.className = 'relative timeline-item text-center md:pt-16';
+                // Added 'text-center' to the container here to ensure centering on all viewport sizes
+                timelineItem.className = 'relative timeline-item text-center md:pt-16'; 
                 timelineItem.innerHTML = `
                     <div class="relative z-10 w-16 h-16 mx-auto flex items-center justify-center accent-bg text-white rounded-full text-lg font-bold shadow-lg mb-4">${index + 1}</div>
                     <h4 class="font-bold text-lg">${item.phase}</h4>
