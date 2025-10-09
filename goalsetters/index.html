@@ -72,10 +72,8 @@
     <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
 
         <header class="flex justify-between items-center py-4 border-b border-gray-200">
-            <!-- Client Logo Area: Placeholder Text for Guaranteed Display -->
-            <div class="h-10 w-40 flex items-center">
-                <p class="text-xl font-bold accent-color">Goalsetters</p>
-            </div>
+            <!-- Left side intentionally left empty or minimalist to focus on the centered main hook -->
+            <div class="h-10 w-40 flex items-center"></div>
             <h1 class="text-2xl font-bold hidden">Proposal for <span class="accent-color">Goalsetters</span></h1>
             <nav class="hidden md:flex space-x-6">
                 <a href="#goal" class="nav-link active text-sm font-semibold hover:accent-color">Goal</a>
@@ -89,7 +87,16 @@
         <main>
             <!-- Section: Project Goal (Hook Added) -->
             <section id="goal" class="text-center py-12 md:py-16">
-                <p class="text-sm font-semibold text-secondary mb-2">GF MARKETING AND CONSULTING FOR GOALSETTERS</p>
+                <!-- LOGO MOVED HERE, RESIZED, AND CENTERED -->
+                <div class="mx-auto mb-6 h-16 w-64 flex items-center justify-center">
+                    <img 
+                        src="https://raw.githubusercontent.com/JRGuerraF95/gfmkt/main/assets/Goalsetters%20Logo%20(2022).png" 
+                        alt="Goalsetters Career & Workforce Development Logo" 
+                        class="h-full object-contain"
+                        onerror="this.onerror=null; this.src='https://placehold.co/256x64/087990/ffffff?text=GOALSETTERS';"
+                    >
+                </div>
+                
                 <h2 class="text-4xl md:text-6xl font-bold mb-4 font-bebas tracking-wide leading-tight">
                     <span class="accent-color">Stop Chasing One-Off Sales:</span> It's Time for Recurring B2B Contracts.
                 </h2>
