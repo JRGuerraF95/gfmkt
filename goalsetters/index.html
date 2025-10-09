@@ -31,7 +31,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         
-        /* Timeline Tooltip Styling */
+        /* Timeline Tooltip Styling (Desktop) */
         .timeline-item .hover-tooltip {
             visibility: hidden;
             opacity: 0;
@@ -54,15 +54,32 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* Mobile specific adjustments for timeline content */
+        /* Mobile specific adjustments for roadmap layout */
         @media (max-width: 768px) {
+            .roadmap-grid {
+                display: flex; /* Change grid to flex for better stacking control */
+                flex-direction: column;
+                gap: 24px;
+            }
+            .timeline-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center main items */
+                text-align: center;
+                padding-bottom: 20px;
+            }
             .timeline-item .hover-tooltip {
-                position: static;
-                visibility: visible;
-                opacity: 1;
-                transform: none;
-                width: 100%;
-                margin-top: 10px;
+                /* For mobile, we display the tooltip content as a centered card below the phase info */
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: static !important;
+                transform: none !important;
+                width: 80% !important; /* Control width of the content card */
+                max-width: 350px !important;
+                margin-top: 10px !important;
+                margin-bottom: 10px !important;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+                border: 1px solid #E5E7EB;
             }
         }
     </style>
@@ -164,8 +181,8 @@
                 </div>
                 <div class="relative min-h-[150px]">
                     <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 accent-bg opacity-50" style="transform: translateY(-50%);"></div>
-                    <!-- Added text-center class to the grid for mobile centering -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <!-- Used flex and column stack for mobile-friendly vertical layout -->
+                    <div class="roadmap-grid grid md:grid-cols-3 gap-6 text-center mx-auto"> 
                         <!-- Timeline items will be injected by JS -->
                     </div>
                 </div>
@@ -248,7 +265,7 @@
             ];
 
             const solutionContainer = document.getElementById('solution-cards-container');
-            const roadmapContainer = document.querySelector('#roadmap .grid');
+            const roadmapContainer = document.querySelector('.roadmap-grid'); // Changed selector
 
             // --- Solution Cards Generation ---
             solutionData.forEach(item => {
@@ -267,13 +284,12 @@
             // --- Roadmap Generation ---
             roadmapData.forEach((item, index) => {
                 const timelineItem = document.createElement('div');
-                // Added 'text-center' to the container here to ensure centering on all viewport sizes
-                timelineItem.className = 'relative timeline-item text-center md:pt-16'; 
+                timelineItem.className = 'relative timeline-item md:pt-16 mx-auto'; 
                 timelineItem.innerHTML = `
                     <div class="relative z-10 w-16 h-16 mx-auto flex items-center justify-center accent-bg text-white rounded-full text-lg font-bold shadow-lg mb-4">${index + 1}</div>
                     <h4 class="font-bold text-lg">${item.phase}</h4>
                     <p class="text-secondary text-sm mt-1 mb-2">${item.title}</p>
-                    <div class="hover-tooltip">
+                    <div class="hover-tooltip bg-white rounded-lg shadow-md p-4 mx-auto">
                         <h5 class="font-bold">${item.phase}: ${item.title}</h5>
                         <p class="text-secondary text-sm mt-1">${item.details}</p>
                     </div>
