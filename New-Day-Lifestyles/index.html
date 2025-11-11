@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Day Lifestyles: Foundational Marketing Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Corporate Calm Styles: Senior Care & Trust Palette (Teal/Navy) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        /* Color Palette Definitions: Trust / Professionalism */
+        .bg-primary { background-color: #fefefe; } /* Near White */
+        .text-primary { color: #212529; } /* Dark Text */
+        .text-secondary { color: #6c757d; } /* Grey Text */
+        .accent-color { color: #17A2B8; } /* Trustworthy Teal Accent (Info Blue) */
+        .accent-bg { background-color: #17A2B8; }
+        .accent-border { border-color: #17A2B8; }
+        .card-bg { background-color: #F8F9FA; } /* Light Grey Card */
+        
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Tooltip style for Roadmap details on desktop */
+        .timeline-item .hover-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+            max-width: 250px;
+            background-color: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 20;
+            margin-top: 10px;
+        }
+
+        .timeline-item:hover .hover-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Mobile specific alignment for roadmap content blocks */
+        @media (max-width: 768px) {
+            .roadmap-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+            .timeline-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .timeline-item .hover-tooltip {
+                visibility: visible;
+                opacity: 1;
+                position: static;
+                transform: none;
+                width: 90%; 
+                max-width: 350px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                border: 1px solid #E5E7EB;
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary text-primary">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
+
+        <header class="flex justify-center items-center py-4 border-b border-gray-200">
+            <nav class="flex space-x-6">
+                <a href="#goal" class="nav-link active text-sm font-semibold hover:accent-color">Goal</a>
+                <a href="#solution" class="nav-link text-sm font-semibold hover:accent-color">Solution</a>
+                <a href="#opportunity" class="nav-link text-sm font-semibold hover:accent-color">Opportunity</a>
+                <a href="#roadmap" class="nav-link text-sm font-semibold hover:accent-color">Roadmap</a>
+                <a href="#investment" class="nav-link text-sm font-semibold hover:accent-color">Investment</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Section: Project Goal (Hook) -->
+            <section id="goal" class="text-center py-12 md:py-16">
+                <!-- CLIENT LOGO INTEGRATION -->
+                <div class="mx-auto mb-6 h-16 w-64 flex items-center justify-center">
+                    <img 
+                        src="https://raw.githubusercontent.com/JRGuerraF95/gfmkt/f75b2e4bcb691e84f0d8a2f0e1882517e70fcccb/assets/Untitled%20design%20(41).png"
+                        alt="New Day Lifestyles Company Logo" 
+                        class="h-full object-contain"
+                    >
+                </div>
+                
+                <h2 class="text-4xl md:text-6xl font-bold mb-4 font-bebas tracking-wide leading-tight">
+                    <span class="accent-color">Converting Experience</span> into Consistent Online Growth.
+                </h2>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    New Day Lifestyles has extensive healthcare experience and strong word-of-mouth. Our <strong>Foundational Marketing</strong> package establishes a reliable, professional online presence to attract new clients beyond referrals, focusing on search engine visibility and consistent content.
+                </p>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+            
+             <!-- Section: The Opportunity (Updated from Notes) -->
+            <section id="opportunity" class="py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">The Opportunity: Capturing Sustainable Leads</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">We are focused on turning time-consuming marketing tasks into automated, strategic growth drivers.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="card-bg border border-gray-200 p-8 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary">Core Challenge</h3>
+                         <div class="text-5xl mb-4 text-secondary">
+                             <i data-lucide="clock" class="mx-auto w-12 h-12"></i>
+                         </div>
+                        <p class="font-bold text-lg">Time and Technical Visibility</p>
+                        <ul class="text-secondary mt-2 list-none space-y-1">
+                            <li><b>&times;</b> Limited time for consistent, quality social posting.</li>
+                            <li><b>&times;</b> Website SEO lacks crucial "meta robots" for Google indexing.</li>
+                            <li><b>&times;</b> Reliance primarily on word-of-mouth referrals.</li>
+                        </ul>
+                    </div>
+                    <div class="card-bg border border-gray-200 p-8 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-4 accent-color">Primary Objective</h3>
+                        <div class="text-5xl mb-4 accent-color">
+                            <i data-lucide="shield-check" class="mx-auto w-12 h-12"></i>
+                        </div>
+                        <p class="font-bold text-lg">Build Trust and Digital Authority</p>
+                        <ul class="text-primary mt-2 list-none space-y-1">
+                            <li><b>&#10003;</b> Establish 3x weekly presence across key platforms (FB, LI, IG).</li>
+                            <li><b>&#10003;</b> Maximize visibility for families and referral partners via SEO.</li>
+                            <li><b>&#10003;</b> Showcase 5+ years of personal senior care experience on the website.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+
+            <!-- Section: Our Solution (Basic Package) -->
+            <section id="solution" class="py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">Our Solution: The Basic <b>Foundational Marketing</b> Package</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">This integrated package provides the essential <strong>Longevity Marketing</strong> infrastructure to build trust and consistency.</p>
+                </div>
+                <div id="solution-cards-container" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Solution Cards will be injected by JS -->
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Roadmap -->
+            <section id="roadmap" class="py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold">Project Roadmap: Three-Phase Foundational Setup</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">A strategic cycle to fix technical foundation, integrate your unique experience, and establish a publishing rhythm.</p>
+                </div>
+                <div class="relative min-h-[150px]">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 accent-bg opacity-50" style="transform: translateY(-50%);"></div>
+                    <div class="roadmap-grid grid md:grid-cols-3 gap-6 text-center mx-auto"> 
+                        <!-- Timeline items will be injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Investment (Closing Added) -->
+            <section id="investment" class="my-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-8 md:p-12 text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">Total Investment & Month-to-Month Terms</h2>
+                        <p class="text-lg text-secondary max-w-3xl mx-auto mb-6">This foundational investment builds your digital authority and prepares your business for future direct lead generation.</p>
+                        <div class="grid grid-cols-1 gap-6 mt-6 max-w-sm mx-auto">
+                            <div class="card-bg p-4 rounded-lg">
+                                <span class="font-bold text-sm uppercase text-secondary">Service Fee (GF Marketing)</span>
+                                <p class="font-bold text-4xl mt-1 accent-color">$1,000<span class="text-xl">/mo</span></p>
+                            </div>
+                            <!-- Ad Budget box removed as requested -->
+                        </div>
+
+                         <!-- CLOSING MESSAGE -->
+                        <div class="mt-8 p-6 rounded-lg border-2 accent-border card-bg">
+                            <p class="text-xl font-bold text-primary mb-2">Next Step: Secure Your Online Foundation</p>
+                            <p class="text-lg text-secondary">
+                                This <strong>Longevity Marketing</strong> strategy ensures you stop missing out on clients searching for senior placement services. By launching this foundational package, we immediately fix the SEO gaps, highlight your invaluable experience, and establish the consistency needed to grow beyond word-of-mouth. We are ready to begin the <strong>BBB setup and website audit</strong> right away.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 text-center flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-4">Investment Summary</h2>
+                        <p class="text-secondary mb-6"><b>Commitment:</b> <br> Month-to-Month (30-day cancellation notice required).</p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between card-bg p-4 rounded-lg">
+                                <span class="font-bold text-lg">Total Monthly Service</span>
+                                <span class="font-bold accent-color text-xl">$1,000</span>
+                            </div>
+                            <div class="flex items-center justify-between card-bg p-4 rounded-lg">
+                                <span class="font-bold text-lg">Initial Setup Work (Month 1)</span>
+                                <span class="font-bold accent-color text-xl">Included</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-6 border-t border-gray-200 flex flex-col items-center">
+            <p class="text-xl font-bold text-primary mb-2">
+                <a href="https://www.guerrafourcademkt.com" class="accent-color hover:underline">GF Marketing and Consulting</a>
+            </p>
+            <p class="text-secondary text-sm">
+                &copy; 2025 Jose Guerra. Foundational Marketing Strategy for New Day Lifestyles.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data for the 4-part solution (Basic Package for New Day Lifestyles)
+            const solutionData = [
+                { title: 'Consistent Social Media', icon: 'message-square-text', description: 'Three weekly, high-quality posts across LinkedIn, Facebook, and Instagram, tailored to each platform\'s audience.' },
+                { title: 'Foundational SEO Repair', icon: 'zap', description: 'Fix technical SEO issues (like missing "meta robots") and implement keywords to make the website discoverable by Google.' },
+                { title: 'Website Content Update', icon: 'layout-template', description: 'Strategic updates to the Squarespace content to highlight the owners\' 5+ years of personal senior care experience.' },
+                { title: 'BBB & Google Profile Maint.', icon: 'trophy', description: 'Setup and maintenance of the Better Business Bureau and Google Business profiles to build local trust and authority.' }
+            ];
+
+            // Data for the 3-phase roadmap
+            const roadmapData = [
+                { phase: 'Phase 1', title: 'Technical SEO & Audit', details: 'Immediate fix of critical SEO issues (meta robots, crawlers) and audit of BBB/Google profiles for proper setup and information accuracy.' },
+                { phase: 'Phase 2', title: 'Content Integration', details: 'Revise website copy and content strategy to showcase the owners\' personal healthcare experience and deep market knowledge.' },
+                { phase: 'Phase 3', title: 'Publishing Rhythm', details: 'Begin the consistent schedule of 3 weekly, platform-tailored posts and monitor initial keyword performance for optimization.' }
+            ];
+
+            const solutionContainer = document.getElementById('solution-cards-container');
+            const roadmapContainer = document.querySelector('.roadmap-grid');
+
+            // --- Solution Cards Generation ---
+            solutionData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-lg shadow-md cursor-pointer card-hover';
+                card.innerHTML = `
+                    <div class="text-3xl mb-3 accent-color">
+                        <i data-lucide="${item.icon}"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">${item.title}</h3>
+                    <p class="text-secondary text-sm">${item.description}</p>
+                `;
+                solutionContainer.appendChild(card);
+            });
+
+            // --- Roadmap Generation ---
+            roadmapData.forEach((item, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'relative timeline-item md:pt-16 mx-auto'; 
+                timelineItem.innerHTML = `
+                    <div class="relative z-10 w-16 h-16 mx-auto flex items-center justify-center accent-bg text-white rounded-full text-lg font-bold shadow-lg mb-4">${index + 1}</div>
+                    <h4 class="font-bold text-lg">${item.phase}</h4>
+                    <p class="text-secondary text-sm mt-1 mb-2 hidden md:block">${item.title}</p>
+                    <div class="hover-tooltip bg-white rounded-lg shadow-md p-4 mx-auto">
+                        <h5 class="font-bold">${item.phase}: ${item.title}</h5>
+                        <p class="text-secondary text-sm mt-1">${item.details}</p>
+                    </div>
+                `;
+                roadmapContainer.appendChild(timelineItem);
+            });
+            
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // --- Navigation Scroll Logic ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    // Check if the section is visible in the viewport with a small offset
+                    if (window.scrollY >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'accent-color');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active', 'accent-color');
+                    }
+                });
+            });
+
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
