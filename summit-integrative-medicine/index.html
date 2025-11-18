@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summit Integrative Medicine: Foundational Marketing Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Corporate Calm Styles: Medical / Trust Palette (Teal/Navy) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        /* Color Palette Definitions: Trust / Professionalism */
+        .bg-primary { background-color: #fefefe; } /* Near White */
+        .text-primary { color: #212529; } /* Dark Text */
+        .text-secondary { color: #6c757d; } /* Grey Text */
+        .accent-color { color: #17A2B8; } /* Trustworthy Teal Accent (Info Blue) */
+        .accent-bg { background-color: #17A2B8; }
+        .accent-border { border-color: #17A2B8; }
+        .card-bg { background-color: #F8F9FA; } /* Light Grey Card */
+        
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Tooltip style for Roadmap details on desktop */
+        .timeline-item .hover-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+            max-width: 250px;
+            background-color: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 20;
+            margin-top: 10px;
+        }
+
+        .timeline-item:hover .hover-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Mobile specific alignment for roadmap content blocks */
+        @media (max-width: 768px) {
+            .roadmap-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+            .timeline-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .timeline-item .hover-tooltip {
+                visibility: visible;
+                opacity: 1;
+                position: static;
+                transform: none;
+                width: 90%; 
+                max-width: 350px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                border: 1px solid #E5E7EB;
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary text-primary">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
+
+        <header class="flex justify-center items-center py-4 border-b border-gray-200">
+            <nav class="flex space-x-6">
+                <a href="#goal" class="nav-link active text-sm font-semibold hover:accent-color">Goal</a>
+                <a href="#solution" class="nav-link text-sm font-semibold hover:accent-color">Solution</a>
+                <a href="#opportunity" class="nav-link text-sm font-semibold hover:accent-color">Opportunity</a>
+                <a href="#roadmap" class="nav-link text-sm font-semibold hover:accent-color">Roadmap</a>
+                <a href="#investment" class="nav-link text-sm font-semibold hover:accent-color">Investment</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Section: Project Goal (Hook) -->
+            <section id="goal" class="text-center py-12 md:py-16">
+                <!-- CLIENT LOGO INTEGRATION -->
+                <div class="mx-auto mb-6 h-28 w-96 flex items-center justify-center"> <!-- Increased size here -->
+                    <img 
+                        src="https://raw.githubusercontent.com/JRGuerraF95/gfmkt/fca6eb5ceb0f067336ae42ff988fab57e76497e1/assets/558894077_122107547457022425_7644567369017317627_n.jpg"
+                        alt="Summit Integrative Medicine Logo" 
+                        class="h-full object-contain"
+                    >
+                </div>
+                
+                <h2 class="text-4xl md:text-6xl font-bold mb-4 font-bebas tracking-wide leading-tight">
+                    <span class="accent-color">Positioning Clinical Expertise</span> to Acquire New Patients.
+                </h2>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Summit Integrative Medicine offers highly specialized care. Our <strong>Foundational Marketing</strong> package is built to maximize online visibility, establish clinical authority, and create a consistent digital presence that attracts ideal patients searching for specialized wellness services.
+                </p>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+            
+             <!-- Section: The Opportunity (Updated for Medical Practice) -->
+            <section id="opportunity" class="py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">The Opportunity: Building Patient Trust & Visibility</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">We focus on optimizing your digital footprint to connect your clinical knowledge with the patients who need it most.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="card-bg border border-gray-200 p-8 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary">Core Challenge</h3>
+                         <div class="text-5xl mb-4 text-secondary">
+                             <i data-lucide="microscope" class="mx-auto w-12 h-12"></i>
+                         </div>
+                        <p class="font-bold text-lg">Communicating Clinical Value</p>
+                        <ul class="text-secondary mt-2 list-none space-y-1">
+                            <li><b>&times;</b> Competition for local health and wellness keywords.</li>
+                            <li><b>&times;</b> Need for consistent, authoritative content to build trust.</li>
+                            <li><b>&times;</b> Technical SEO roadblocks hindering search visibility.</li>
+                        </ul>
+                    </div>
+                    <div class="card-bg border border-gray-200 p-8 rounded-lg text-center">
+                        <h3 class="text-2xl font-semibold mb-4 accent-color">Primary Objective</h3>
+                        <div class="text-5xl mb-4 accent-color">
+                            <i data-lucide="user-plus" class="mx-auto w-12 h-12"></i>
+                        </div>
+                        <p class="font-bold text-lg">Drive Qualified Patient Leads</p>
+                        <ul class="text-primary mt-2 list-none space-y-1">
+                            <li><b>&#10003;</b> Establish 3x weekly expert-level content posts.</li>
+                            <li><b>&#10003;</b> Improve local search rankings for specialized services.</li>
+                            <li><b>&#10003;</b> Maximize positive patient reviews and optimize Google profile.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+
+            <!-- Section: Our Solution (Basic Package) -->
+            <section id="solution" class="py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">Our Solution: The Basic <b>Foundational Marketing</b> Package</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">This integrated package provides the essential <strong>Longevity Marketing</strong> infrastructure to build trust and consistency for patient growth.</p>
+                </div>
+                <div id="solution-cards-container" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Solution Cards will be injected by JS -->
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Roadmap -->
+            <section id="roadmap" class="py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold">Project Roadmap: Three-Phase Foundational Setup</h2>
+                    <p class="text-secondary mt-2 max-w-2xl mx-auto">A strategic cycle to fix technical foundation, integrate clinical knowledge, and establish a high-authority publishing rhythm.</p>
+                </div>
+                <div class="relative min-h-[150px]">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 accent-bg opacity-50" style="transform: translateY(-50%);"></div>
+                    <div class="roadmap-grid grid md:grid-cols-3 gap-6 text-center mx-auto"> 
+                        <!-- Timeline items will be injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Investment (Closing Added) -->
+            <section id="investment" class="my-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-8 md:p-12 text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">Total Investment & Month-to-Month Terms</h2>
+                        <p class="text-lg text-secondary max-w-3xl mx-auto mb-6">This foundational investment builds your digital authority and positions Summit Integrative Medicine for consistent, sustainable patient acquisition.</p>
+                        <div class="grid grid-cols-1 gap-6 mt-6 max-w-sm mx-auto">
+                            <div class="card-bg p-4 rounded-lg">
+                                <span class="font-bold text-sm uppercase text-secondary">Service Fee (GF Marketing)</span>
+                                <p class="font-bold text-4xl mt-1 accent-color">$1,000<span class="text-xl">/mo</span></p>
+                            </div>
+                        </div>
+
+                         <!-- CLOSING MESSAGE -->
+                        <div class="mt-8 p-6 rounded-lg border-2 accent-border card-bg">
+                            <p class="text-xl font-bold text-primary mb-2">Next Step: Launch Your Digital Authority</p>
+                            <p class="text-lg text-secondary">
+                                This <strong>Longevity Marketing</strong> strategy ensures Summit Integrative Medicine captures the attention of patients searching for specialized care. We are prepared to launch the foundational setup immediately (<strong>November 18, 2025</strong>) to fix technical SEO, optimize your profiles, and begin consistent content publishing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 text-center flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-4">Investment Summary</h2>
+                        <p class="text-secondary mb-6"><strong>Commitment:</strong> <br> Month-to-Month (30-day cancellation notice required).</p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between card-bg p-4 rounded-lg">
+                                <span class="font-bold text-lg">Total Monthly Service</span>
+                                <span class="font-bold accent-color text-xl">$1,000</span>
+                            </div>
+                            <div class="flex items-center justify-between card-bg p-4 rounded-lg">
+                                <span class="font-bold text-lg">Initial Setup Work (Month 1)</span>
+                                <span class="font-bold accent-color text-xl">Included</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-6 border-t border-gray-200 flex flex-col items-center">
+            <p class="text-xl font-bold text-primary mb-2">
+                <a href="https://www.guerrafourcademkt.com" class="accent-color hover:underline">GF Marketing and Consulting</a>
+            </p>
+            <p class="text-secondary text-sm">
+                &copy; 2025 Jose Guerra. Foundational Marketing Strategy for Summit Integrative Medicine.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data for the 4-part solution (Basic Package for Summit Integrative Medicine)
+            const solutionData = [
+                { title: 'Authority Content (3x/Wk)', icon: 'newspaper', description: 'Three weekly, high-quality posts (FB/LI/IG) focused on clinical expertise, health education, and practice authority.' },
+                { title: 'Technical SEO & Audit', icon: 'zap', description: 'Immediate repair of technical SEO issues to ensure the website is fully discoverable by potential patients on Google.' },
+                { title: 'Website Optimization', icon: 'layout-template', description: 'Strategic updates to website content to clearly showcase services, patient benefits, and clinical experience.' },
+                { title: 'Reputation & GBP Management', icon: 'star', description: 'Optimization of the Google Business Profile (GBP) and management of patient reviews to build trust and increase local ranking.' }
+            ];
+
+            // Data for the 3-phase roadmap
+            const roadmapData = [
+                { phase: 'Phase 1', title: 'Technical SEO & Audit', details: 'Immediate fix of critical SEO issues (meta robots, crawlers) and thorough audit of current website structure and Google Profile.' },
+                { phase: 'Phase 2', title: 'Clinical Content Integration', details: 'Revise website copy and content strategy to integrate Melissa Clifton\'s expertise and position the practice as a leader in Integrative Medicine.' },
+                { phase: 'Phase 3', title: 'Publishing & Reputation', details: 'Begin the consistent schedule of 3 weekly, platform-tailored posts and implement the system for generating and managing patient reviews.' }
+            ];
+
+            const solutionContainer = document.getElementById('solution-cards-container');
+            const roadmapContainer = document.querySelector('.roadmap-grid');
+
+            // --- Solution Cards Generation ---
+            solutionData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-lg shadow-md cursor-pointer card-hover';
+                card.innerHTML = `
+                    <div class="text-3xl mb-3 accent-color">
+                        <i data-lucide="${item.icon}"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">${item.title}</h3>
+                    <p class="text-secondary text-sm">${item.description}</p>
+                `;
+                solutionContainer.appendChild(card);
+            });
+
+            // --- Roadmap Generation ---
+            roadmapData.forEach((item, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'relative timeline-item md:pt-16 mx-auto'; 
+                timelineItem.innerHTML = `
+                    <div class="relative z-10 w-16 h-16 mx-auto flex items-center justify-center accent-bg text-white rounded-full text-lg font-bold shadow-lg mb-4">${index + 1}</div>
+                    <h4 class="font-bold text-lg">${item.phase}</h4>
+                    <p class="text-secondary text-sm mt-1 mb-2 hidden md:block">${item.title}</p>
+                    <div class="hover-tooltip bg-white rounded-lg shadow-md p-4 mx-auto">
+                        <h5 class="font-bold">${item.phase}: ${item.title}</h5>
+                        <p class="text-secondary text-sm mt-1">${item.details}</p>
+                    </div>
+                `;
+                roadmapContainer.appendChild(timelineItem);
+            });
+            
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // --- Navigation Scroll Logic ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    // Check if the section is visible in the viewport with a small offset
+                    if (window.scrollY >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'accent-color');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active', 'accent-color');
+                    }
+                });
+            });
+
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
