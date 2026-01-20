@@ -344,7 +344,7 @@
                     </div>
 
                     <div class="text-center space-y-4">
-                        <a href="mailto:jose@guerrafourcademkt.com?subject=NM%20Smith%20Proposal%20Approved&body=Hi%20Jose%2C%0A%0AI%20am%20ready%20to%20move%20forward%20with%20the%20Marketing%20Proposal.%20Let's%20get%20started.%0A%0ABest%2C%0ANick" 
+                        <a href="mailto:jose@guerrafourcademkt.com?subject=Moving%20Forward%20-%20NM%20Smith%20Proposal&body=Hi%20Jose%2C%0A%0AI've%20reviewed%20the%20proposal%20and%20I'd%20like%20to%20move%20forward.%20Please%20send%20over%20the%20agreement%20and%20let%20me%20know%20the%20next%20steps%20for%20onboarding.%0A%0AThanks%2C" 
                            class="inline-block w-full md:w-auto bg-brand-red hover:bg-red-800 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:-translate-y-1" 
                            style="background-color: var(--brand-red);">
                             Approve Proposal & Start
@@ -409,9 +409,9 @@
             // Display Annual Value of this monthly volume
             revenue.innerText = formatter.format(monthlyComm * 12); 
             
-            // Break even logic: Fee is $1000. 
-            // If comm is $450, break even is ~2.2 clients.
-            breakEven.innerText = Math.ceil(1000 / commPerClient);
+            // Break even logic: Fee is $1200. 
+            // If comm is $450, break even is ~2.6 clients -> 3.
+            breakEven.innerText = Math.ceil(1200 / commPerClient);
         }
 
         slider.addEventListener('input', updateCalc);
