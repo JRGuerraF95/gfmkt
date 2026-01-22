@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: Trinity Medical Consultants x GF Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* --- Typography & Theme --- */
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #334155; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Medical Palette: Teal/Sage (Flagstaff) & Charcoal (Phoenix Professional) */
+        :root {
+            --brand-navy: #111827; /* Dark Charcoal */
+            --brand-teal: #0D9488; /* Sage/Teal */
+            --brand-red: #B91C1C; /* Action Color */
+        }
+
+        .text-navy { color: var(--brand-navy); }
+        .bg-navy { background-color: var(--brand-navy); }
+        .text-accent { color: var(--brand-teal); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Card Effects */
+        .glass-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--brand-teal);
+        }
+
+        /* Roadmap Timeline Styling */
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            bottom: -40px;
+            width: 2px;
+            background: #E2E8F0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-connector { left: 24px; top: 24px; bottom: -24px; transform: none; }
+        }
+
+        /* Range Slider */
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 24px; width: 24px;
+            border-radius: 50%; background: var(--brand-teal);
+            cursor: pointer; margin-top: -10px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 4px; cursor: pointer;
+            background: #CBD5E1; border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
+            <div class="font-bold text-navy tracking-tight text-lg">GF Marketing <span class="text-gray-400 font-light mx-2">|</span> Trinity Medical</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#vision" class="hover:text-teal-700 transition">Objective</a>
+                <a href="#strategy" class="hover:text-teal-700 transition">Strategy</a>
+                <a href="#roadmap" class="hover:text-teal-700 transition">Timeline</a>
+                <a href="#investment" class="hover:text-teal-700 transition">Investment</a>
+            </div>
+            <a href="#investment" class="bg-navy text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-700 transition">View Proposal</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-6 py-12 max-w-5xl">
+
+        <!-- Hero Section -->
+        <header id="vision" class="text-center py-16 md:py-24">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-800 text-xs font-semibold mb-6 uppercase tracking-wider">
+                Digital Foundation & Market Entry
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-navy mb-6 leading-tight">
+                Flagstaff Roots. <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Phoenix Authority.</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Trinity Medical Consultants needs more than just a website—it needs an identity. We will build a complete digital footprint from scratch to establish Dr. McCarr as a trusted authority in the competitive Phoenix market.
+            </p>
+        </header>
+
+        <div class="w-full h-px bg-gray-200 my-8"></div>
+
+        <!-- The Shift (Problem/Solution) -->
+        <section class="grid md:grid-cols-2 gap-12 items-center py-12">
+            <div>
+                <h2 class="text-3xl font-bold text-navy mb-6">The "Ghost Practice" Risk</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-red-50 p-3 rounded-lg h-fit text-red-700"><i data-lucide="map-pin-off"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Invisible in Phoenix</h4>
+                            <p class="text-sm text-gray-600">A minimal presence worked in Flagstaff, but Phoenix requires validation. Without a professional site, potential clients will choose established competitors.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-red-50 p-3 rounded-lg h-fit text-red-700"><i data-lucide="fingerprint"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">No Brand Identity</h4>
+                            <p class="text-sm text-gray-600">Currently operating without a logo or defined visual style makes it difficult to produce business cards or marketing materials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-navy text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-teal-600 rounded-full opacity-20 blur-xl"></div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="globe" class="text-teal-400"></i> The "Digital Office"
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-teal-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Immediate Credibility</h4>
+                            <p class="text-sm text-gray-300">A "Coming Soon" page in Week 1, followed by a full site that communicates established medical expertise.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-teal-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Phoenix SEO Foundation</h4>
+                            <p class="text-sm text-gray-300">We research and target keywords like "Medical Consultancy Phoenix" to ensure you appear in local searches.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <p class="italic text-teal-200">"From a local name to a state-wide brand."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Grid -->
+        <section id="strategy" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-navy">The Build Plan</h2>
+                <p class="text-gray-600 mt-2">A complete setup: Domain, Branding, and Development.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-teal-50 w-12 h-12 rounded-lg flex items-center justify-center text-teal-700 mb-4">
+                        <i data-lucide="pen-tool"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Brand Identity</h3>
+                    <p class="text-sm text-gray-600">We will create the logo, color palette, and typography system. <br><strong>Concept:</strong> "Flagstaff Roots, Phoenix Scale"—sage greens transitioning to professional charcoal.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-teal-50 w-12 h-12 rounded-lg flex items-center justify-center text-teal-700 mb-4">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Custom Website</h3>
+                    <p class="text-sm text-gray-600">A 5-page responsive site (Home, About Dr. McCarr, Services, Phoenix Expansion, Contact). Built on a fast, secure framework.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section class="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 my-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-navy mb-4">Investment vs. Value</h2>
+                    <p class="text-gray-600 mb-6">
+                        A website is an asset, not an expense. Securing just one major consulting contract in Phoenix covers the cost of development.
+                    </p>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Consulting Contracts per Year via Web</label>
+                        <input type="range" id="closeSlider" min="1" max="12" value="2" class="w-full mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Conservative (1)</span>
+                            <span class="text-2xl font-bold text-teal-700" id="sliderValue">2</span>
+                            <span class="text-gray-500 text-sm">Aggressive (12)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-700 text-center">
+                    <h3 class="text-gray-500 text-sm font-bold uppercase tracking-wide mb-2">Projected New Revenue</h3>
+                    <div class="text-5xl font-bold text-navy mb-2" id="revenueDisplay">$0</div>
+                    <p class="text-green-600 text-sm font-medium bg-green-50 inline-block px-3 py-1 rounded-full mt-2">
+                        Pays for itself with <span id="breakEvenText">1</span> client
+                    </p>
+                    <p class="text-xs text-gray-400 mt-4">*Assumes avg. consulting retainer of $5k</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rolling Start Roadmap -->
+        <section id="roadmap" class="py-12 max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-navy">Timeline: 4-6 Weeks</h2>
+                <p class="text-gray-600 mt-2">From "Zero" to "Launch".</p>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <div class="timeline-connector hidden md:block"></div>
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-slate-200 md:hidden"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 1: Foundations</h3>
+                        <p class="text-sm text-gray-600 mt-2">Domain research/purchase, Logo Design concepts, and a "Coming Soon" landing page to capture early leads.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-teal-800 border-4 border-white rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">1</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Domain Live</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Logo Approved</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="hidden md:block md:text-right order-1">
+                         <ul class="text-sm text-gray-600 space-y-2 flex flex-col items-end">
+                            <li class="flex items-center gap-2"> Homepage Design <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                            <li class="flex items-center gap-2"> Copywriting <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-teal-800 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-teal-800 font-bold">2</span>
+                    </div>
+                    <div class="order-2 md:text-left pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-navy">Week 2-4: Development</h3>
+                        <p class="text-sm text-gray-600 mt-2">We build the full 5-page site. We focus on mobile responsiveness for busy doctors and SEO structure for Google.</p>
+                        <div class="md:hidden mt-4">
+                             <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Mobile Responsive</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Content Upload</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 6: Launch</h3>
+                        <p class="text-sm text-gray-600 mt-2">Final testing, SEO indexing, and Go-Live. We hand over the keys.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-teal-800 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-teal-800 font-bold">3</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                         <div class="bg-teal-50 p-4 rounded-lg inline-block">
+                            <span class="text-teal-800 font-bold text-sm">Target: Fully Operational</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment -->
+        <section id="investment" class="py-16">
+            <div class="glass-card max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <div class="bg-navy p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold">Partnership Investment</h2>
+                    <p class="text-teal-200 mt-2">50% Deposit / 50% Upon Launch</p>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex justify-between items-end border-b border-gray-100 pb-4 mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy">Full Website & Brand Build</h3>
+                            <p class="text-sm text-gray-500">Complete "Done-For-You" package.</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-3xl font-bold text-navy">$1,200</div>
+                            <span class="text-xs text-gray-400">One-time fee</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-teal-50 p-4 rounded-lg mb-8">
+                        <h4 class="font-bold text-teal-900 text-sm mb-2">INCLUDED:</h4>
+                        <ul class="text-sm text-teal-800 grid md:grid-cols-2 gap-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Logo & Identity Design</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Domain Setup & Hosting Config</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> 5-Page Website Development</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Basic SEO (Local Focus)</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <a href="mailto:jose@guerrafourcademkt.com?subject=Approved%20-%20Trinity%20Medical%20Proposal&body=Hi%20Jose%2C%0A%0AI'm%20ready%20to%20move%20forward%20with%20the%20Trinity%20Medical%20website%20build.%20Please%20send%20the%20agreement.%0A%0AThanks%2C" 
+                           class="inline-block w-full md:w-auto bg-brand-red hover:bg-red-800 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:-translate-y-1" 
+                           style="background-color: var(--brand-red);">
+                            Approve & Start Build
+                        </a>
+                        <p class="text-xs text-gray-400">Standard timeline: 4-6 weeks from deposit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 text-gray-500 text-sm">
+            <div class="mb-4">
+                <span class="font-bold text-navy text-lg">GF Marketing & Consulting</span>
+                <br/>
+                <span class="italic">José Rodolfo Guerra Fourcade</span>
+            </div>
+            <p>&copy; 2026 Prepared for Diane / Trinity Medical Consultants.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // ROI Calculator Logic
+        const slider = document.getElementById('closeSlider');
+        const display = document.getElementById('sliderValue');
+        const revenue = document.getElementById('revenueDisplay');
+        const breakEven = document.getElementById('breakEvenText');
+
+        const contractValue = 5000; 
+
+        function updateCalc() {
+            const closes = slider.value;
+            display.innerText = closes;
+            
+            const totalVal = closes * contractValue; 
+            
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                maximumFractionDigits: 0,
+            });
+
+            revenue.innerText = formatter.format(totalVal); 
+            
+            // Break even logic: Fee is $3850. 
+            // If contract is 5000, break even is < 1
+            breakEven.innerText = "1";
+        }
+
+        slider.addEventListener('input', updateCalc);
+        updateCalc();
+    </script>
+</body>
+</html>
