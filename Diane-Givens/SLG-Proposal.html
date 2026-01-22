@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: Sheston Law Group x GF Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* --- Typography & Theme --- */
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #334155; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Corporate Palette: Navy (Trust) & Gold/Bronze (Prestige for Law) */
+        :root {
+            --brand-navy: #0F172A;
+            --brand-blue: #334155; 
+            --brand-gold: #B45309; 
+            --brand-red: #B91C1C; /* Kept for action buttons */
+        }
+
+        .text-navy { color: var(--brand-navy); }
+        .bg-navy { background-color: var(--brand-navy); }
+        .text-accent { color: var(--brand-gold); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Card Effects */
+        .glass-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--brand-gold);
+        }
+
+        /* Roadmap Timeline Styling */
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            bottom: -40px;
+            width: 2px;
+            background: #E2E8F0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-connector { left: 24px; top: 24px; bottom: -24px; transform: none; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
+            <div class="font-bold text-navy tracking-tight text-lg">GF Marketing <span class="text-gray-400 font-light mx-2">|</span> Sheston Law Group</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#vision" class="hover:text-blue-700 transition">Objective</a>
+                <a href="#deliverables" class="hover:text-blue-700 transition">Deliverables</a>
+                <a href="#timeline" class="hover:text-blue-700 transition">Timeline</a>
+                <a href="#investment" class="hover:text-blue-700 transition">Investment</a>
+            </div>
+            <a href="#investment" class="bg-navy text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-700 transition">View Proposal</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-6 py-12 max-w-5xl">
+
+        <!-- Hero Section -->
+        <header id="vision" class="text-center py-16 md:py-24">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold mb-6 uppercase tracking-wider">
+                Print Collateral & Brand Assets
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-navy mb-6 leading-tight">
+                Tangible Authority for a <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900">Battle-Tested Firm.</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Sheston Law Group has the reputation. Now, let's give you the physical assets to match. We will create premium, "take-away" collateral that reinforces your expertise at conferences and client meetings.
+            </p>
+        </header>
+
+        <div class="w-full h-px bg-gray-200 my-8"></div>
+
+        <!-- The Shift (Problem/Solution) -->
+        <section class="grid md:grid-cols-2 gap-12 items-center py-12">
+            <div>
+                <h2 class="text-3xl font-bold text-navy mb-6">The "Conference Gap"</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-red-50 p-3 rounded-lg h-fit text-red-700"><i data-lucide="file-x"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Empty Hands</h4>
+                            <p class="text-sm text-gray-600">At round-tables and conferences, digital reputation isn't enough. You need something physical to leave behind to stay top-of-mind.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-red-50 p-3 rounded-lg h-fit text-red-700"><i data-lucide="layers"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Fragmented Services</h4>
+                            <p class="text-sm text-gray-600">With 5 distinct practice areas, relying on a single business card fails to communicate the depth of your specific expertise (e.g., Elder Abuse vs. Board Matters).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-navy text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-slate-600 rounded-full opacity-20 blur-xl"></div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="printer" class="text-slate-300"></i> The Solution
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-slate-300"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Premium Firm Brochure</h4>
+                            <p class="text-sm text-gray-300">A comprehensive Tri-Fold narrative that explains the "Anti-Billboard" philosophy and your high-stakes defense capabilities.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-slate-300"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Specific Practice Rack Cards</h4>
+                            <p class="text-sm text-gray-300">Five distinct 4x9 cards. Whether you are talking to a Surgeon or a Nursing Home Admin, you hand them exactly what matters to them.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-700">
+                        <p class="italic text-slate-300">"Professional. Discreet. Tangible."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Grid -->
+        <section id="deliverables" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-navy">Scope of Work</h2>
+                <p class="text-gray-600 mt-2">Design, Copywriting, and Print-Ready File Preparation.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center text-navy mb-4">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">The Firm Brochure</h3>
+                    <p class="text-sm text-gray-600"><strong>Format:</strong> Tri-Fold (8.5 x 11 folded).<br><strong>Content:</strong> Firm history, "Anti-Billboard" philosophy, Team overview, and 2026 Defense landscape.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-xl relative">
+                    <div class="absolute top-4 right-4 bg-slate-100 text-slate-700 text-xs font-bold px-2 py-1 rounded">Qty: 5 Designs</div>
+                    <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center text-navy mb-4">
+                        <i data-lucide="files"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Rack Card Suite</h3>
+                    <p class="text-sm text-gray-600"><strong>Format:</strong> 4x9 Double-Sided.<br><strong>Topics:</strong> Medical Malpractice, Board Matters, Elder Abuse, Catastrophic Injury, Risk Consulting.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center text-navy mb-4">
+                        <i data-lucide="image"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Visual Consistency</h3>
+                    <p class="text-sm text-gray-600">We will create a master template that ensures all assets look like a cohesive family, reinforcing the SLG brand at every touchpoint.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rolling Start Roadmap -->
+        <section id="timeline" class="py-12 max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-navy">Timeline: Ready for February</h2>
+                <p class="text-gray-600 mt-2">A 3-week sprint to get you conference-ready.</p>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <!-- Vertical Line -->
+                <div class="timeline-connector hidden md:block"></div>
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-slate-200 md:hidden"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 1: Concept & Copy</h3>
+                        <p class="text-sm text-gray-600 mt-2">We finalize the text for all 6 assets and establish the visual "Master Template" for your approval.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-navy border-4 border-white rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">1</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Content Approval</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Design Style Approval</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="hidden md:block md:text-right order-1">
+                         <ul class="text-sm text-gray-600 space-y-2 flex flex-col items-end">
+                            <li class="flex items-center gap-2"> Brochure Layout <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                            <li class="flex items-center gap-2"> Rack Card Variations <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-navy rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-navy font-bold">2</span>
+                    </div>
+                    <div class="order-2 md:text-left pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-navy">Week 2: Design & Review</h3>
+                        <p class="text-sm text-gray-600 mt-2">We build out the full suite. You will receive PDF proofs of all assets to ensure accuracy and tone.</p>
+                        <div class="md:hidden mt-4">
+                             <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Brochure Layout</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Rack Card Variations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 3: Final Polish</h3>
+                        <p class="text-sm text-gray-600 mt-2">Final edits are made. We generate high-resolution, print-ready PDFs with crops and bleeds, ready to send to the printer.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-navy rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-navy font-bold">3</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                         <div class="bg-slate-100 p-4 rounded-lg inline-block">
+                            <span class="text-navy font-bold text-sm">Target: Files Ready for Print</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment -->
+        <section id="investment" class="py-16">
+            <div class="glass-card max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <div class="bg-navy p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold">Project Investment</h2>
+                    <p class="text-slate-300 mt-2">Payment Terms: 50% Deposit / 50% Upon File Delivery</p>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex justify-between items-end border-b border-gray-100 pb-4 mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy">Full Collateral Suite</h3>
+                            <p class="text-sm text-gray-500">Design & Copywriting for 6 unique assets.</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-3xl font-bold text-navy">$500</div>
+                            <span class="text-xs text-gray-400">One-time fee</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg mb-8">
+                        <h4 class="font-bold text-navy text-sm mb-2">DELIVERABLES:</h4>
+                        <ul class="text-sm text-slate-700 grid md:grid-cols-2 gap-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i> 1x Firm Brochure (Tri-Fold)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i> 5x Practice Area Rack Cards</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i> Stock Photo Licensing</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i> Print-Ready PDF Generation</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <a href="mailto:jose@guerrafourcademkt.com?subject=Approved%20-%20Sheston%20Law%20Group%20Proposal&body=Hi%20Jose%2C%0A%0AI'm%20ready%20to%20move%20forward%20with%20the%20Sheston%20Law%20Group%20collateral.%20Please%20send%20the%20invoice%20for%20the%20deposit.%0A%0AThanks%2C" 
+                           class="inline-block w-full md:w-auto bg-brand-red hover:bg-red-800 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:-translate-y-1" 
+                           style="background-color: var(--brand-red);">
+                            Approve Proposal & Start
+                        </a>
+                        <p class="text-xs text-gray-400">Includes 2 rounds of revisions per asset.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 text-gray-500 text-sm">
+            <div class="mb-4">
+                <span class="font-bold text-navy text-lg">GF Marketing & Consulting</span>
+                <br/>
+                <span class="italic">José Rodolfo Guerra Fourcade</span>
+            </div>
+            <p>&copy; 2026 Prepared for Diane / Sheston Law Group.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
