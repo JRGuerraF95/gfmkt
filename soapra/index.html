@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: SoAPRA x GF Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* --- Typography & Theme --- */
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #334155; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Organization Palette: Royal Blue & Slate */
+        :root {
+            --brand-navy: #0F172A; /* Slate 900 */
+            --brand-blue: #2563EB; /* Royal Blue */
+            --brand-gold: #D97706; /* Accent Gold */
+        }
+
+        .text-navy { color: var(--brand-navy); }
+        .bg-navy { background-color: var(--brand-navy); }
+        .text-accent { color: var(--brand-blue); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Card Effects */
+        .glass-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--brand-blue);
+        }
+
+        /* Roadmap Timeline Styling */
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            bottom: -40px;
+            width: 2px;
+            background: #E2E8F0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-connector { left: 24px; top: 24px; bottom: -24px; transform: none; }
+        }
+
+        /* Range Slider */
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 24px; width: 24px;
+            border-radius: 50%; background: var(--brand-blue);
+            cursor: pointer; margin-top: -10px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 4px; cursor: pointer;
+            background: #CBD5E1; border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
+            <div class="font-bold text-navy tracking-tight text-lg">GF Marketing <span class="text-gray-400 font-light mx-2">|</span> SoAPRA</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#vision" class="hover:text-blue-700 transition">Objective</a>
+                <a href="#strategy" class="hover:text-blue-700 transition">Strategy</a>
+                <a href="#roadmap" class="hover:text-blue-700 transition">Timeline</a>
+                <a href="#investment" class="hover:text-blue-700 transition">Investment</a>
+            </div>
+            <a href="#investment" class="bg-navy text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-700 transition">View Proposal</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-6 py-12 max-w-5xl">
+
+        <!-- Hero Section -->
+        <header id="vision" class="text-center py-16 md:py-24">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-semibold mb-6 uppercase tracking-wider">
+                Digital Transformation & Member Growth
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-navy mb-6 leading-tight">
+                A Modern Home for <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">SoAPRA.</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                We are building more than a website. We are creating a "Live Business Card" and a central digital hub to grow membership and professionalize the organization's presence.
+            </p>
+        </header>
+
+        <div class="w-full h-px bg-gray-200 my-8"></div>
+
+        <!-- The Shift (Problem/Solution) -->
+        <section class="grid md:grid-cols-2 gap-12 items-center py-12">
+            <div>
+                <h2 class="text-3xl font-bold text-navy mb-6">The Current Challenge</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-slate-100 p-3 rounded-lg h-fit text-slate-600"><i data-lucide="users"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Missed Connections</h4>
+                            <p class="text-sm text-gray-600">Without a central digital hub, potential new members struggle to find information, register for events, or understand the value of joining.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-slate-100 p-3 rounded-lg h-fit text-slate-600"><i data-lucide="search-x"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Hard to Verify</h4>
+                            <p class="text-sm text-gray-600">In 2026, if an organization isn't online, it feels "informal." A dedicated URL (SoAPRA.org) builds immediate institutional trust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-navy text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-600 rounded-full opacity-20 blur-xl"></div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="monitor-check" class="text-blue-400"></i> The "Live Business Card"
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-blue-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Always Accessible</h4>
+                            <p class="text-sm text-gray-300">A clean, 5-page site that works perfectly on phones. Members can pull it up instantly during meetings to share resources.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-blue-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Membership Engine</h4>
+                            <p class="text-sm text-gray-300">Clear calls-to-action for new members to join, contact the board, or attend the next gathering.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <p class="italic text-blue-200">"Legitimacy and accessibility in one click."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Grid -->
+        <section id="strategy" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-navy">The Build Plan</h2>
+                <p class="text-gray-600 mt-2">A streamlined 5-page structure designed for clarity.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center text-blue-700 mb-4">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">The 5 Core Pages</h3>
+                    <ul class="text-sm text-gray-600 space-y-2 mt-2">
+                        <li><strong>1. Home:</strong> Mission statement & immediate "Join" options.</li>
+                        <li><strong>2. About/Board:</strong> Who we are and leadership bios.</li>
+                        <li><strong>3. Membership:</strong> Benefits and how to sign up.</li>
+                        <li><strong>4. Events/Resources:</strong> Upcoming meetings or downloads.</li>
+                        <li><strong>5. Contact:</strong> Direct line to the organization.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center text-blue-700 mb-4">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Growth Features</h3>
+                    <p class="text-sm text-gray-600">The site will include basic SEO to ensure SoAPRA appears when local professionals search for industry organizations, acting as a passive recruitment tool.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section class="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 my-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-navy mb-4">Value vs. Cost</h2>
+                    <p class="text-gray-600 mb-6">
+                        At this special partnership rate, the website pays for itself with just a handful of new member registrations.
+                    </p>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">New Members per Year via Web</label>
+                        <input type="range" id="closeSlider" min="1" max="20" value="5" class="w-full mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">1</span>
+                            <span class="text-2xl font-bold text-blue-700" id="sliderValue">5</span>
+                            <span class="text-gray-500 text-sm">20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-700 text-center">
+                    <h3 class="text-gray-500 text-sm font-bold uppercase tracking-wide mb-2">Projected Member Dues</h3>
+                    <div class="text-5xl font-bold text-navy mb-2" id="revenueDisplay">$0</div>
+                    <p class="text-green-600 text-sm font-medium bg-green-50 inline-block px-3 py-1 rounded-full mt-2">
+                        Pays for site with <span id="breakEvenText">4</span> members
+                    </p>
+                    <p class="text-xs text-gray-400 mt-4">*Assumes avg. annual dues of $150</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section id="roadmap" class="py-12 max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-navy">Timeline: 4 Weeks</h2>
+                <p class="text-gray-600 mt-2">Rapid deployment to get SoAPRA online.</p>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <div class="timeline-connector hidden md:block"></div>
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-slate-200 md:hidden"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 1: Setup</h3>
+                        <p class="text-sm text-gray-600 mt-2">We secure the domain (if needed), set up hosting, and finalize the "Live Business Card" look and feel.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-blue-800 border-4 border-white rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">1</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Blueprint Approved</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Content Gathered</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="hidden md:block md:text-right order-1">
+                         <ul class="text-sm text-gray-600 space-y-2 flex flex-col items-end">
+                            <li class="flex items-center gap-2"> 5-Page Build <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                            <li class="flex items-center gap-2"> Mobile Optimization <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-blue-800 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-blue-800 font-bold">2</span>
+                    </div>
+                    <div class="order-2 md:text-left pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-navy">Week 2-3: Development</h3>
+                        <p class="text-sm text-gray-600 mt-2">We build the pages. We ensure it looks professional on desktops and functions perfectly on mobile devices for ease of sharing.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 4: Launch</h3>
+                        <p class="text-sm text-gray-600 mt-2">Final review with the board and Go-Live. SoAPRA is officially online.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-blue-800 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-blue-800 font-bold">3</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                         <div class="bg-blue-50 p-4 rounded-lg inline-block">
+                            <span class="text-blue-800 font-bold text-sm">Target: Live in 30 Days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment -->
+        <section id="investment" class="py-16">
+            <div class="glass-card max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <div class="bg-navy p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold">Partnership Investment</h2>
+                    <p class="text-blue-200 mt-2">Special "At-Cost" rate honoring our history of working together.</p>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex justify-between items-end border-b border-gray-100 pb-4 mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy">Complete Organization Website</h3>
+                            <p class="text-sm text-gray-500">Design, Development, and Launch.</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-3xl font-bold text-navy">$600</div>
+                            <span class="text-xs text-gray-400">Total Project Fee</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg mb-8">
+                        <h4 class="font-bold text-blue-900 text-sm mb-2">INCLUDED:</h4>
+                        <ul class="text-sm text-blue-800 grid md:grid-cols-2 gap-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> 5-Page Site Structure</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Mobile "Card" Optimization</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Domain Configuration</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Contact Form Integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <a href="mailto:jose@guerrafourcademkt.com?subject=Approved%20-%20SoAPRA%20Website%20Build&body=Hi%20Jose%2C%0A%0AWe%20are%20ready%20to%20move%20forward%20with%20the%20SoAPRA%20website%20at%20the%20%24600%20rate.%20Please%20send%20the%20agreement.%0A%0AThanks%2C" 
+                           class="inline-block w-full md:w-auto bg-navy hover:bg-slate-800 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                            Approve & Start Build
+                        </a>
+                        <p class="text-xs text-gray-400">Terms: Full payment of $600 due upon agreement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 text-gray-500 text-sm">
+            <div class="mb-4">
+                <span class="font-bold text-navy text-lg">GF Marketing & Consulting</span>
+                <br/>
+                <span class="italic">José Rodolfo Guerra Fourcade</span>
+            </div>
+            <p>&copy; 2026 Prepared for SoAPRA.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // ROI Calculator Logic
+        const slider = document.getElementById('closeSlider');
+        const display = document.getElementById('sliderValue');
+        const revenue = document.getElementById('revenueDisplay');
+        const breakEven = document.getElementById('breakEvenText');
+
+        // Estimate annual dues/value of a member
+        const memberValue = 150; 
+        const siteCost = 600;
+
+        function updateCalc() {
+            const members = slider.value;
+            display.innerText = members;
+            
+            const totalVal = members * memberValue; 
+            
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                maximumFractionDigits: 0,
+            });
+
+            revenue.innerText = formatter.format(totalVal); 
+            
+            // Calculate break even
+            const breakEvenCount = Math.ceil(siteCost / memberValue);
+            breakEven.innerText = breakEvenCount;
+        }
+
+        slider.addEventListener('input', updateCalc);
+        updateCalc();
+    </script>
+</body>
+</html>
