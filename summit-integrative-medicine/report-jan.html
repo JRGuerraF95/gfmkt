@@ -55,17 +55,8 @@
     Primary: Indigo (#4F46E5)
     Secondary: Cyan (#06B6D4)
     Accent: Fuchsia (#D946EF) for high energy
+    New Content Section: Emerald (#10B981) for SEO/Growth
     Background: Slate (#F8FAFC)
-    -->
-    <!-- 
-    Source Material Analysis Plan:
-    1. Executive Summary: High-level overview of the month's wins.
-    2. Social Velocity (Insta/FB): Visualizing the triple-digit growth and engagement rates.
-    3. B2B Awakening (LinkedIn): Focusing on the daily impression spikes.
-    4. Local Intent (Google): Breaking down how patients find the clinic (Maps vs Search) and their actions.
-    5. Roadmap: Text-based cards for SEO/Spanish expansion.
-    
-    NO SVG USED. NO MERMAID JS USED.
     -->
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -266,7 +257,82 @@
             </div>
         </section>
 
-        <!-- Section 6: Roadmap -->
+        <!-- Section 6: Content & SEO Architecture (NEW) -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                    <span class="text-emerald-500 text-3xl">&#9997;</span> Content & SEO Architecture
+                </h2>
+                <p class="text-gray-500 mt-2">A fundamental component of our SEO strategy: We have created and deployed targeted, high-value articles to capture local search intent.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Stats Card -->
+                <div class="stat-card bg-emerald-600 text-white p-6 rounded-lg shadow-lg flex flex-col justify-center">
+                    <p class="text-sm font-medium opacity-80 uppercase">Articles Published</p>
+                    <p class="text-5xl font-bold mt-2">11</p>
+                    <p class="text-sm mt-4 opacity-90 border-t border-emerald-400 pt-2">Driving "Naturopathic" & "Holistic" Traffic</p>
+                </div>
+
+                <!-- Keyword Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-md md:col-span-2">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">SEO Keyword Targeting</h3>
+                    <p class="text-sm text-gray-500 mb-4">Distribution of content focus across high-value search terms.</p>
+                    <div class="chart-container h-48 md:h-48"> 
+                        <canvas id="seoContentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog List -->
+            <div class="mt-8 bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Content Library Highlights</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-600">
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>7 Powerful Reasons to Choose Summit Naturopathic Medicine in Tucson</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>5 Life-Changing Benefits of Naturopathic Medicine Tucson</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>9 Powerful Ways Naturopathic Medicine in Tucson Supports Long-Term Healing</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>6 Meaningful Ways Naturopathic Medicine in Tucson Supports Real Healing</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>8 Refreshing Reasons Naturopathic Medicine in Tucson Is Changing Healthcare</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>7 Meaningful Ways Holistic Medicine in Tucson Supports Whole-Body Healing</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>8 Inspiring Reasons Holistic Medicine in Tucson Is Transforming Patient Care</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>9 Powerful Reasons Holistic Medicine in Tucson Feels Different From Conventional Care</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>7 Eye-Opening Ways Holistic Medicine in Tucson Supports Lasting Wellness</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-emerald-500 font-bold">&bull;</span>
+                        <span>10 Reassuring Ways Holistic Medicine in Tucson Supports Long-Term Health</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Roadmap -->
         <section>
             <div class="bg-slate-900 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
                 <h2 class="text-3xl font-bold mb-6 border-b border-slate-700 pb-4">Future Roadmap: Q1 2026</h2>
@@ -279,7 +345,7 @@
                             We are moving from foundation building to authority building. Our focus shifts to ranking for competitive keywords through:
                         </p>
                         <ul class="text-slate-300 space-y-2 text-sm pl-4 border-l-2 border-cyan-500">
-                            <li class="pl-2"><strong>Educational Blogs:</strong> Answering specific patient questions.</li>
+                            <li class="pl-2"><strong>Educational Blogs:</strong> Continuing the momentum with answer-based content.</li>
                             <li class="pl-2"><strong>Podcasts:</strong> Building trust through audio content.</li>
                             <li class="pl-2"><strong>Backlinks:</strong> Acquiring links from reputable health sites.</li>
                         </ul>
@@ -525,6 +591,43 @@
                 scales: {
                     y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
                     x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- CHART 6: SEO Content Strategy (Horizontal Bar) ---
+        // Naturopathic 5, Holistic 6
+        const ctxSeo = document.getElementById('seoContentChart').getContext('2d');
+        new Chart(ctxSeo, {
+            type: 'bar',
+            data: {
+                labels: ['Naturopathic Medicine', 'Holistic Medicine'],
+                datasets: [{
+                    label: 'Articles Created',
+                    data: [5, 6],
+                    backgroundColor: [
+                        'rgba(16, 185, 129, 0.8)', // Emerald
+                        'rgba(6, 182, 212, 0.8)'   // Cyan
+                    ],
+                    borderRadius: 4,
+                    barThickness: 30
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                ...commonOptions,
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { 
+                        beginAtZero: true, 
+                        grid: { color: '#f1f5f9' },
+                        title: { display: true, text: 'Articles Targeting Keywords' },
+                        ticks: { stepSize: 1 }
+                    },
+                    y: { grid: { display: false } }
                 }
             }
         });
