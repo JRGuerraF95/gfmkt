@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summit Integrative Medicine - Marketing Performance Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Chart Container Styling - Responsive Boundaries */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* Flexible within grid columns */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; /* Base height */
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Custom Scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        
+        /* Card Hover Effects */
+        .stat-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <!-- 
+    Palette Selection: Vibrant Medical
+    Primary: Indigo (#4F46E5)
+    Secondary: Cyan (#06B6D4)
+    Accent: Fuchsia (#D946EF) for high energy
+    Background: Slate (#F8FAFC)
+    -->
+    <!-- 
+    Source Material Analysis Plan:
+    1. Executive Summary: High-level overview of the month's wins.
+    2. Social Velocity (Insta/FB): Visualizing the triple-digit growth and engagement rates.
+    3. B2B Awakening (LinkedIn): Focusing on the daily impression spikes.
+    4. Local Intent (Google): Breaking down how patients find the clinic (Maps vs Search) and their actions.
+    5. Roadmap: Text-based cards for SEO/Spanish expansion.
+    
+    NO SVG USED. NO MERMAID JS USED.
+    -->
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h1 class="text-3xl font-bold tracking-tight">Marketing Performance Report</h1>
+                    <p class="mt-2 text-indigo-100 text-lg">Client: Summit Integrative Medicine</p>
+                </div>
+                <div class="mt-4 md:mt-0 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+                    <p class="font-semibold">Period: Jan 04, 2026 – Feb 02, 2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- Section 1: Executive Summary -->
+        <section>
+            <div class="bg-white rounded-xl shadow-md p-8 border-l-8 border-indigo-500">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    This month marks a turning point for Summit Integrative Medicine's digital ecosystem. Following the successful website launch, our pivot to aggressive content distribution has triggered <span class="font-bold text-indigo-600">triple-digit percentage growth</span> on Facebook and established a highly engaged community on Instagram. Simultaneously, local SEO efforts are translating directly into physical foot traffic, with nearly 50 navigation requests generated this month alone.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Instagram Performance -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                    <span class="text-fuchsia-500 text-3xl">&#9673;</span> Instagram Performance
+                </h2>
+                <p class="text-gray-500 mt-2">High engagement rates prove the content is resonating with the local wellness community.</p>
+            </div>
+
+            <!-- KPI Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                    <p class="text-sm font-medium text-gray-400 uppercase">Total Followers</p>
+                    <p class="text-3xl font-bold text-gray-900 mt-1">86</p>
+                    <p class="text-sm text-green-500 mt-2 font-semibold">Growing Steady</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                    <p class="text-sm font-medium text-gray-400 uppercase">Total Reach</p>
+                    <p class="text-3xl font-bold text-indigo-600 mt-1">166</p>
+                    <p class="text-sm text-green-500 mt-2 font-semibold">↑ 85% vs last month</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                    <p class="text-sm font-medium text-gray-400 uppercase">Total Views</p>
+                    <p class="text-3xl font-bold text-fuchsia-500 mt-1">1.7K</p>
+                    <p class="text-sm text-green-500 mt-2 font-semibold">↑ 47% vs last month</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                    <p class="text-sm font-medium text-gray-400 uppercase">Interaction Rate</p>
+                    <p class="text-3xl font-bold text-cyan-500 mt-1">66.9%</p>
+                    <p class="text-sm text-gray-400 mt-2">Exceptionally High</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chart: Insta Engagement Mix -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Engagement Funnel</h3>
+                    <p class="text-sm text-gray-500 mb-4">Comparing how many people saw content (Reach) vs. how many engaged.</p>
+                    <div class="chart-container">
+                        <canvas id="instaFunnelChart"></canvas>
+                    </div>
+                </div>
+                
+                 <!-- Chart: Insta Growth -->
+                 <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Growth Analysis</h3>
+                    <p class="text-sm text-gray-500 mb-6">
+                        The <strong>85% increase in Reach</strong> is the leading indicator here. By reaching nearly double the unique accounts compared to the previous period, we are widening the top of the funnel. The <strong>1.7K views</strong> demonstrates that users are not just scrolling past; they are watching the Reels and consuming the content.
+                    </p>
+                    <div class="p-4 bg-indigo-50 rounded-lg border border-indigo-100">
+                        <p class="text-indigo-800 font-medium">Key Takeaway</p>
+                        <p class="text-indigo-600 text-sm mt-1">Our content strategy is working. The algorithms are prioritizing our posts because the interaction rate (66.9%) signals high quality to the platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Facebook Velocity -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                    <span class="text-indigo-600 text-3xl">&#9632;</span> Facebook Growth Surge
+                </h2>
+                <p class="text-gray-500 mt-2">Facebook has seen the most explosive growth in visibility this month due to cross-promotion.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chart: Growth Percentages -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Month-over-Month Growth</h3>
+                    <div class="chart-container">
+                        <canvas id="fbGrowthChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- FB Context -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Performance Breakdown</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-indigo-500">&#9650;</span>
+                            <div>
+                                <p class="font-bold text-gray-900">667% Increase in Page Views</p>
+                                <p class="text-sm text-gray-500">Users are clicking through from posts to check out the full profile, business hours, and location.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-cyan-500">&#9650;</span>
+                            <div>
+                                <p class="font-bold text-gray-900">210% Increase in Impressions</p>
+                                <p class="text-sm text-gray-500">Your content appeared on screens 313 times, significantly boosting brand recall.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-fuchsia-500">&#9650;</span>
+                            <div>
+                                <p class="font-bold text-gray-900">59% Increase in Engagement</p>
+                                <p class="text-sm text-gray-500">Likes, shares, and comments are up, creating a feedback loop that shows your page to even more people.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: LinkedIn Awakening -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                    <span class="text-cyan-600 text-3xl">&#9670;</span> LinkedIn: B2B Awakening
+                </h2>
+                <p class="text-gray-500 mt-2">Consistent posting has "woken up" the algorithm, driving a 5,100% increase in impressions.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Daily Impressions Trend</h3>
+                 <p class="text-sm text-gray-500 mb-4">Tracking how the professional audience is beginning to see your content.</p>
+                <div class="chart-container">
+                    <canvas id="linkedinChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Local SEO & Google Business -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                    <span class="text-red-500 text-3xl">&#9679;</span> Local Search & Patient Intent
+                </h2>
+                <p class="text-gray-500 mt-2">The Google Business Profile is your primary driver of physical foot traffic and appointments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                 <div class="stat-card bg-indigo-600 text-white p-6 rounded-lg shadow-lg">
+                    <p class="text-sm font-medium opacity-80 uppercase">Direction Requests</p>
+                    <p class="text-4xl font-bold mt-2">49</p>
+                    <p class="text-sm mt-2 opacity-90">High Intent Potential Patients</p>
+                </div>
+                 <div class="stat-card bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                    <p class="text-sm font-medium text-gray-400 uppercase">Website Visits (GBP)</p>
+                    <p class="text-3xl font-bold text-gray-900 mt-1">29</p>
+                </div>
+                 <div class="stat-card bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                    <p class="text-sm font-medium text-gray-400 uppercase">Calls</p>
+                    <p class="text-3xl font-bold text-gray-900 mt-1">2</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chart: Discovery Source -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">How They Found You</h3>
+                    <p class="text-sm text-gray-500 mb-4">Are users looking for your name or discovering you via category?</p>
+                    <div class="chart-container">
+                        <canvas id="googleSourceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart: Action Breakdown -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Customer Actions</h3>
+                    <p class="text-sm text-gray-500 mb-4">What users do after viewing your profile.</p>
+                    <div class="chart-container">
+                        <canvas id="googleActionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Roadmap -->
+        <section>
+            <div class="bg-slate-900 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
+                <h2 class="text-3xl font-bold mb-6 border-b border-slate-700 pb-4">Future Roadmap: Q1 2026</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2 flex items-center gap-2">
+                            <span>&#9881;</span> Search Engine Optimization (SEO)
+                        </h3>
+                        <p class="text-slate-300 leading-relaxed mb-4">
+                            We are moving from foundation building to authority building. Our focus shifts to ranking for competitive keywords through:
+                        </p>
+                        <ul class="text-slate-300 space-y-2 text-sm pl-4 border-l-2 border-cyan-500">
+                            <li class="pl-2"><strong>Educational Blogs:</strong> Answering specific patient questions.</li>
+                            <li class="pl-2"><strong>Podcasts:</strong> Building trust through audio content.</li>
+                            <li class="pl-2"><strong>Backlinks:</strong> Acquiring links from reputable health sites.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-fuchsia-400 mb-2 flex items-center gap-2">
+                            <span>&#127758;</span> Spanish Market Expansion
+                        </h3>
+                        <p class="text-slate-300 leading-relaxed mb-4">
+                            Capturing the significant Spanish-speaking demographic in Arizona with a fully localized website strategy.
+                        </p>
+                        <ul class="text-slate-300 space-y-2 text-sm pl-4 border-l-2 border-fuchsia-500">
+                            <li class="pl-2"><strong>Manual Localization:</strong> Ensuring medical accuracy (not just auto-translate).</li>
+                            <li class="pl-2"><strong>Targeted SEO:</strong> Ranking for "Naturopata en Arizona" and "Medicina Integrativa".</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-400 text-sm py-12">
+            <p>&copy; 2026 Marketing Agency Report for Summit Integrative Medicine</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- UTILITY: Label Wrapping Logic (16 char limit) ---
+        function wrapLabel(label) {
+            if (typeof label !== 'string' || label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= 16) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- UTILITY: Common Chart Options ---
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                tooltip: {
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    titleFont: { size: 14, family: 'Inter' },
+                    bodyFont: { size: 13, family: 'Inter' },
+                    padding: 12,
+                    cornerRadius: 8,
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        font: { family: 'Inter', size: 12 },
+                        usePointStyle: true,
+                        padding: 20
+                    }
+                }
+            }
+        };
+
+        // --- CHART 1: Instagram Funnel (Reach vs Interactions) ---
+        const ctxInsta = document.getElementById('instaFunnelChart').getContext('2d');
+        new Chart(ctxInsta, {
+            type: 'bar',
+            data: {
+                labels: ['Total Reach', 'Total Interactions'],
+                datasets: [{
+                    label: 'Metrics',
+                    data: [166, 111],
+                    backgroundColor: [
+                        'rgba(79, 70, 229, 0.8)', // Indigo
+                        'rgba(6, 182, 212, 0.8)'  // Cyan
+                    ],
+                    borderColor: [
+                        'rgba(79, 70, 229, 1)',
+                        'rgba(6, 182, 212, 1)'
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                ...commonOptions,
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: { display: false }, // Hide legend for single dataset
+                    tooltip: {
+                        ...commonOptions.plugins.tooltip,
+                        callbacks: {
+                            ...commonOptions.plugins.tooltip.callbacks,
+                            afterBody: function(context) {
+                                if (context[0].dataIndex === 1) {
+                                    return 'Interaction Rate: 66.9%';
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- CHART 2: Facebook Growth (Horizontal Bar) ---
+        const ctxFb = document.getElementById('fbGrowthChart').getContext('2d');
+        new Chart(ctxFb, {
+            type: 'bar',
+            data: {
+                labels: ['Page Views', 'Impressions', 'Engagement'],
+                datasets: [{
+                    label: '% Growth vs Last Month',
+                    data: [667, 210, 59],
+                    backgroundColor: [
+                        'rgba(79, 70, 229, 0.8)', // Indigo
+                        'rgba(6, 182, 212, 0.8)', // Cyan
+                        'rgba(217, 70, 239, 0.8)' // Fuchsia
+                    ],
+                    borderRadius: 4,
+                    barThickness: 40
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal bar
+                ...commonOptions,
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { 
+                        beginAtZero: true, 
+                        grid: { color: '#f1f5f9' },
+                        title: { display: true, text: 'Percentage Increase (%)' }
+                    },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- CHART 3: LinkedIn Daily Trend (Line) ---
+        // Data derived from Page 23 snippet: Sun 6, Mon 25, Tue 6, Wed 2, Thu 12, Fri 0, Sat 1
+        const ctxLi = document.getElementById('linkedinChart').getContext('2d');
+        new Chart(ctxLi, {
+            type: 'line',
+            data: {
+                labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                datasets: [{
+                    label: 'Daily Impressions',
+                    data: [6, 25, 6, 2, 12, 0, 1],
+                    borderColor: '#06B6D4', // Cyan
+                    backgroundColor: 'rgba(6, 182, 212, 0.1)',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#06B6D4',
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- CHART 4: Google Source Split (Doughnut) ---
+        // Search 73, Maps 47
+        const ctxGoogleSource = document.getElementById('googleSourceChart').getContext('2d');
+        new Chart(ctxGoogleSource, {
+            type: 'doughnut',
+            data: {
+                labels: ['Google Search', 'Google Maps'],
+                datasets: [{
+                    data: [73, 47],
+                    backgroundColor: [
+                        '#4F46E5', // Indigo
+                        '#D946EF'  // Fuchsia
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                ...commonOptions,
+                cutout: '70%',
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // --- CHART 5: Google Actions (Bar) ---
+        // Directions 49, Website 29, Calls 2
+        const ctxGoogleAction = document.getElementById('googleActionChart').getContext('2d');
+        new Chart(ctxGoogleAction, {
+            type: 'bar',
+            data: {
+                labels: ['Get Directions', 'Visit Website', 'Call Business'],
+                datasets: [{
+                    label: 'User Actions',
+                    data: [49, 29, 2],
+                    backgroundColor: [
+                        'rgba(79, 70, 229, 0.8)',
+                        'rgba(6, 182, 212, 0.8)',
+                        'rgba(217, 70, 239, 0.8)'
+                    ],
+                    borderRadius: 6,
+                    barThickness: 50
+                }]
+            },
+            options: {
+                ...commonOptions,
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
