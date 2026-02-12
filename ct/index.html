@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta: Sistema de Captación - Carlos Terrazas x GF Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* --- Typography & Theme --- */
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #334155; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Real Estate Palette: Charcoal (Professionalism) & Emerald (Growth/Profit) */
+        :root {
+            --brand-dark: #1E293B; /* Slate 800 */
+            --brand-action: #059669; /* Emerald 600 */
+            --brand-accent: #D97706; /* Amber 600 */
+            --brand-light: #ECFDF5; /* Emerald 50 */
+        }
+
+        .text-dark { color: var(--brand-dark); }
+        .bg-dark { background-color: var(--brand-dark); }
+        .text-accent { color: var(--brand-accent); }
+        .bg-action { background-color: var(--brand-action); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Card Effects */
+        .glass-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--brand-action);
+        }
+
+        /* Roadmap Timeline Styling */
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            bottom: -40px;
+            width: 2px;
+            background: #E2E8F0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-connector { left: 24px; top: 24px; bottom: -24px; transform: none; }
+        }
+
+        /* Range Slider */
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 24px; width: 24px;
+            border-radius: 50%; background: var(--brand-action);
+            cursor: pointer; margin-top: -10px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 4px; cursor: pointer;
+            background: #CBD5E1; border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
+            <div class="font-bold text-dark tracking-tight text-lg flex items-center gap-2">
+                <i data-lucide="building-2" class="w-5 h-5 text-emerald-600"></i> GF Marketing <span class="text-gray-400 font-light mx-1">|</span> Inversiones
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#vision" class="hover:text-emerald-700 transition">Objetivo</a>
+                <a href="#strategy" class="hover:text-emerald-700 transition">Estrategia</a>
+                <a href="#roadmap" class="hover:text-emerald-700 transition">Plan de Acción</a>
+                <a href="#investment" class="hover:text-emerald-700 transition">Inversión</a>
+            </div>
+            <a href="#investment" class="bg-dark text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-700 transition">Ver Propuesta</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-6 py-12 max-w-5xl">
+
+        <!-- Hero Section -->
+        <header id="vision" class="text-center py-16 md:py-24">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold mb-6 uppercase tracking-wider border border-emerald-100">
+                Sistema de Generación de Leads
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-dark mb-6 leading-tight">
+                Deja de buscar vendedores. <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-800">Haz que ellos te encuentren.</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Pasar de un modelo manual y reactivo a un <strong>sistema predecible de adquisición de propiedades</strong> en Tucson. Construiremos tu infraestructura digital desde cero para captar vendedores motivados en el momento exacto en que necesitan liquidar sus activos.
+            </p>
+        </header>
+
+        <div class="w-full h-px bg-gray-200 my-8"></div>
+
+        <!-- The Shift (Problem/Solution) -->
+        <section class="grid md:grid-cols-2 gap-12 items-center py-12">
+            <div>
+                <h2 class="text-3xl font-bold text-dark mb-6">El Cuello de Botella Actual</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-amber-50 p-3 rounded-lg h-fit text-amber-700"><i data-lucide="search-x"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Prospección Manual</h4>
+                            <p class="text-sm text-gray-600">Depender de llamadas en frío y búsqueda manual limita tu capacidad de escalar. Necesitas un sistema que trabaje 24/7 atrayendo prospectos mientras tú cierras tratos.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-red-50 p-3 rounded-lg h-fit text-red-700"><i data-lucide="ghost"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Invisibilidad Digital</h4>
+                            <p class="text-sm text-gray-600">Sin un sitio web, dominio, ni perfiles de redes sociales, incluso si un vendedor te encuentra, no hay forma de generar la confianza necesaria para transacciones de alto valor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-dark text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-emerald-600 rounded-full opacity-20 blur-xl"></div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="magnet" class="text-emerald-400"></i> La Solución: Atracción Activa
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-emerald-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Centro de Operaciones Digital</h4>
+                            <p class="text-sm text-gray-300">Un sitio web profesional optimizado para conversiones, actuando como tu "tarjeta de presentación viva" e integrado a un CRM ligero para no perder ningún lead.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-emerald-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Estrategia de Nicho (Mercado Hispano)</h4>
+                            <p class="text-sm text-gray-300">Evitaremos la competencia directa atacando nichos hiperlocales en Tucson y dominando el mercado hispanohablante, reduciendo el costo por prospecto.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <p class="italic text-emerald-200">"Menos competencia, prospectos más calificados."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Grid -->
+        <section id="strategy" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark">Estrategia Multicanal</h2>
+                <p class="text-gray-600 mt-2">Construimos la fundación primero, luego encendemos el tráfico.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="bg-emerald-50 w-10 h-10 rounded-lg flex items-center justify-center text-emerald-700 mb-4">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">Fundación Web & CRM</h3>
+                    <p class="text-sm text-gray-600">Compra de dominio, diseño de Landing Page de alta conversión y configuración de un CRM ligero para capturar y gestionar cada prospecto desde el día uno.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="bg-emerald-50 w-10 h-10 rounded-lg flex items-center justify-center text-emerald-700 mb-4">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">Google Ads (Intención)</h3>
+                    <p class="text-sm text-gray-600">Campañas hiperlocales (Ej. "vender casa rápido por divorcio en 85745"). Capturamos a las personas en el momento exacto en que buscan una solución urgente en Google.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="bg-emerald-50 w-10 h-10 rounded-lg flex items-center justify-center text-emerald-700 mb-4">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">Meta Ads (Empatía)</h3>
+                    <p class="text-sm text-gray-600">Campañas en Facebook/Instagram abordando puntos de dolor reales (herencias, pre-foreclosure, deudas), posicionándote como el experto local que resuelve problemas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section class="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 my-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-dark mb-4">El Poder del ROI Inmobiliario</h2>
+                    <p class="text-gray-600 mb-6">
+                        En tu industria, no necesitas cientos de clientes. Solo un trato cerrado ("el que valga la pena") tiene el margen suficiente para cubrir el marketing de todo un año.
+                    </p>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Tratos cerrados al año vía embudo digital</label>
+                        <input type="range" id="dealsSlider" min="1" max="10" step="1" value="2" class="w-full mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Conservador (1)</span>
+                            <span class="text-2xl font-bold text-emerald-700" id="dealsValue">2</span>
+                            <span class="text-gray-500 text-sm">Escala (10)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-emerald-600 text-center">
+                    <h3 class="text-gray-500 text-sm font-bold uppercase tracking-wide mb-2">Beneficio Bruto Proyectado</h3>
+                    <div class="text-5xl font-bold text-dark mb-2" id="revenueDisplay">$20,000</div>
+                    <p class="text-emerald-700 text-sm font-medium bg-emerald-50 inline-block px-3 py-1 rounded-full mt-2">
+                        <i data-lucide="trending-up" class="inline w-4 h-4 mr-1"></i> El marketing se paga solo
+                    </p>
+                    <p class="text-xs text-gray-400 mt-4">*Asume un beneficio promedio conservador de $10,000 por transacción.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section id="roadmap" class="py-12 max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark">Plan de Acción (Despliegue)</h2>
+                <p class="text-gray-600 mt-2">Desde cero hasta captación de leads constante.</p>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <div class="timeline-connector hidden md:block"></div>
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-slate-200 md:hidden"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-dark">Mes 1: La Fundación</h3>
+                        <p class="text-sm text-gray-600 mt-2">Selección y compra de dominio. Desarrollo de la "tarjeta de presentación viva" (sitio web optimizado). Creación de perfiles profesionales en Facebook, Instagram y LinkedIn. Integración de CRM.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-emerald-700 border-4 border-white rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">1</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Infraestructura Lista</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Seguimiento Configurado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="hidden md:block md:text-right order-1">
+                         <ul class="text-sm text-gray-600 space-y-2 flex flex-col items-end">
+                            <li class="flex items-center gap-2"> Google Ads Local <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i></li>
+                            <li class="flex items-center gap-2"> Meta Ads Emocional <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i></li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-emerald-700 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-emerald-700 font-bold">2</span>
+                    </div>
+                    <div class="order-2 md:text-left pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-dark">Mes 2: Lanzamiento de Tráfico</h3>
+                        <p class="text-sm text-gray-600 mt-2">Activación de campañas publicitarias. Investigación de palabras clave hiperlocales en Tucson y lanzamiento de anuncios dirigidos a vendedores en apuros (español e inglés).</p>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-dark">Mes 3-4: Optimización</h3>
+                        <p class="text-sm text-gray-600 mt-2">El algoritmo madura. Filtramos prospectos no calificados, reducimos el costo por lead y estabilizamos el flujo de vendedores hacia tu CRM.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-emerald-700 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-emerald-700 font-bold">3</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                         <div class="bg-emerald-50 p-4 rounded-lg inline-block">
+                            <span class="text-emerald-800 font-bold text-sm">Objetivo: Leads Consistentes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment -->
+        <section id="investment" class="py-16">
+            <div class="glass-card max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <div class="bg-dark p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold">Inversión del Sistema</h2>
+                    <p class="text-emerald-400 mt-2 font-medium">Servicio Mes a Mes. Sin Contratos Forzosos.</p>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-gray-100 pb-6 mb-6 gap-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-dark">Gestión y Desarrollo Integral</h3>
+                            <p class="text-sm text-gray-500 mt-1">Solución completa: Web, Redes Sociales, Publicidad y CRM.</p>
+                        </div>
+                        <div class="text-left md:text-right">
+                            <div class="text-4xl font-bold text-dark">$1,200</div>
+                            <span class="text-sm font-medium text-emerald-600">/ mes</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-50 p-5 rounded-xl mb-8 border border-emerald-100">
+                        <h4 class="font-bold text-emerald-900 text-sm mb-3">EL PAQUETE INCLUYE:</h4>
+                        <ul class="text-sm text-emerald-800 grid md:grid-cols-2 gap-3">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Creación y Hosting de Sitio Web</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Sugerencia y Compra de Dominio</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Creación de Perfiles de RRSS</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Integración de CRM ligero</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Gestión de Google Ads</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Gestión de Meta Ads (FB/IG)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg mb-8 border border-gray-200 text-sm text-gray-600">
+                        <span class="font-bold text-gray-800"><i data-lucide="info" class="inline w-4 h-4 mr-1 text-gray-500 relative -top-0.5"></i> Presupuesto de Anuncios:</span> El costo de los anuncios se paga directamente a Google/Facebook. Sugerimos un presupuesto inicial de prueba de <strong>~$500/mes</strong> para alimentar el sistema.
+                    </div>
+
+                    <div class="text-center space-y-4 pt-4 border-t border-gray-100">
+                        <a href="mailto:jose@guerrafourcademkt.com?subject=Aprobado%20-%20Sistema%20Inmobiliario&body=Hola%20Jose%2C%0A%0AEstoy%20listo%20para%20comenzar%20con%20el%20sistema%20de%20captaci%C3%B3n.%20Por%20favor%20env%C3%ADame%20los%20siguientes%20pasos.%0A%0AGracias%2C%0ACarlos%20Terrazas" 
+                           class="inline-flex justify-center items-center w-full md:w-auto bg-action hover:bg-emerald-700 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                            Aprobar y Comenzar Mes 1
+                        </a>
+                        <p class="text-xs text-gray-400">Reunión de seguimiento programada para el próximo martes a las 2:00 p.m.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 text-gray-500 text-sm border-t border-gray-200 mt-8">
+            <div class="mb-4">
+                <span class="font-bold text-dark text-lg">GF Marketing and Consulting</span>
+            </div>
+            <p>&copy; 2026 Preparado exclusivamente para Carlos Terrazas.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // ROI Calculator Logic
+        const dealsSlider = document.getElementById('dealsSlider');
+        const dealsValue = document.getElementById('dealsValue');
+        const revenueDisplay = document.getElementById('revenueDisplay');
+
+        // Conservative profit per house flipped/wholesaled
+        const profitPerDeal = 10000; 
+
+        function updateROICalc() {
+            const deals = parseInt(dealsSlider.value);
+            
+            // Format number of deals
+            dealsValue.innerText = deals.toLocaleString();
+            
+            // Calculate Total Revenue
+            const totalRevenue = deals * profitPerDeal;
+            
+            // Format to currency
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                maximumFractionDigits: 0,
+            });
+
+            revenueDisplay.innerText = formatter.format(totalRevenue);
+        }
+
+        dealsSlider.addEventListener('input', updateROICalc);
+        updateROICalc(); // Initialize on load
+    </script>
+</body>
+</html>
