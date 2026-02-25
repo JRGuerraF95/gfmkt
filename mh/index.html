@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Estrategia Digital - GF Marketing x Luis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- Typography & Theme --- */
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #334155; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Political/Consulting Palette: Navy (Trust/Authority) & Royal Blue (Action) */
+        :root {
+            --brand-dark: #0F172A; /* Slate 900 */
+            --brand-action: #2563EB; /* Blue 600 */
+            --brand-accent: #DC2626; /* Red 600 (Subtle accents) */
+            --brand-light: #EFF6FF; /* Blue 50 */
+        }
+
+        .text-dark { color: var(--brand-dark); }
+        .bg-dark { background-color: var(--brand-dark); }
+        .text-accent { color: var(--brand-accent); }
+        .bg-action { background-color: var(--brand-action); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Card Effects */
+        .glass-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--brand-action);
+        }
+
+        /* Roadmap Timeline Styling */
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            bottom: -40px;
+            width: 2px;
+            background: #E2E8F0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-connector { left: 24px; top: 24px; bottom: -24px; transform: none; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
+            <div class="font-bold text-dark tracking-tight text-lg flex items-center gap-2">
+                <i data-lucide="megaphone" class="w-5 h-5 text-blue-600"></i> GF Marketing <span class="text-gray-400 font-light mx-1">|</span> Consultoría
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#vision" class="hover:text-blue-700 transition">Objetivo</a>
+                <a href="#strategy" class="hover:text-blue-700 transition">Estrategia</a>
+                <a href="#acuerdo" class="hover:text-blue-700 transition">Acuerdo</a>
+                <a href="#portafolio" class="hover:text-blue-700 transition">Portafolio</a>
+            </div>
+            <a href="#acuerdo" class="bg-dark text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition">Ver Alcance</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-6 py-12 max-w-5xl">
+
+        <!-- Hero Section -->
+        <header id="vision" class="text-center py-16 md:py-24">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-semibold mb-6 uppercase tracking-wider border border-blue-100">
+                Campaña Maritza - Distrito 21
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-dark mb-6 leading-tight">
+                Eleva el reconocimiento. <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-800">Mantén la seguridad táctica.</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Pasar de una presencia digital esporádica a una <strong>máquina de contenido constante y profesional</strong>. Construimos el nombre de Maritza frente a candidatas establecidas, actuando como una extensión de tu equipo para potenciar los esfuerzos en campo.
+            </p>
+        </header>
+
+        <div class="w-full h-px bg-gray-200 my-8"></div>
+
+        <!-- The Shift (Problem/Solution) -->
+        <section class="grid md:grid-cols-2 gap-12 items-center py-12">
+            <div>
+                <h2 class="text-3xl font-bold text-dark mb-6">Los Retos Actuales</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-amber-50 p-3 rounded-lg h-fit text-amber-700"><i data-lucide="video-off"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Capacidad Visual Limitada</h4>
+                            <p class="text-sm text-gray-600">La candidata requiere elevar su nombre, pero la campaña carece de la habilidad y el tiempo para producir videos cortos (Reels/TikToks) atractivos y de forma constante.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-red-50 p-3 rounded-lg h-fit text-red-700"><i data-lucide="shield-alert"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Seguridad Operativa (Campo)</h4>
+                            <p class="text-sm text-gray-600">Anunciar movimientos o geolocalizar áreas prematuramente alerta a la competencia. Se necesita impacto digital sin sacrificar el factor sorpresa de las caminatas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-dark text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-blue-600 rounded-full opacity-20 blur-xl"></div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="zap" class="text-blue-400"></i> Nuestra Solución
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-blue-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Tu Brazo Digital de Respaldo</h4>
+                            <p class="text-sm text-gray-300">Producimos material de alta calidad y nos integramos a tu calendario. Trabajamos en perfecta sincronía con tus tácticas, asegurando que el contenido impulse el trabajo de campo sin revelar los movimientos anticipadamente.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-700">
+                        <p class="italic text-blue-200 text-sm">"Sinergia Total: Somos un recurso para tu firma, listos para alinear nuestra estrategia digital con los materiales de tu nueva imprenta."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Grid -->
+        <section id="strategy" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark">Plan de Ataque</h2>
+                <p class="text-gray-600 mt-2">Creación de contenido ágil, profesional y controlado.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="bg-blue-50 w-10 h-10 rounded-lg flex items-center justify-center text-blue-700 mb-4">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">1. Paquete "Quick Start"</h3>
+                    <p class="text-sm text-gray-600">Producimos un lote inmediato de contenido fundamental: videos de presentación de Maritza, posturas clave y gráficos para inundar las redes rápidamente.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="bg-blue-50 w-10 h-10 rounded-lg flex items-center justify-center text-blue-700 mb-4">
+                        <i data-lucide="film"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">2. Producción In-House</h3>
+                    <p class="text-sm text-gray-600">Sesiones de grabación directas y dinámicas. Nos encargamos de la dirección, grabación y edición visual (formato Reels/TikTok) para garantizar calidad y retención.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="bg-blue-50 w-10 h-10 rounded-lg flex items-center justify-center text-blue-700 mb-4">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">3. Sincronía Táctica</h3>
+                    <p class="text-sm text-gray-600">Trabajamos como aliados de tu equipo. Coordinamos el "Soporte Aéreo" digital para que aterrice en el momento exacto, multiplicando el impacto de tus equipos de calle y sumando fuerza a su trabajo.</p>
+                </div>
+
+                <!-- Card 4 (Nuevo: Google Ads) -->
+                <div class="glass-card p-6 rounded-xl border-blue-200 shadow-md relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-blue-50 rounded-bl-full -mr-8 -mt-8"></div>
+                    <div class="bg-blue-600 w-10 h-10 rounded-lg flex items-center justify-center text-white mb-4 relative z-10">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2 relative z-10">4. Dominio en Google Ads</h3>
+                    <p class="text-sm text-gray-600 relative z-10">Realizamos una investigación profunda del algoritmo de búsqueda de Google. Posicionamos a la candidata capturando la intención exacta de los votantes, aportando un nivel de preparación técnica que marca una clara diferencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section id="roadmap" class="py-12 max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark">Plan de Acción (Despliegue)</h2>
+                <p class="text-gray-600 mt-2">Visibilidad inmediata, crecimiento sostenido.</p>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <div class="timeline-connector hidden md:block"></div>
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-slate-200 md:hidden"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-dark">Fase 1: Quick Start & Identidad</h3>
+                        <p class="text-sm text-gray-600 mt-2">Sesión inicial de grabación. Producción del paquete de contenido fundacional (Biografía, Posturas, Presentación) para asegurar que, si alguien busca a Maritza, encuentre un perfil profesional y activo.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-blue-700 border-4 border-white rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">1</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Perfiles Optimizados</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Primer Lote de Reels Listo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="hidden md:block md:text-right order-1">
+                         <ul class="text-sm text-gray-600 space-y-2 flex flex-col items-end">
+                            <li class="flex items-center gap-2"> Motor de Contenido <i data-lucide="check" class="w-4 h-4 text-blue-500"></i></li>
+                            <li class="flex items-center gap-2"> Coordinación con Campo <i data-lucide="check" class="w-4 h-4 text-blue-500"></i></li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-blue-700 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-blue-700 font-bold">2</span>
+                    </div>
+                    <div class="order-2 md:text-left pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-dark">Fase 2: Flujo Constante (Pillar Content)</h3>
+                        <p class="text-sm text-gray-600 mt-2">Desglose de temas extensos en piezas cortas. Actuamos como tu equipo digital de respaldo, coordinando las publicaciones estratégicamente para potenciar y blindar las tácticas de calle.</p>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-dark">Fase 3: Expansión y Escalabilidad</h3>
+                        <p class="text-sm text-gray-600 mt-2">Afinamos mensajes basados en la respuesta de los votantes. Estamos listos para funcionar como un recurso integral, escalando nuestra producción de contenido para apoyar a otros clientes de tu firma.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-blue-700 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-blue-700 font-bold">3</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                         <div class="bg-blue-50 p-4 rounded-lg inline-block">
+                            <span class="text-blue-800 font-bold text-sm">Visión a Futuro: Sinergia de Cuentas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alcance Operativo -->
+        <section id="acuerdo" class="py-16">
+            <div class="glass-card max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <div class="bg-dark p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold">Alcance Operativo del Acuerdo</h2>
+                    <p class="text-blue-400 mt-2 font-medium">Detalle de los servicios en curso para la campaña.</p>
+                </div>
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-gray-100 pb-6 mb-6 gap-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-dark">Máquina de Contenido y Gestión</h3>
+                            <p class="text-sm text-gray-500 mt-1">Producción visual, estrategia y entrega lista para publicar de forma coordinada.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-5 rounded-xl mb-8 border border-blue-100">
+                        <h4 class="font-bold text-blue-900 text-sm mb-3">EL ACUERDO INCLUYE:</h4>
+                        <ul class="text-sm text-blue-800 grid md:grid-cols-2 gap-3">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Sesiones de Grabación (Dirección)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Edición Profesional de Reels/TikToks</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Creación de Gráficos de Campaña</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Estrategia "Pillar Content"</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Biblioteca de Contenido Flexible</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Reunión Táctica Semanal</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Investigación y Google Ads</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Scheduling (FB, Insta, LI, etc.)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm text-gray-600">
+                        <span class="font-bold text-gray-800"><i data-lucide="info" class="inline w-4 h-4 mr-1 text-gray-500 relative -top-0.5"></i> Trabajo en Equipo:</span> La activación de campañas publicitarias (Soporte Aéreo) se ejecutará en perfecta sincronía con los tiempos de tu equipo de campo, actuando como multiplicadores de su esfuerzo táctico.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portafolio Grid (Reubicado y Actualizado) -->
+        <section id="portafolio" class="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 my-12">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-dark mb-4">Portafolio y Casos de Éxito</h2>
+                <p class="text-gray-600">Ejemplos de creación de contenido, posicionamiento de marca e identidad visual. Con experiencia demostrada en sectores de alto nivel y <em>Senior Living</em>.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- TOP 3 PRIORITIES -->
+                <a href="https://www.linkedin.com/company/tucson-npra-national-placement-referral-alliance" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900 group-hover:text-blue-600 transition">SoAPRA (Tucson NPRA)</h4>
+                        <p class="text-xs text-slate-500">Gestión Profesional B2B</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/wrightwaysp" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-full flex items-center justify-center group-hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 group-hover:text-white transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900 group-hover:text-pink-600 transition">Wright Way</h4>
+                        <p class="text-xs text-slate-500">Senior Placement</p>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/New%20Day%20Lifestyles%20-232305163294768/" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900 group-hover:text-blue-600 transition">New Day Lifestyles</h4>
+                        <p class="text-xs text-slate-500">Comunidad & Estilo de Vida</p>
+                    </div>
+                </a>
+
+                <!-- OTHERS -->
+                <a href="https://www.instagram.com/gfmkt.consult" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-slate-100 text-slate-700 rounded-full flex items-center justify-center group-hover:bg-slate-800 group-hover:text-white transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900">GF Marketing & Consulting</h4>
+                        <p class="text-xs text-slate-500">Nuestra Agencia</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/newday4seniors" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-full flex items-center justify-center group-hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 group-hover:text-white transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900">New Day Lifestyles</h4>
+                        <p class="text-xs text-slate-500">Cuidado Integral</p>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/Abuelos%20at%20La%20Ca%C3%B1ada-1028416017012073/" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900">Abuelos at La Cañada</h4>
+                        <p class="text-xs text-slate-500">Centro de Asistencia</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/company/crossroads-assisted-living" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900">Crossroads Assisted</h4>
+                        <p class="text-xs text-slate-500">Cuidado Especializado</p>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/Summit%20Integrative%20Medicine-787736384423158/" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900">Summit Medicine</h4>
+                        <p class="text-xs text-slate-500">Medicina Integrativa</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/valencia.machacaycecina" target="_blank" class="glass-card p-5 rounded-xl flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-pink-50 text-pink-600 rounded-full flex items-center justify-center group-hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 group-hover:text-white transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-900">Valencia Machaca</h4>
+                        <p class="text-xs text-slate-500">Marca Comercial</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Multi-platform Scheduling Banner -->
+            <div class="mt-8 bg-white p-6 rounded-xl border border-blue-100 shadow-sm text-center">
+                <h4 class="text-sm font-bold text-slate-800 mb-4 flex items-center justify-center gap-2">
+                    <i data-lucide="calendar-clock" class="w-5 h-5 text-blue-600"></i>
+                    Post Scheduling & Distribución Multicanal
+                </h4>
+                <p class="text-xs text-slate-500 mb-5">Todas nuestras cuentas incluyen programación de contenido y distribución estratégica en todo el ecosistema digital:</p>
+                <div class="flex flex-wrap justify-center gap-3 text-sm font-medium text-slate-700">
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-facebook text-blue-600"></i> Facebook</span>
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-instagram text-pink-600"></i> Instagram</span>
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-linkedin text-blue-700"></i> LinkedIn</span>
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-tiktok text-slate-900"></i> TikTok</span>
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-youtube text-red-600"></i> YouTube</span>
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-google text-blue-500"></i> Google Business</span>
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-x-twitter text-slate-900"></i> X</span>
+                    <span class="bg-slate-100 px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm border border-slate-200"><i class="fa-brands fa-threads text-slate-900"></i> Threads</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 text-gray-500 text-sm border-t border-gray-200 mt-8">
+            <div class="mb-4">
+                <span class="font-bold text-dark text-lg">GF Marketing and Consulting</span>
+            </div>
+            <p>&copy; 2026 Preparado exclusivamente para Luis y su firma de consultoría.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
