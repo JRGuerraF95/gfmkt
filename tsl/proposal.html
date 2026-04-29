@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: The Tax Strategy Lab x GF Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* --- Typography & Theme --- */
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #334155; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Financial Palette: Trust Blue & Slate */
+        :root {
+            --brand-navy: #0F172A; /* Slate 900 */
+            --brand-primary: #0369A1; /* Sky 700 - Professional Blue */
+            --brand-accent: #D97706; /* Amber 600 - Warm Accent */
+        }
+
+        .text-navy { color: var(--brand-navy); }
+        .bg-navy { background-color: var(--brand-navy); }
+        .text-primary { color: var(--brand-primary); }
+        .bg-primary { background-color: var(--brand-primary); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Card Effects */
+        .glass-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--brand-primary);
+        }
+
+        /* Roadmap Timeline Styling */
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            bottom: -40px;
+            width: 2px;
+            background: #E2E8F0;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-connector { left: 24px; top: 24px; bottom: -24px; transform: none; }
+        }
+
+        /* Range Slider */
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 24px; width: 24px;
+            border-radius: 50%; background: var(--brand-primary);
+            cursor: pointer; margin-top: -10px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 4px; cursor: pointer;
+            background: #CBD5E1; border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-5xl">
+            <div class="font-bold text-navy tracking-tight text-lg">GF Marketing <span class="text-gray-400 font-light mx-2">|</span> The Tax Strategy Lab</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#vision" class="hover:text-sky-700 transition">Objective</a>
+                <a href="#strategy" class="hover:text-sky-700 transition">Strategy</a>
+                <a href="#roadmap" class="hover:text-sky-700 transition">Timeline</a>
+                <a href="#investment" class="hover:text-sky-700 transition">Investment</a>
+            </div>
+            <a href="#investment" class="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-sky-800 transition">View Proposal</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-6 py-12 max-w-5xl">
+
+        <!-- Hero Section -->
+        <header id="vision" class="text-center py-16 md:py-24">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-sky-800 text-xs font-semibold mb-6 uppercase tracking-wider">
+                Digital Transformation & Nationwide Scaling
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-navy mb-6 leading-tight">
+                Premium Advisory. <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-sky-800">Nationwide Impact.</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                We are building a conversion-focused digital presence and an integrated marketing engine to transition The Tax Strategy Lab into a fully remote, highly scalable nationwide authority.
+            </p>
+        </header>
+
+        <div class="w-full h-px bg-gray-200 my-8"></div>
+
+        <!-- The Shift (Problem/Solution) -->
+        <section class="grid md:grid-cols-2 gap-12 items-center py-12">
+            <div>
+                <h2 class="text-3xl font-bold text-navy mb-6">The Growth Bottlenecks</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-amber-50 p-3 rounded-lg h-fit text-amber-700"><i data-lucide="smartphone"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">The Mobile Drop-off</h4>
+                            <p class="text-sm text-gray-600">With ~90% of your traffic on mobile, the current GoDaddy site is harming credibility and causing high bounce rates before clients even see your expertise.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-amber-50 p-3 rounded-lg h-fit text-amber-700"><i data-lucide="split-square-horizontal"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Fragmented Pipeline</h4>
+                            <p class="text-sm text-gray-600">Social media, paid ads, and your website aren't operating as a single unit. There is no clear CRM integration to capture and nurture leads.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-amber-50 p-3 rounded-lg h-fit text-amber-700"><i data-lucide="calendar-x"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Content Overwhelm</h4>
+                            <p class="text-sm text-gray-600">Without a clear division of labor, content production stalls. You need a reliable system for regular posting (static & video) without constant operational stress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-navy text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-sky-600 rounded-full opacity-20 blur-xl"></div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="rocket" class="text-sky-400"></i> The Integrated Engine
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-sky-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Conversion-Focused UX</h4>
+                            <p class="text-sm text-gray-300">A mobile-first WordPress build designed to do one thing: drive high-quality prospects to your "Book a Call" calendar.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-sky-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Nationwide SEO & Geo-Signals</h4>
+                            <p class="text-sm text-gray-300">5-6 dedicated service pages with strategic local signals (Tucson/Phoenix/Scottsdale) engineered to capture search traffic while maintaining a premium national posture.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 text-sky-400"><i data-lucide="check-circle-2"></i></div>
+                        <div>
+                            <h4 class="font-bold">Strict Ad Governance</h4>
+                            <p class="text-sm text-gray-300">Daily monitoring of Google, Meta, and YouTube ads with strict budget caps and geo-locks to prevent AI drift and maximize ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Grid -->
+        <section id="strategy" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-navy">The Implementation Plan</h2>
+                <p class="text-gray-600 mt-2">A complete setup: Website, Marketing Engine, and Operations.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-sky-50 w-12 h-12 rounded-lg flex items-center justify-center text-sky-700 mb-4">
+                        <i data-lucide="monitor-smartphone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">WordPress Development</h3>
+                    <p class="text-sm text-gray-600">A fast, fully responsive site delivered in 3-4 weeks. Built to integrate seamlessly with your brand assets and structured to drive users directly to calendar bookings.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-sky-50 w-12 h-12 rounded-lg flex items-center justify-center text-sky-700 mb-4">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Content & Social Engine</h3>
+                    <p class="text-sm text-gray-600">We handle the creation/scheduling of ~12 posts/month (70% educational, 20% resources, 10% sales). You handle community engagement. Monthly batch video shoots included.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-sky-50 w-12 h-12 rounded-lg flex items-center justify-center text-sky-700 mb-4">
+                        <i data-lucide="network"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">CRM & Lead Nurture</h3>
+                    <p class="text-sm text-gray-600">Selection and integration of your Martech stack. We ensure speed-to-lead and automated follow-ups are locked in before ads launch.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="bg-sky-50 w-12 h-12 rounded-lg flex items-center justify-center text-sky-700 mb-4">
+                        <i data-lucide="line-chart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">Paid Media Testing</h3>
+                    <p class="text-sm text-gray-600">A 90-day test-and-learn phase across Google Search, FB/IG, and YouTube. Strict daily monitoring to identify winning channels before scaling budgets.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section class="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 my-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-navy mb-4">The Value of the Funnel</h2>
+                    <p class="text-gray-600 mb-6">
+                        By fixing the "leaky bucket" (mobile drop-offs, poor routing) and centralizing traffic to your calendar, this infrastructure is designed to pay for itself rapidly.
+                    </p>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">New Retained Clients via Web Funnel</label>
+                        <input type="range" id="closeSlider" min="1" max="15" value="3" class="w-full mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Conservative (1)</span>
+                            <span class="text-2xl font-bold text-sky-700" id="sliderValue">3</span>
+                            <span class="text-gray-500 text-sm">Aggressive (15)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-sky-700 text-center">
+                    <h3 class="text-gray-500 text-sm font-bold uppercase tracking-wide mb-2">Projected New Revenue</h3>
+                    <div class="text-5xl font-bold text-navy mb-2" id="revenueDisplay">$0</div>
+                    <p class="text-green-600 text-sm font-medium bg-green-50 inline-block px-3 py-1 rounded-full mt-2">
+                        System ROI achieved with <span id="breakEvenText">1</span> client
+                    </p>
+                    <p class="text-xs text-gray-400 mt-4">*Assumes avg. client lifetime value of $3,500</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rolling Start Roadmap -->
+        <section id="roadmap" class="py-12 max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-navy">Timeline & Milestones</h2>
+                <p class="text-gray-600 mt-2">Clear division of responsibilities to ensure a rapid launch.</p>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <div class="timeline-connector hidden md:block"></div>
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-slate-200 md:hidden"></div>
+
+                <!-- Phase 1 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 1: Strategy & Assets</h3>
+                        <p class="text-sm text-gray-600 mt-2">We define the SEO location strategy, finalize the 5-6 core service pages, and gather brand assets. Social content plan (70/20/10) is delivered for approval.</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-sky-800 border-4 border-white rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">1</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Client: Provide Services & Bios</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> GF: SEO & Content Plan Delivered</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="hidden md:block md:text-right order-1">
+                         <ul class="text-sm text-gray-600 space-y-2 flex flex-col items-end">
+                            <li class="flex items-center gap-2"> WordPress Dev & Mobile QA <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                            <li class="flex items-center gap-2"> CRM & Tracking Setup <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-sky-800 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-sky-800 font-bold">2</span>
+                    </div>
+                    <div class="order-2 md:text-left pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-navy">Week 2-3: Build & Integrate</h3>
+                        <p class="text-sm text-gray-600 mt-2">Website development focusing on responsive UX and click-to-play media. Integration of lead capture forms into your selected CRM platform.</p>
+                        <div class="md:hidden mt-4">
+                             <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> WordPress Build</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> CRM Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="relative grid md:grid-cols-2 gap-8 mb-16 items-center">
+                    <div class="md:text-right order-2 md:order-1">
+                        <h3 class="text-xl font-bold text-navy">Week 4: Website Launch</h3>
+                        <p class="text-sm text-gray-600 mt-2">Final testing across devices, SEO indexing, and Go-Live. Handover of lead handling processes (speed-to-lead SLAs).</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-white border-4 border-sky-800 rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-sky-800 font-bold">3</span>
+                    </div>
+                    <div class="order-3 md:order-2 pl-8 md:pl-0">
+                         <div class="bg-sky-50 p-4 rounded-lg inline-block">
+                            <span class="text-sky-800 font-bold text-sm">Target: Fully Operational Site</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="relative grid md:grid-cols-2 gap-8 items-center">
+                    <div class="hidden md:block md:text-right order-1">
+                        <ul class="text-sm text-gray-600 space-y-2 flex flex-col items-end">
+                           <li class="flex items-center gap-2"> Google & Meta Ads Live <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                           <li class="flex items-center gap-2"> Monthly Content Batching <i data-lucide="check" class="w-4 h-4 text-green-500"></i></li>
+                       </ul>
+                   </div>
+                    <div class="absolute left-0 md:left-1/2 -ml-3 md:-ml-4 w-6 h-6 md:w-8 md:h-8 bg-sky-800 border-4 border-white rounded-full shadow-lg z-10 flex items-center justify-center">
+                        <span class="text-xs text-white font-bold">4</span>
+                    </div>
+                    <div class="order-2 md:text-left pl-8 md:pl-0">
+                        <h3 class="text-xl font-bold text-navy">Month 2+: The Growth Engine</h3>
+                        <p class="text-sm text-gray-600 mt-2">Launch paid ad tests with strict geo-controls and budget caps. Begin monthly video batching (6-10 videos) and execution of the ongoing social calendar.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Investment -->
+        <section id="investment" class="py-16">
+            <div class="glass-card max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <div class="bg-navy p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold">Partnership Investment</h2>
+                    <p class="text-sky-200 mt-2">Clear scope. Transparent pricing. Month-to-month flexibility.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2">
+                    <!-- Column 1 -->
+                    <div class="p-8 md:p-10 border-b md:border-b-0 md:border-r border-gray-100">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-navy">Phase 1: Digital Foundation</h3>
+                            <p class="text-sm text-gray-500 mt-1">Website Build & System Integration</p>
+                            <div class="text-3xl font-bold text-navy mt-4">$1,200 <span class="text-sm font-normal text-gray-400">One-time</span></div>
+                        </div>
+
+                        <ul class="text-sm text-slate-600 space-y-3 mb-8">
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Responsive WordPress Website (5-6 pages)</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Foundational SEO & Local Strategy</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Martech/CRM Integration</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Call Tracking & Analytics Setup</li>
+                        </ul>
+                        <div class="text-xs text-gray-400 italic">$600 Deposit / $600 Upon Launch</div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="p-8 md:p-10 bg-slate-50">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-navy">Phase 2: Growth Engine</h3>
+                            <p class="text-sm text-gray-500 mt-1">Ads, Content & Ongoing Support</p>
+                            <div class="text-3xl font-bold text-navy mt-4">$1,200 <span class="text-sm font-normal text-gray-400">/ Month</span></div>
+                        </div>
+
+                        <ul class="text-sm text-slate-600 space-y-3 mb-8">
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Social Posting (12x/mo) & Shared Calendar</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Ad Campaigns & Funnel Testing</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Ongoing Website Maintenance</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 mt-0.5 text-sky-600"></i> Daily Monitoring & Bi-weekly Reviews</li>
+                        </ul>
+                        <div class="text-xs text-gray-400 italic">Ad Spend Billed Separately (Budget varies)</div>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-white text-center border-t border-gray-100">
+                    <a href="mailto:jose@guerrafourcademkt.com?subject=Approved%20-%20The%20Tax%20Strategy%20Lab%20Proposal&body=Hi%20Jose%2C%0A%0AWe%20are%20ready%20to%20move%20forward%20with%20the%20website%20build%20and%20marketing%20engine.%20Please%20send%20the%20agreement.%0A%0AThanks%2C" 
+                       class="inline-block w-full md:w-auto bg-primary hover:bg-sky-800 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Approve & Start Project
+                    </a>
+                    <p class="text-xs text-gray-400 mt-4">We are ready to begin Week 1 upon execution.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 text-gray-500 text-sm">
+            <div class="mb-4">
+                <span class="font-bold text-navy text-lg">GF Marketing & Consulting</span>
+                <br/>
+                <span class="italic">José Rodolfo Guerra Fourcade</span>
+            </div>
+            <p>&copy; 2026 Prepared for The Tax Strategy Lab (thetaxstrategylab.com) / Premium Accounting & Tax Advisory.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // ROI Calculator Logic
+        const slider = document.getElementById('closeSlider');
+        const display = document.getElementById('sliderValue');
+        const revenue = document.getElementById('revenueDisplay');
+        const breakEven = document.getElementById('breakEvenText');
+
+        // Assumed LTV of an advisory client 
+        const contractValue = 3500; 
+
+        function updateCalc() {
+            const closes = slider.value;
+            display.innerText = closes;
+            
+            const totalVal = closes * contractValue; 
+            
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                maximumFractionDigits: 0,
+            });
+
+            revenue.innerText = formatter.format(totalVal); 
+            
+            // Break even logic: Combined Phase 1 + Phase 2 is $2400. 
+            // At $3500 LTV, they need ~0.7 clients to break even.
+            let breakEvenPoint = 1;
+            if(totalVal > 2400) {
+                breakEvenPoint = Math.ceil(2400 / contractValue); 
+            } else {
+                breakEvenPoint = 1; // Needs at least 1 client to cover $2.4k at $3.5k each
+            }
+            breakEven.innerText = breakEvenPoint;
+        }
+
+        slider.addEventListener('input', updateCalc);
+        updateCalc();
+    </script>
+</body>
+</html>
