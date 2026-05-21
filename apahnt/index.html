@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Place At Home - North Tucson: Digital Growth Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Corporate Styles: A Place At Home Palette (Navy/Orange) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        /* Color Palette Definitions: Trust / Action */
+        .bg-primary { background-color: #fefefe; } /* Near White */
+        .text-primary { color: #0B2046; } /* Navy Dark Text */
+        .text-secondary { color: #556070; } /* Grey/Blue Text */
+        .accent-color { color: #F26922; } /* Brand Orange */
+        .accent-color-alt { color: #0B2046; } /* Brand Navy */
+        .accent-bg { background-color: #F26922; }
+        .accent-border { border-color: #F26922; }
+        .card-bg { background-color: #F4F7F9; } /* Light Blue/Grey Card */
+        
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Tooltip style for Roadmap details on desktop */
+        .timeline-item .hover-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+            max-width: 300px;
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-top: 3px solid #F26922;
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 20;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .timeline-item:hover .hover-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Mobile specific alignment for roadmap content blocks */
+        @media (max-width: 768px) {
+            .roadmap-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+            .timeline-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                text-align: center;
+                padding-bottom: 20px;
+                width: 100%;
+            }
+            .timeline-item .hover-tooltip {
+                visibility: visible;
+                opacity: 1;
+                position: static;
+                transform: none;
+                width: 100%; 
+                max-width: 100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                border: 1px solid #E5E7EB;
+                border-top: 3px solid #F26922;
+                text-align: left;
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary text-primary">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
+
+        <header class="flex justify-center items-center py-4 border-b border-gray-200 sticky top-0 bg-[#fefefe] z-50 shadow-sm">
+            <nav class="flex flex-wrap justify-center gap-x-3 gap-y-2 sm:gap-x-6">
+                <a href="#goal" class="nav-link active text-sm font-semibold hover:text-[#F26922] transition-colors">Goal</a>
+                <a href="#solution" class="nav-link text-sm font-semibold hover:text-[#F26922] transition-colors">Solution</a>
+                <a href="#opportunity" class="nav-link text-sm font-semibold hover:text-[#F26922] transition-colors">Opportunity</a>
+                <a href="#roadmap" class="nav-link text-sm font-semibold hover:text-[#F26922] transition-colors">Roadmap</a>
+                <a href="#investment" class="nav-link text-sm font-semibold hover:text-[#F26922] transition-colors">Investment</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Section: Project Goal (Hook) -->
+            <section id="goal" class="text-center py-10 md:py-16 scroll-mt-20">
+                
+                <div class="mx-auto mb-6 flex flex-col items-center justify-center"> 
+                    <h1 class="text-2xl md:text-3xl font-bold tracking-widest text-[#0B2046] uppercase text-center">A Place At Home</h1>
+                    <p class="text-xs md:text-sm font-semibold tracking-widest text-[#F26922] uppercase mt-1 text-center">North Tucson, AZ</p>
+                </div>
+                
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 font-bebas tracking-wide leading-tight px-2">
+                    Making the Phone Ring.<br>
+                    <span class="accent-color">Empowering Your 85% Close Rate.</span>
+                </h2>
+                <p class="text-base md:text-lg text-secondary max-w-3xl mx-auto mt-6 px-2">
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+            
+             <!-- Section: The Opportunity -->
+            <section id="opportunity" class="py-12 scroll-mt-20">
+                <div class="text-center mb-10 px-2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">The Opportunity: Fixing the Foundation</h2>
+                    <p class="text-sm md:text-base text-secondary mt-2 max-w-2xl mx-auto">Moving away from agencies that provide "no structure" and moving toward a predictable, transparent lead generation system.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+                    <div class="card-bg border border-gray-200 p-6 md:p-8 rounded-lg text-center flex flex-col">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-4 accent-color-alt">The Current Roadblocks</h3>
+                         <div class="text-4xl md:text-5xl mb-4 text-secondary opacity-70">
+                             <i data-lucide="phone-off" class="mx-auto w-10 h-10 md:w-12 md:h-12"></i>
+                         </div>
+                        <ul class="text-secondary mt-2 list-none space-y-4 text-left mx-auto w-full md:inline-block md:w-auto text-sm md:text-base">
+                            <li class="flex items-start"><b class="text-red-500 mr-2 text-lg">&times;</b> <span><strong>Zero Tracking:</strong> Not knowing if incoming calls are actually from agency efforts.</span></li>
+                            <li class="flex items-start"><b class="text-red-500 mr-2 text-lg">&times;</b> <span><strong>Underdeveloped Local SEO:</strong> Only 9 reviews and 2 photos on Google Business Profile (GBP), hurting organic trust.</span></li>
+                            <li class="flex items-start"><b class="text-red-500 mr-2 text-lg">&times;</b> <span><strong>Informational vs. Strategic:</strong> Current social media is great for info, but lacks a professional strategic social media approach.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card-bg border border-gray-200 p-6 md:p-8 rounded-lg text-center flex flex-col border-b-4 accent-border">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-4 accent-color">Our Primary Objective</h3>
+                        <div class="text-4xl md:text-5xl mb-4 accent-color">
+                            <i data-lucide="phone-call" class="mx-auto w-10 h-10 md:w-12 md:h-12"></i>
+                        </div>
+                        <ul class="text-primary mt-2 list-none space-y-4 text-left mx-auto w-full md:inline-block md:w-auto text-sm md:text-base">
+                            <li class="flex items-start"><b class="text-green-500 mr-2 text-lg">&#10003;</b> <span><strong>Drive Trackable Leads:</strong> Utilize a targeted ad budget to generate highly-qualified care inquiries with clear attribution.</span></li>
+                            <li class="flex items-start"><b class="text-green-500 mr-2 text-lg">&#10003;</b> <span><strong>Dominate Local Search:</strong> Aggressively build out the GBP and leverage local blogs to bypass franchise corporate website limits.</span></li>
+                            <li class="flex items-start"><b class="text-green-500 mr-2 text-lg">&#10003;</b> <span><strong>Solve the Caregiver Shortage:</strong> Implement the government grant program to hire, train, and certify W2 caregivers.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Our Solution -->
+            <section id="solution" class="py-12 scroll-mt-20">
+                <div class="text-center mb-10 px-2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">The Action Plan: Lead Gen & Operations</h2>
+                    <p class="text-sm md:text-base text-secondary mt-2 max-w-2xl mx-auto">We don't just run ads; we partner with you to fix the pipeline, both for getting new clients and staffing the caregivers needed to serve them.</p>
+                </div>
+                <div id="solution-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-2 md:px-0">
+                    <!-- Solution Cards injected by JS -->
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Roadmap -->
+            <section id="roadmap" class="py-12 scroll-mt-20">
+                <div class="text-center mb-12 px-2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">Execution Roadmap</h2>
+                    <p class="text-sm md:text-base text-secondary mt-2 max-w-2xl mx-auto">A transparent timeline to get tracking in place, launch the ads, and start recruiting your caregiver team.</p>
+                </div>
+                <div class="relative min-h-[150px] px-2 md:px-0">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 accent-bg opacity-30" style="transform: translateY(-50%);"></div>
+                    <div class="roadmap-grid grid md:grid-cols-3 gap-6 text-center mx-auto relative z-10"> 
+                        <!-- Timeline items injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-full border-t border-gray-200 my-8"></div>
+
+            <!-- Section: Investment -->
+            <section id="investment" class="my-12 scroll-mt-20">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6 md:p-12 text-center border border-gray-100">
+                        <h2 class="text-2xl md:text-4xl font-bold mb-4 leading-tight text-primary">Investment & Partnership</h2>
+                        <p class="text-base md:text-lg text-secondary max-w-3xl mx-auto mb-6">A clear, structured approach ensuring every dollar is tracked and aimed directly at getting the phone to ring with qualified senior care prospects.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-2xl mx-auto">
+                            <div class="card-bg p-6 rounded-lg border-t-4 border-[#0B2046]">
+                                <span class="font-bold text-xs sm:text-sm uppercase text-secondary">Agency Service Fee</span>
+                                <p class="font-bold text-3xl sm:text-4xl mt-2 accent-color-alt">$1,200<span class="text-lg sm:text-xl text-secondary font-normal">/mo</span></p>
+                                <p class="text-xs sm:text-sm text-secondary mt-2">Includes Ads Management, SEO/Blogs, GBP Optimization, Professional Strategic Social Media & Govt. Grant consulting.</p>
+                            </div>
+                            <div class="card-bg p-6 rounded-lg border-t-4 border-[#F26922]">
+                                <span class="font-bold text-xs sm:text-sm uppercase text-secondary">Ad Spend Budget</span>
+                                <p class="font-bold text-3xl sm:text-4xl mt-2 accent-color">TBD</p>
+                                <p class="text-xs sm:text-sm text-secondary mt-2">Paid directly to Google & Meta to drive immediate, trackable phone leads.</p>
+                            </div>
+                        </div>
+
+                         <!-- CLOSING MESSAGE -->
+                        <div class="mt-8 p-4 sm:p-6 rounded-lg border-2 accent-border bg-orange-50/50 text-left">
+                            <div class="flex items-center mb-2">
+                                <i data-lucide="rocket" class="accent-color mr-2 flex-shrink-0"></i>
+                                <p class="text-lg sm:text-xl font-bold text-primary">Let's Get The Phone Ringing</p>
+                            </div>
+                            <p class="text-sm sm:text-md text-secondary">
+                                Gerardo, you already have the sales skills to close 85% of your leads. Our job is simply to give you the at-bats. By launching targeted digital ads, bypassing franchise website limits with local SEO/GBP strategies, and solving the caregiver bottleneck via government grants, we will build a scalable system that previous agencies failed to provide.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 md:p-12 text-center flex flex-col justify-center border border-gray-100 mt-6 lg:mt-0">
+                        <h2 class="text-xl md:text-2xl font-bold mb-4 text-primary">Summary of Deliverables</h2>
+                        <p class="text-secondary mb-6 text-xs md:text-sm">Everything you need to capture demand and prove ROI.</p>
+                        <div class="flex flex-col gap-4 text-left">
+                            <div class="flex items-center gap-3 border-b border-gray-100 pb-2">
+                                <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                <span class="text-sm font-medium">Google & Meta Ads Management</span>
+                            </div>
+                            <div class="flex items-center gap-3 border-b border-gray-100 pb-2">
+                                <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                <span class="text-sm font-medium">Call Tracking & ROI Reporting</span>
+                            </div>
+                            <div class="flex items-center gap-3 border-b border-gray-100 pb-2">
+                                <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                <span class="text-sm font-medium">Google Business Profile Overhaul</span>
+                            </div>
+                            <div class="flex items-center gap-3 border-b border-gray-100 pb-2">
+                                <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                <span class="text-sm font-medium">Professional Strategic Social Media</span>
+                            </div>
+                            <div class="flex items-center gap-3 border-b border-gray-100 pb-2">
+                                <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                <span class="text-sm font-medium">Local SEO & Custom Blogs</span>
+                            </div>
+                            <div class="flex items-center gap-3 pb-2">
+                                <i data-lucide="check-circle" class="text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                <span class="text-sm font-medium">Govt. Grant Caregiver Assistance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-8 border-t border-gray-200 flex flex-col items-center mt-8">
+            <p class="text-xl font-bold text-primary mb-2">
+                <a href="https://www.guerrafourcademkt.com" class="hover:text-[#F26922] transition-colors">GF Marketing and Consulting</a>
+            </p>
+            <p class="text-secondary text-sm">
+                &copy; 2026 Jose Guerra. Strategy for A Place At Home - North Tucson.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data for the 4-part solution
+            const solutionData = [
+                { 
+                    title: 'Targeted Paid Ads', 
+                    icon: 'mouse-pointer-click', 
+                    description: 'Deploying your ad budget across Google and Meta. We capture families actively searching for care and push them directly to your phone line.' 
+                },
+                { 
+                    title: 'True ROI Tracking', 
+                    icon: 'bar-chart-3', 
+                    description: 'No more guessing. We implement strict call-tracking and attribution so you know exactly which campaigns are generating your 85% close-rate leads.' 
+                },
+                { 
+                    title: 'Local SEO & GBP', 
+                    icon: 'map-pin', 
+                    description: 'Your GBP currently only has 9 reviews. We will overhaul this profile and write targeted local blogs to bypass the limits of your franchise landing page.' 
+                },
+                { 
+                    title: 'Caregiver Grant Access', 
+                    icon: 'graduation-cap', 
+                    description: 'A massive value-add: We will connect you with government programs that provide grants to hire, train, and certify your W2 caregivers.' 
+                }
+            ];
+
+            // Data for the 3-phase roadmap
+            const roadmapData = [
+                { 
+                    phase: 'Phase 1', 
+                    title: 'Foundation & True Tracking', 
+                    details: 'Week 1-2: We overhaul your Google Business Profile (photos, services), establish strict call tracking systems, and prepare the Google/Meta ad accounts for launch.' 
+                },
+                { 
+                    phase: 'Phase 2', 
+                    title: 'Lead Gen & Grant Initiation', 
+                    details: 'Week 3-4: Ad campaigns go live to make the phone ring. Simultaneously, we initiate the government grant paperwork to start building your caregiver pipeline.' 
+                },
+                { 
+                    phase: 'Phase 3', 
+                    title: 'Professional Socials & Scaling', 
+                    details: 'Month 2+: Shift your social media to a professional strategic approach. Launch local SEO blogs and implement an aggressive patient review campaign.' 
+                }
+            ];
+
+            const solutionContainer = document.getElementById('solution-cards-container');
+            const roadmapContainer = document.querySelector('.roadmap-grid');
+
+            // --- Solution Cards Generation ---
+            solutionData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-xl shadow-sm border border-gray-100 cursor-pointer card-hover';
+                card.innerHTML = `
+                    <div class="text-3xl mb-4 text-[#F26922] bg-orange-50 w-16 h-16 flex items-center justify-center rounded-full">
+                        <i data-lucide="${item.icon}"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-[#0B2046]">${item.title}</h3>
+                    <p class="text-secondary text-sm leading-relaxed">${item.description}</p>
+                `;
+                solutionContainer.appendChild(card);
+            });
+
+            // --- Roadmap Generation ---
+            roadmapData.forEach((item, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'relative timeline-item md:pt-12 mx-auto w-full'; 
+                timelineItem.innerHTML = `
+                    <div class="relative z-10 w-14 h-14 mx-auto flex items-center justify-center accent-bg text-white rounded-full text-xl font-bold shadow-md border-4 border-white mb-4">${index + 1}</div>
+                    <h4 class="font-bold text-lg text-[#0B2046]">${item.phase}</h4>
+                    <p class="text-secondary text-sm mt-1 mb-2 font-medium">${item.title}</p>
+                    <div class="hover-tooltip">
+                        <h5 class="font-bold text-[#0B2046] mb-1">${item.phase}: ${item.title}</h5>
+                        <p class="text-secondary text-sm leading-relaxed">${item.details}</p>
+                    </div>
+                `;
+                roadmapContainer.appendChild(timelineItem);
+            });
+            
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // --- Navigation Scroll Logic ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            // Offset for sticky header
+            const headerOffset = 80; 
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= sectionTop - headerOffset - 10) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'text-[#F26922]');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active', 'text-[#F26922]');
+                    }
+                });
+            });
+
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    // Smooth scroll to element with offset for the sticky header
+                    window.scrollTo({
+                        top: targetElement.offsetTop - headerOffset,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
